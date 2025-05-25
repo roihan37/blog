@@ -3,6 +3,7 @@
 import type { Metadata } from "next";
 import { Public_Sans } from "next/font/google";
 import Header from "./components/header";
+import ThemeProviderClient from "./components/ThemeProviderClient";
 import "./globals.css";
 
 const fontSans = Public_Sans({
@@ -25,14 +26,16 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+ 
+
+
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <body
-        className={`${fontSans.variable} bg-metallic lg:px-[165px] md:px-[100px] sm:px-[80px] px-[50px] relative`}
+        className={`${fontSans.variable} `}
       >
-        <div className="bg-white  shadow-md">
-          <Header />
-          {children}
+        <div >
+          <ThemeProviderClient>{children}</ThemeProviderClient>
         </div>
       </body>
     </html>

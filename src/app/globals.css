@@ -1,36 +1,27 @@
 @import "tailwindcss";
 
-.bg-metallic {
-  background: conic-gradient(
-    from 0deg,
-    #C9B7C2,
-    #BDD5C3,
-    #FDF8C8,
-    #C9B9C4
+@layer utilities {
+  .bg-metallic {
+    background: conic-gradient(
+      from 0deg,
+      #C9B7C2,
+      #BDD5C3,
+      #FDF8C8,
+      #C9B9C4
+    );
+  }
 
-    
-  );
+  .dark .bg-metallic {
+    background-color: #0f172a; /* sama seperti bg-zinc-900 */
+  }
 }
 
+
 .text-gradient-soft {
-  background: linear-gradient(
-    90deg,
-    #C9B9C4,
-    #FDF8C8,
-    #BDD5C3,
-    #C9B7C2
-  );
+  background: linear-gradient(90deg, #C9B9C4, #FDF8C8, #BDD5C3, #C9B7C2);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
 }
 
-.bg-metallic-hover:hover {
-  background: conic-gradient(
-    from 0deg,
-    #C9B9C4,
-    #FDF8C8,
-    #BDD5C3,
-    #C9B7C2
-  );
-}
+
