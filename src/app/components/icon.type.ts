@@ -1,0 +1,1 @@
+export type IconsType = 'github' | 'instagram' | 'linkedin' | "mail"; 
