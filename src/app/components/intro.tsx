@@ -8,7 +8,7 @@ import { Icon } from './icon';
 
 export default function Intro(): React.JSX.Element {
     return (
-        <div className=" my-[105px] relative z-10 gap-[5px] text-[#041148] ">
+        <div className=" my-[105px] relative z-10 gap-[5px] text-gray-800">
        
             <Image
                 src={photoRoihan}
@@ -19,13 +19,13 @@ export default function Intro(): React.JSX.Element {
                 priority={true}
                 className="h-[95px] w-[95px] rounded-full object-cover border-[0.35rem] border-white shadow-xl"
             />
-            <div className="text-[64px] w-[628px]">
-                <p className="font-semibold font-sans leading-[70px]">Software engineer and tech enthusiast.</p>
+            <div className="md:text-[64px] sm:text-[40px] text-[40px] md:max-w-[628px] sm:w-full max-w-[400px]">
+                <p className="font-semibold font-sans md:leading-[70px] sm:leading-[50px] leading-11 mt-[15px]">Software engineer and tech enthusiast.</p>
             </div>
-            <div className="text-[16px] w-[600px] mt-[10px]">
-                <p className=" font-sans text-left leading-[30px] ml-[5px]">Hi, I'm Roihan 👋 I write practical tutorials (short & long) for developers who love building with Next.js, React, Laravel, JavaScript, Rust, and Go.</p>
+            <div className="text-[16px] lg:max-w-[600px] md:max-w-[600px] sm:max-w-[380px] max-w-[380px] mt-[10px]">
+                <p className=" font-sans text-left leading-[30px] ml-[5px] opacity-75">Hi, I'm Roihan 👋 I write practical tutorials (short & long) for developers who love building with Next.js, React, JavaScript, and Go.</p>
             </div>
-            <div className="flex flex-row mt-[20px] ml-[5px] gap-[20px]">
+            <div className="flex flex-row mt-[20px] ml-[5px] opacity-65 gap-[20px]">
                 <Icon name="github" width={24} height={24} color="--c-crimson-blue-500" />
                 <Icon name="linkedin" width={24} height={24} color="--c-crimson-blue-500" />
                 <Icon name="instagram" width={24} height={24} color="--c-crimson-blue-500" />

@@ -6,7 +6,7 @@ import Footer from "./components/footer";
 export default function Home() {
   return (
     
-      <main className="px-[170px]" >
+      <main className="lg:px-[170px] md:px-[100px] sm:px-[80px] px-[50px]" >
         <Intro />
         <HomeSection />
         <Footer />

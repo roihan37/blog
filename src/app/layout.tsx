@@ -28,9 +28,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${fontSans.variable} bg-[#FAFAFA] px-[165px]  relative`}
+        className={`${fontSans.variable} bg-metallic lg:px-[165px] md:px-[100px] sm:px-[80px] px-[50px] relative`}
       >
-        <div className="bg-white">
+        <div className="bg-white  shadow-md">
           <Header />
           {children}
         </div>

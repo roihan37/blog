@@ -7,6 +7,7 @@ interface IconProps extends React.SVGAttributes<HTMLOrSVGElement> {
     width: number;
     height: number;
     color?: ColorsType;
+    className?: string;
 }
 
 const replaceColor = (svgString: string, newColor: string) => {
@@ -15,7 +16,7 @@ const replaceColor = (svgString: string, newColor: string) => {
     return svgString.replace(regex, replacement);
 };
 
-export const Icon: React.FC<IconProps> = ({ name, width, height, color = '--c-oxford-blue-500', ...props }) => {
+export const Icon: React.FC<IconProps> = ({ name, width, height, color = '--c-oxford-blue-500',className, ...props }) => {
     const svgRef = useRef<SVGSVGElement>(null);
 
     useEffect(() => {
@@ -32,5 +33,5 @@ export const Icon: React.FC<IconProps> = ({ name, width, height, color = '--c-ox
         
     }, [name, color]);
 
-    return <svg width={width} height={height} ref={svgRef} {...props}></svg>;
+    return <svg width={width} height={height} ref={svgRef} className={className} {...props}></svg>;
 };
