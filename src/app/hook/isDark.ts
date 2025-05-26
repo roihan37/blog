@@ -9,13 +9,14 @@ export function useDarkMode(): boolean {
       };
   
       checkDarkMode();
-  
+      
       const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
       mediaQuery.addEventListener('change', checkDarkMode);
   
       return () => {
         mediaQuery.removeEventListener('change', checkDarkMode);
       };
+      
     }, []);
   
     return isDark;

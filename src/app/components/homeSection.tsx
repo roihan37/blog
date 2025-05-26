@@ -1,5 +1,6 @@
 // components/home.tsx
 'use client';
+import Link from "@/node_modules/next/link";
 import React, { useState } from "react";
 
 export default function HomeSection(): React.JSX.Element {
@@ -190,7 +191,7 @@ export default function HomeSection(): React.JSX.Element {
                     </div>
 
                     <div className="pt-6 mt-6">
-                        <a className="underline cursor-pointer inline-block dark:text-slate-300 text-base" href="/blog">See all posts</a>
+                        <Link className="underline cursor-pointer inline-block dark:text-slate-300 text-base" href="/blog">See all posts</Link>
                     </div>
 
                 </div>

@@ -1,4 +1,4 @@
-import Image from "next/image";
+
 import Intro from "./components/intro";
 import HomeSection from "./components/homeSection";
 import Footer from "./components/footer";
