@@ -15,15 +15,15 @@ export default function HomeSection(): React.JSX.Element {
                 {/* List Project */}
                 <div className="my-[35px] flex flex-col gap-[20px] ">
                     
-                        <h1 className="md:text-[48px] sm:text-[36px] text-[36px] font-semibold">
+                        <h1 className="md:text-[48px] dark:text-zinc-200 sm:text-[36px] text-[36px] font-semibold">
                             Project
                         </h1>
                     
                     <div className="max-w-[410px] xl:max-w-full">
-                        <p className="opacity-75 ">I build some projects to help me learn new things and also to help other. Follow my journey build in public here.
+                        <p className="opacity-75 dark:text-zinc-200 ">I build some projects to help me learn new things and also to help other. Follow my journey build in public here.
                         </p>
                     </div>
-                    <div className="grid xl:grid-cols-2 grid-cols-1 gap-[25px]">
+                    <div className="grid xl:grid-cols-2 grid-cols-1 dark:text-zinc-200 gap-[25px]">
                         {/* Cards */}
                         <div className=" flex flex-col gap-[10px]">
                             <div className=" max-w-[400px] h-[200px] rounded-[10px] bg-gray-400">
@@ -51,7 +51,7 @@ export default function HomeSection(): React.JSX.Element {
                 </div>
                 {/* List Blog */}
                 <div className="py-15 pl-2">
-                <h1 className="md:text-[48px] sm:text-[36px] text-[36px] font-semibold">
+                <h1 className="md:text-[48px] dark:text-zinc-200 sm:text-[36px] text-[36px] font-semibold">
                             Writing
                         </h1>
                     <div className="ml-[3px] -mb-[25px] h-8 w-[3px] bg-slate-950/10 dark:bg-white/10 rounded-t">
@@ -59,7 +59,7 @@ export default function HomeSection(): React.JSX.Element {
                     <div className="flex items-top">
                         <div className="relative">
                             <div className="w-[9px] h-[9px] mt-[26.5px] rounded-full bg-gray-600 dark:bg-white/90 relative">
-                                <div className="bg-gray-500 dark:bg-white/90 animate-ping w-[9px] h-[9px] rounded-full absolute">
+                                <div className="bg-gray-500  dark:bg-white/90 animate-ping w-[9px] h-[9px] rounded-full absolute">
                                 </div>
 
                             </div>
@@ -67,7 +67,7 @@ export default function HomeSection(): React.JSX.Element {
                             </div>
 
                         </div>
-                        <div className="pl-3 group hover:bg-gray-50 border-[1px] border-white inline hover:border-gray-200 p-5 ml-5 mb-5 rounded-2xl">
+                        <div className="pl-3 group hover:bg-gray-50 dark:hover:bg-zinc-900 border-[1px] border-white dark:border-zinc-950 dark:hover:border-zinc-800 inline hover:border-gray-200 p-5 ml-5 mb-5 rounded-2xl">
                             <p className="text-sm mb-1 text-slate-950/70 group-hover:text-slate-950/90 dark:text-white/90 dark:group-hover:text-slate-300  font-semibold">December 5, 2024</p>
                             <a className="cursor-pointer inline-block mb-2" href="/blog/setting-up-vince-analytics">
                                 <h3 className="text-slate-800 dark:text-slate-300 text-lg sm:text-xl cursor-pointer">
@@ -90,7 +90,7 @@ export default function HomeSection(): React.JSX.Element {
                             </div>
 
                         </div>
-                        <div className="pl-3 group hover:bg-gray-50 border-[1px] border-white inline hover:border-gray-200 p-5 ml-5 mb-5 rounded-2xl">
+                         <div className="pl-3 group hover:bg-gray-50 dark:hover:bg-zinc-900 border-[1px] border-white dark:border-zinc-950 dark:hover:border-zinc-800 inline hover:border-gray-200 p-5 ml-5 mb-5 rounded-2xl">
                             <p className="text-sm mb-1 text-slate-950/70 group-hover:text-slate-950/90 dark:text-white/90 dark:group-hover:text-slate-300  font-semibold">December 5, 2024</p>
                             <a className="cursor-pointer inline-block mb-2" href="/blog/setting-up-vince-analytics">
                                 <h3 className="text-slate-800 dark:text-slate-300 text-lg sm:text-xl cursor-pointer">
@@ -113,7 +113,7 @@ export default function HomeSection(): React.JSX.Element {
                             </div>
 
                         </div>
-                        <div className="pl-3 group hover:bg-gray-50 border-[1px] border-white inline hover:border-gray-200 p-5 ml-5 mb-5 rounded-2xl">
+                         <div className="pl-3 group hover:bg-gray-50 dark:hover:bg-zinc-900 border-[1px] border-white dark:border-zinc-950 dark:hover:border-zinc-800 inline hover:border-gray-200 p-5 ml-5 mb-5 rounded-2xl">
                             <p className="text-sm mb-1 text-slate-950/70 group-hover:text-slate-950/90 dark:text-white/90 dark:group-hover:text-slate-300  font-semibold">December 5, 2024</p>
                             <a className="cursor-pointer inline-block mb-2" href="/blog/setting-up-vince-analytics">
                                 <h3 className="text-slate-800 dark:text-slate-300 text-lg sm:text-xl cursor-pointer">
@@ -136,7 +136,7 @@ export default function HomeSection(): React.JSX.Element {
                             </div>
 
                         </div>
-                        <div className="pl-3 group hover:bg-gray-50 border-[1px] border-white inline hover:border-gray-200 p-5 ml-5 mb-5 rounded-2xl">
+                         <div className="pl-3 group hover:bg-gray-50 dark:hover:bg-zinc-900 border-[1px] border-white dark:border-zinc-950 dark:hover:border-zinc-800 inline hover:border-gray-200 p-5 ml-5 mb-5 rounded-2xl">
                             <p className="text-sm mb-1 text-slate-950/70 group-hover:text-slate-950/90 dark:text-white/90 dark:group-hover:text-slate-300  font-semibold">December 5, 2024</p>
                             <a className="cursor-pointer inline-block mb-2" href="/blog/setting-up-vince-analytics">
                                 <h3 className="text-slate-800 dark:text-slate-300 text-lg sm:text-xl cursor-pointer">
@@ -156,7 +156,7 @@ export default function HomeSection(): React.JSX.Element {
                             </div>
 
                         </div>
-                        <div className="pl-3  group hover:bg-gray-50 p-5 ml-5 mb-5 rounded-2xl">
+                        <div className="pl-3 group hover:bg-gray-50 dark:hover:bg-zinc-900 border-[1px] border-white dark:border-zinc-950 dark:hover:border-zinc-800 inline hover:border-gray-200 p-5 ml-5 mb-5 rounded-2xl">
                             <p className="text-sm mb-1 text-slate-950/70 group-hover:text-slate-950/90 dark:text-white/90 dark:group-hover:text-slate-300 font-semibold">November 18, 2024</p>
                             <a className="cursor-pointer inline-block mb-2" href="/blog/how-to-use-laravel-pint-in-vscode">
                                 <h3 className="text-slate-800 dark:text-slate-300 text-lg sm:text-xl cursor-pointer">
@@ -176,7 +176,7 @@ export default function HomeSection(): React.JSX.Element {
                             </div>
 
                         </div>
-                        <div className="pl-3 group hover:bg-gray-50 border-[1px] border-white inline hover:border-gray-200 p-5 ml-5 mb-5 rounded-2xl">
+                         <div className="pl-3 group hover:bg-gray-50 dark:hover:bg-zinc-900 border-[1px] border-white dark:border-zinc-950 dark:hover:border-zinc-800 inline hover:border-gray-200 p-5 ml-5 mb-5 rounded-2xl">
                             <p className="text-sm mb-1 text-slate-950/70 group-hover:text-slate-950/90 dark:text-white/90 dark:group-hover:text-slate-300 font-semibold">November 8, 2024</p>
                             <a className="cursor-pointer inline-block mb-2" href="/blog/how-to-hide-scrollbar-in-tailwindcss">
                                 <h3 className="text-slate-800 dark:text-slate-300 text-lg sm:text-xl cursor-pointer">
@@ -195,7 +195,7 @@ export default function HomeSection(): React.JSX.Element {
 
                 </div>
                 {/* SEND EMAIL */}
-                <div className="border-[1px] border-gray-300 rounded-2xl p-5 my-10">
+                <div className="border-[1px] border-gray-300 dark:border-zinc-300 dark:text-zinc-200 rounded-2xl p-5 my-10">
                     <div className="flex flex-row gap-2 mb-2">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6">
                             <path d="M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.928 5.493a3 3 0 0 1-3.144 0L1.5 8.67Z" />
@@ -208,7 +208,7 @@ export default function HomeSection(): React.JSX.Element {
                     </div>
                     <div className="flex flex-row items-center gap-5">
                         <textarea className="border-gray-300 h-[50px] w-full rounded-md  border-[1px]"></textarea>
-                        <button className="px-[15px] rounded-md py-[10px] bg-gray-950 text-white">Send</button>
+                        <button className="px-[15px] rounded-md py-[10px] bg-gray-950 dark:bg-zinc-200 dark:text-zinc-950 text-white">Send</button>
                     </div>
                 </div>
 

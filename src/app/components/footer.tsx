@@ -1,14 +1,12 @@
 'use client';
 import React from "react";
-import { motion } from "framer-motion"
-import Image from "next/image";
 import photoRoihan from "../public/roihan.jpeg"
 import { Icon } from './icon';
 
 
 export default function Footer(): React.JSX.Element {
     return (
-        <div className="flex sm:flex-row md:flex-col lg:flex-col xl:flex-row flex-col justify-between py-25 md:text-3xl sm:text-[15px] md:items-center sm:items-center gap-3 md:gap-5 text-gray-600 ">
+        <div className="flex dark:text-zinc-200 sm:flex-row md:flex-col lg:flex-col xl:flex-row flex-col justify-between py-25 md:text-3xl sm:text-[15px] md:items-center sm:items-center gap-3 md:gap-5 text-gray-600 ">
             <div className="flex flex-row md:gap-3 sm:gap-2 gap-3">
                 <h1 className="text-gray-400">Say hi</h1>
                 <h1>pro.roihan@gmail.com</h1>
