@@ -8,7 +8,8 @@ export default function ThemeProviderClient({ children }: { children: React.Reac
   const isDark = useDarkMode();
   const pathname = usePathname();
   const isBlogRoute = pathname.startsWith("/blog");
-  const bgClass = isBlogRoute? "bg-zinc-50 dark:bg-black xl:px-[165px] lg:px-[50px] md:px-[100px] sm:px-[80px] px-[50px] relative" : `${isDark ? "bg-zinc-900" : "bg-metallic"} lg:px-[165px] md:px-[100px] sm:px-[80px] px-[50px] relative`
+  const bgClass = isBlogRoute? "bg-zinc-50 dark:bg-black xl:px-[165px] lg:px-[50px] md:px-[100px] sm:px-[80px] px-[50px] relative" 
+  : `${isDark ? "bg-zinc-900" : "bg-metallic"} xl:px-[165px] lg:px-[80px] md:px-[80px] sm:px-[80px] px-[50px] relative`
 
   return (
     <div className={`${bgClass}`}>

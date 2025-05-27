@@ -12,6 +12,10 @@ export const postType = defineType({
       type: 'string',
     }),
     defineField({
+      name: 'description',
+      type: 'string',
+    }),
+    defineField({
       name: 'slug',
       type: 'slug',
       options: {
@@ -71,7 +75,7 @@ export const postType = defineType({
       author: 'author.name',
       media: 'mainImage',
     },
-    prepare(selection) {
+    prepare(selection: { author: any }) {
       const {author} = selection
       return {...selection, subtitle: author && `by ${author}`}
     },

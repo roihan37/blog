@@ -24,7 +24,7 @@ export default function HomeSection(): React.JSX.Element {
                         <p className="opacity-75 dark:text-zinc-200 ">I build some projects to help me learn new things and also to help other. Follow my journey build in public here.
                         </p>
                     </div>
-                    <div className="grid xl:grid-cols-2 grid-cols-1 dark:text-zinc-200 gap-[25px]">
+                    <div className="grid lg:grid-cols-2 grid-cols-1 dark:text-zinc-200 gap-[25px]">
                         {/* Cards */}
                         <div className=" flex flex-col gap-[10px]">
                             <div className=" max-w-[400px] h-[200px] rounded-[10px] bg-gray-400">

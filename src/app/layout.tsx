@@ -1,13 +1,18 @@
 
 
 import type { Metadata } from "next";
-import { Public_Sans } from "next/font/google";
+import { Public_Sans, Noto_Serif, Playfair } from "next/font/google";
 import Header from "./components/header";
 import ThemeProviderClient from "./components/ThemeProviderClient";
 import "./globals.css";
 
 const fontSans = Public_Sans({
   variable: "--font-sans",
+  subsets: ["latin"],
+});
+
+const fontSerif = Noto_Serif({
+  variable: "--font-serif",
   subsets: ["latin"],
 });
 
@@ -32,7 +37,7 @@ export default function RootLayout({
   return (
     <html lang="en" >
       <body
-        className={`${fontSans.variable} `}
+        className={`${fontSans.variable} ${fontSerif.variable} `}
       >
         <div >
           <ThemeProviderClient>{children}</ThemeProviderClient>

@@ -30,6 +30,7 @@ export default function Intro(): React.JSX.Element {
                 </p>
             </div>
             <div className="flex dark:text-zinc-100 flex-row mt-[20px] ml-[5px] opacity-65 gap-[20px]">
+                
                 <Icon name="github" width={24} height={24} color="--c-crimson-blue-500" />
                 <Icon name="linkedin" width={24} height={24} color="--c-crimson-blue-500" />
                 <Icon name="instagram" width={24} height={24} color="--c-crimson-blue-500" />
