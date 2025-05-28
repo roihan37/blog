@@ -3,14 +3,17 @@ import Intro from "./components/intro";
 import HomeSection from "./components/homeSection";
 import Footer from "./components/footer";
 import Header from "./components/header";
+import { getAllposts } from "./hook/fetchPosts";
 
-export default function Home() {
+export default async function Home() {
+  const posts = await getAllposts()
+  // console.log(posts,"PAGE");
+  
   return (
-    
-      <main className="lg:px-[170px] md:px-[100px] sm:px-[80px] px-[50px] bg-white dark:bg-zinc-950  shadow-md" >
+      <main className="xl:px-[170px] lg:px-[100px] md:px-[100px] sm:px-[80px] px-[50px] bg-white dark:bg-zinc-950  shadow-md" >
         <Header />
         <Intro />
-        <HomeSection />
+        <HomeSection posts={posts} />
         <Footer />
       </main>
   );

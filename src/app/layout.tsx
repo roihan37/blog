@@ -1,7 +1,7 @@
 
 
 import type { Metadata } from "next";
-import { Public_Sans, Noto_Serif, Playfair } from "next/font/google";
+import { Public_Sans, Noto_Serif } from "next/font/google";
 import Header from "./components/header";
 import ThemeProviderClient from "./components/ThemeProviderClient";
 import "./globals.css";
@@ -15,6 +15,8 @@ const fontSerif = Noto_Serif({
   variable: "--font-serif",
   subsets: ["latin"],
 });
+
+
 
 // const geistMono = Geist_Mono({
 //   variable: "--font-geist-mono",

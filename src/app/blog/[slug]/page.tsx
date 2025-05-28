@@ -1,14 +1,10 @@
-import { PortableText, type SanityDocument } from "next-sanity";
-import { client } from "../../../sanity/lib/client";
 import { urlFor } from "../../../sanity/lib/image";
 import { PortableTextRenderer } from "../../components/PortableTextRenderer";
 import Header from "../../components/header";
 import Footer from "../../components/footer";
 import Image from "@/node_modules/next/image";
 import photoRoihan from "../../public/roihan.jpeg";
-
-const POST_QUERY = `*[_type == "post" && slug.current == $slug][0]`;
-const options = { next: { revalidate: 30 } };
+import { getPost } from "../../hook/fetchPosts";
 
 export default async function PostPage({
   params,
@@ -16,12 +12,13 @@ export default async function PostPage({
   params: Promise<{ slug: string }>;
 }) {
 
-  const post = await client.fetch<SanityDocument>(POST_QUERY, await params, options);
+  const post = await getPost(params)
+  // const post = await client.fetch<SanityDocument>(POST_QUERY, await params, options);
   const postImageUrl = post?.mainImage ? urlFor(post.mainImage).width(550).height(310).url() : null;
 
   return (
     <div>
-      <main className="container mx-auto min-h-screen max-w-3xl xl:px-1 bg-gray-500 flex flex-col gap-4">
+      <main className="container mx-auto min-h-screen max-w-3xl xl:px-1  flex flex-col gap-4">
         <div className="mb-8">
           <Header />
         </div>

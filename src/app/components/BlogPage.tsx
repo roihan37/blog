@@ -3,25 +3,12 @@ import Link from "@/node_modules/next/link"
 import { urlFor } from "@/src/sanity/lib/image";
 import { formattedDate } from "../hook/formatedDate";
 import { useDarkMode } from "../hook/isDark"
+import { Post } from "../type/typePost";
 import Footer from "./footer"
 import Header from "./header"
 import { Icon } from "./icon"
 
-interface Post {
-    _id: string;
-    mainImage: {
-        _type: string;
-        asset: {
-            [key: string]: any;
-        };
-    };
-    publishedAt: string;
-    slug: {
-        _type: string;
-        current: string;
-    };
-    title: string;
-}
+
 
 export default function BlogPage({ posts }: { posts: Post[] }) {
     const isDark = useDarkMode()
