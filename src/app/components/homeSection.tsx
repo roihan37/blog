@@ -107,7 +107,7 @@ export default function HomeSection({ posts }: { posts: Post[] }) {
                                             priority={true}
                                             className="h-[45px] w-[45px] rounded-full object-cover border-[0.40rem] shadow-md"
                                         />
-                                        <h1 className="font-semibold">Magurameudon Clone Website</h1>
+                                        <h1 className="font-semibold">Magurameudon Clone Website and Admin Side</h1>
                                         <p className="font-light">A Web clone Restaurant Magurameudon and admin side.</p>
                                         <div>
                                             <Link href={`https://github.com/roihan37/Magurameudon-Web-Clone`} className="cursor-pointer hover:underline flex gap-2 flex-row items-center rounded-full opacity-55 text-sm">
