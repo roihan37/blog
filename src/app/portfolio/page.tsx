@@ -7,7 +7,23 @@ import magurame from "../public/magurame.png";
 import theflix from "../public/theflix.png";
 import Link from "@/node_modules/next/link";
 import { Icon } from "../components/icon";
+import { motion } from "framer-motion";
+import { skillsData } from "../lib/data";
 import React from "react";
+
+const fadeInAnimationVariants = {
+    initial: {
+        opacity: 0,
+        y: 100,
+    },
+    animate: (index: number) => ({
+        opacity: 1,
+        y: 0,
+        transition: {
+            delay: 0.05 * index,
+        },
+    }),
+};
 
 
 export default function IndexPage() {
@@ -171,6 +187,76 @@ export default function IndexPage() {
 
 
 
+            </div>
+
+            <div className="px-[85px] py-[87px] border-l border-r border-b">
+                <div className="font-bold text-[40px] leading-12 ">
+                    <h1>Skills</h1>
+                </div>
+                <div className="mt-3 opacity-75 max-w-[350px]">
+                        I’ve worked on a range of projects, primarily for companies and local business. These are the ones I’m proudest to have developed.
+                    </div>
+                <div>
+                    <div className="grid grid-cols-3 gap-3 text-lg text-gray-800 mt-10">
+                        <div>
+                            <h2 className="font-bold mb-3">Language</h2>
+                         {skillsData.language.map((skill, index) => (
+                            <motion.div
+                                className="bg-gray-200 borderBlack rounded-sm px-5 py-3 dark:text-white/80 mt-2"
+                                key={index}
+                                variants={fadeInAnimationVariants}
+                                initial="initial"
+                                whileInView="animate"
+                                viewport={{
+                                    once: true,
+                                }}
+                                custom={index}
+                            >
+                               
+                                {skill}
+                            </motion.div>
+                        ))} 
+                        </div>
+
+                        <div>
+                            <h2 className="font-bold mb-3">Front End</h2>
+                         {skillsData.frontend.map((skill, index) => (
+                            <motion.div
+                                className="bg-gray-200 borderBlack rounded-sm px-5 py-3 dark:text-white/80 mt-2"
+                                key={index}
+                                variants={fadeInAnimationVariants}
+                                initial="initial"
+                                whileInView="animate"
+                                viewport={{
+                                    once: true,
+                                }}
+                                custom={index}
+                            >
+                                {skill}
+                            </motion.div>
+                        ))} 
+                        </div>
+
+                        <div>
+                            <h2 className="font-bold mb-3">Back End</h2>
+                         {skillsData.backend.map((skill, index) => (
+                            <motion.div
+                                className="bg-gray-200 borderBlack rounded-sm px-5 py-3 dark:text-white/80 mt-2"
+                                key={index}
+                                variants={fadeInAnimationVariants}
+                                initial="initial"
+                                whileInView="animate"
+                                viewport={{
+                                    once: true,
+                                }}
+                                custom={index}
+                            >
+                                {skill}
+                            </motion.div>
+                        ))} 
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     );

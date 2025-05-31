@@ -5,14 +5,14 @@ import createMDX from '@next/mdx'
 const nextConfig: NextConfig = {
   /* config options here */
   pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
-    webpack: (config: { module: { rules: { test: RegExp; loader: string; }[]; }; }) => {
-      config.module.rules.push({
-          test: /\.svg$/,
-          loader: 'svg-inline-loader'
-      });
-      return config;
+  webpack: (config: { module: { rules: { test: RegExp; loader: string; }[]; }; }) => {
+    config.module.rules.push({
+      test: /\.svg$/,
+      loader: 'svg-inline-loader'
+    });
+    return config;
   }
-  
+
 };
 
 const withMDX = createMDX({
@@ -32,7 +32,7 @@ const withMDX = createMDX({
       }],
     ],
   },
-  },
+},
 )
 
 export default withMDX(nextConfig);
