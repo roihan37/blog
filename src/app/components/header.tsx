@@ -9,7 +9,7 @@ export default function Header(): React.JSX.Element {
     const pathname = usePathname();
     const isDexBarberRoute = pathname.startsWith("/blog/dex-barber");
     const isBlogRoute = pathname.startsWith("/blog") && !isDexBarberRoute;
-    const justBlogRoute = pathname.startsWith("/blog") 
+    // const justBlogRoute = pathname.startsWith("/blog") 
     return (
         <header>
             <motion.div className=" text-gray-800  relative z-10 text-[13px] pt-[25px] flex justify-between"
@@ -19,13 +19,12 @@ export default function Header(): React.JSX.Element {
                 <Link href={'/'} className={`flex flex-col justify-start ${isDexBarberRoute ? `text-zinc-300` : ``}`}>
                     <h1 className="font-semibold text-[20px] dark:text-zinc-300">Let's learn</h1>
                     <p className=" font-light dark:text-zinc-400">with Roihan Salsabila</p>
-                    <p className=" font-light dark:text-zinc-400">{justBlogRoute?'← Back to Home' : ""}</p>
                 </Link>
-                <div className="flex justify-end gap-[25px] items-center">
+                <div className="flex justify-end gap-[25px]  items-center">
                     {
                         isBlogRoute || isDexBarberRoute ? <>
                             <Link href={'/blog'}>
-                                <p className={`text-[15px] ${isDexBarberRoute ? `text-zinc-300` : ``} hover:underline`}>Blog</p>
+                                <p className={`text-[15px] dark:text-zinc-300 ${isDexBarberRoute ? `text-zinc-300 ` : ``} hover:underline`}>Blog</p>
                             </Link>
                         </>
                             : ''

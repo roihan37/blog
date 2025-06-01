@@ -5,6 +5,7 @@ import Footer from "../../components/footer";
 import Image from "@/node_modules/next/image";
 import photoRoihan from "../../public/roihan.jpeg";
 import { getPost } from "../../hook/fetchPosts";
+import Link from "@/node_modules/next/link";
 
 export default async function PostPage({
   params,
@@ -18,11 +19,11 @@ export default async function PostPage({
 
   return (
     <div>
-      <main className="container mx-auto min-h-screen max-w-3xl xl:px-1  flex flex-col gap-4">
+      <main className="container mx-auto min-h-screen max-w-3xl xl:px-1 px-[20px] flex flex-col gap-4">
         <div className="mb-8">
           <Header />
         </div>
-        <h1 className="md:text-[42px] text-[36px] md:leading-13 leading-11 font-bold ">{post.title}</h1>
+        <h1 className="md:text-[42px] text-[36px] md:leading-13 leading-11 dark:text-[#D4D4D4] font-bold ">{post.title}</h1>
         <div className=" flex flex-row items-center gap-5 text-[15px] font-light">
           <Image
                   src={photoRoihan}
@@ -33,8 +34,8 @@ export default async function PostPage({
                   priority={true}
                   className="h-[32px] w-[32px] rounded-full object-cover  shadow-xl"
               />
-              <p>Roihan Salsabila</p>
-              <p className="opacity-50">6 days ago</p>
+              <Link href={'/'} className="cursor-pointer dark:text-[#D4D4D4] hover:underline">Roihan Salsabila</Link>
+              <p className="opacity-50 dark:text-[#D4D4D4]">6 days ago</p>
         </div>
         <hr className="mb-8 border-t border-gray-300 my-4" />
         <div className="flex flex-col items-center gap-3">
@@ -47,7 +48,7 @@ export default async function PostPage({
               height="310"
             />
           )}
-          <p className="opacity-50">{post.mainImage.alt}</p>
+          <p className="opacity-75 dark:text-[#D4D4D4] ">{post.mainImage.alt}</p>
         </div>
         <div className="prose mt-8">
           {Array.isArray(post.body) && <PortableTextRenderer value={post.body} />}

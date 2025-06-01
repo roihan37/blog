@@ -8,12 +8,30 @@ export default function ThemeProviderClient({ children }: { children: React.Reac
   const isDark = useDarkMode();
   const pathname = usePathname();
   const isDexBarberRoute = pathname.startsWith("/blog/dex-barber");
-  const isBlogRoute = pathname.startsWith("/blog") && !isDexBarberRoute;
-  const bgClass = isBlogRoute? "bg-zinc-50 dark:bg-black xl:px-[165px] lg:px-[50px] md:px-[100px] sm:px-[80px] px-[50px] relative" 
-  : isDexBarberRoute? ``
-  :`${isDark ? "bg-black" : "bg-zinc-100"} xl:px-[165px] lg:px-[80px] md:px-[80px] sm:px-[80px] px-[50px] relative`
+  const segments = pathname.split("/").filter(Boolean); 
+  const isBlogSlugRoute = segments[0] === "blog" && segments.length === 2 && segments[1] !== "dex-barber";
+  const isBlogRoute = pathname.startsWith("/blog") && !isDexBarberRoute && !isBlogSlugRoute;
+  let bgClass;
+  // let bgClass = isBlogRoute? "bg-zinc-100 dark:bg-black xl:px-[165px] md:px-15 lg:px-[80px] sm:px-8 relative" 
+  // : isDexBarberRoute? ``
+  // :`${isDark ? "bg-black" : "bg-zinc-100"} xl:px-[165px] md:px-15 lg:px-[80px]  sm:px-8 relative`
 
-  // console.log(isDexBarberRoute, isBlogRoute);
+  if(isBlogRoute){
+    bgClass = "bg-zinc-100 dark:bg-black xl:px-[165px] md:px-15 lg:px-[80px] sm:px-8 relative"
+    console.log('masuk isBlogRoute');
+  }
+  else if(isDexBarberRoute){
+    bgClass = ''
+  }
+  else if(isBlogSlugRoute){
+    console.log('masuk isBlogSlugRoute');
+    
+    bgClass = 'bg-[#191919]'
+  } else{
+    bgClass = `${isDark ? "bg-black" : "bg-zinc-100"} xl:px-[165px] md:px-15 lg:px-[80px]  sm:px-8 relative`
+  }
+  
+  console.log(bgClass);
   
   return (
     <div className={`${bgClass}`}>
