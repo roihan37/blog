@@ -31,7 +31,7 @@ export default function Header(): React.JSX.Element {
                             : ''
                     }
 
-                    <div className={`bg-metallic  rounded-full  px-[15px] py-[7px] flex gap-[10px] justify-center items-center`}>
+                    <Link href={'/portfolio'} className={`bg-metallic  rounded-full  px-[15px] py-[7px] flex gap-[10px] justify-center items-center`}>
                         {
                             isBlogRoute
                                 ? <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6">
@@ -45,7 +45,7 @@ export default function Header(): React.JSX.Element {
 
 
                         <p className="text-5">{isBlogRoute ? "Subscribe" : "Show Portofolio"}</p>
-                    </div>
+                    </Link>
 
 
                 </div>

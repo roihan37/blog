@@ -34,10 +34,9 @@ export default function Intro(): React.JSX.Element {
                 <Icon name="github" width={24} height={24} color="--c-crimson-blue-500" />
                 <Icon name="linkedin" width={24} height={24} color="--c-crimson-blue-500" />
                 <Icon name="instagram" width={24} height={24} color="--c-crimson-blue-500" />
-                <Icon name="mail" width={24} height={24} color="--c-crimson-blue-500" />
+                <Icon name="mail" width={24} height={24} color="--c-crimson-blue-500" className="hover:animate-spin" />
             </div>
-
-            {/* Contoh tampilkan counter agar terlihat berjalan */}
+           
             
         </div>
     );

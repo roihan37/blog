@@ -8,7 +8,7 @@ const nextConfig: NextConfig = {
   webpack: (config: { module: { rules: { test: RegExp; loader: string; }[]; }; }) => {
     config.module.rules.push({
       test: /\.svg$/,
-      loader: 'svg-inline-loader'
+      loader: 'svg-inline-loader',
     });
     return config;
   }

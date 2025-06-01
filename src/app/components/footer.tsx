@@ -5,6 +5,7 @@ import { Icon } from './icon';
 
 
 export default function Footer(): React.JSX.Element {
+    
     return (
         <div className="flex dark:text-zinc-200 sm:flex-row md:flex-col lg:flex-col xl:flex-row flex-col justify-between py-25 md:items-center sm:items-center gap-3 md:gap-5 text-gray-600 ">
             <div className="flex  xl:items-start flex-col lg:items-center" >

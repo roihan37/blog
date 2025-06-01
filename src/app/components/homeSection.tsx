@@ -18,9 +18,6 @@ export default function HomeSection({ posts }: { posts: Post[] }) {
     return (
         <>
             <div className="text-[16px]  text-gray-800">
-
-
-                {/* List Project */}
                 <div className="my-[35px] flex flex-col gap-[20px] ">
 
                     <h1 className="md:text-[48px] dark:text-zinc-200 sm:text-[36px] text-[36px] font-semibold">
@@ -30,8 +27,8 @@ export default function HomeSection({ posts }: { posts: Post[] }) {
                     <div className="max-w-[410px] xl:max-w-full">
                         <div className="flex flex-row items-center gap-5">
                             <div className="ml-[3px]  h-10 w-[3px] bg-slate-950/10 dark:bg-white/10 rounded-t"></div>
-                            <div>
-                                <p className="opacity-75 dark:text-zinc-200 ">I build projects to learn new things and to help others. Follow my journey build in public <br></br>
+                            <div className="dark:text-zinc-200">
+                                <p className="opacity-75 ">I build projects to learn new things and to help others. Follow my journey build in public <br></br>
                                 </p>
                                 <button className="cursor-pointer hover:underline" onClick={() => {
                                     displayAllProjects ? setDisplayAllProjects(false) : setDisplayAllProjects(true)
@@ -41,9 +38,9 @@ export default function HomeSection({ posts }: { posts: Post[] }) {
                             </div>
                         </div>
                     </div>
-                    <div className="grid lg:grid-cols-2 grid-cols-1 dark:text-zinc-200 gap-[5px]">
+                    <div className="grid lg:grid-cols-2 grid-cols-1  gap-[5px] ">
                         {/* Cards */}
-                        <div className="text-black text-[15px] flex flex-col max-w-[360px] rounded-[10px] hover:bg-gray-100 p-5 gap-[10px]">
+                        <div className=" text-black dark:text-zinc-300 text-[15px]  flex flex-col max-w-[360px] rounded-[10px] hover:bg-gray-100 dark:hover:bg-zinc-800 p-5 gap-[10px]">
                             <Image
                                 src={dexbarber}
                                 alt="Ricardo portrait"
@@ -72,7 +69,7 @@ export default function HomeSection({ posts }: { posts: Post[] }) {
                             </div>
                         </div>
 
-                        <div className="text-black text-[15px] flex flex-col max-w-[360px] rounded-[10px] hover:bg-gray-100 p-5 gap-[10px]">
+                        <div className="text-black dark:text-zinc-300 text-[15px] flex flex-col max-w-[360px] rounded-[10px] hover:bg-gray-100 dark:hover:bg-zinc-800 p-5 gap-[10px]">
                             <Image
                                 src={magurame}
                                 alt="Ricardo portrait"
@@ -97,7 +94,7 @@ export default function HomeSection({ posts }: { posts: Post[] }) {
                         {
                             displayAllProjects
                                 ? <>
-                                    <div className="text-black text-[15px] flex flex-col max-w-[360px] rounded-[10px] hover:bg-gray-100 p-5 gap-[10px]">
+                                    <div className="text-black dark:text-zinc-300 text-[15px] flex flex-col max-w-[360px] rounded-[10px] hover:bg-gray-100 dark:hover:bg-zinc-800 p-5 gap-[10px]">
                                         <Image
                                             src={magurameweb}
                                             alt="Ricardo portrait"
@@ -121,7 +118,7 @@ export default function HomeSection({ posts }: { posts: Post[] }) {
 
                                     </div>
 
-                                    <div className="text-black text-[15px] flex flex-col max-w-[360px] rounded-[10px] hover:bg-gray-100 p-5 gap-[10px]">
+                                    <div className="text-black dark:text-zinc-300 text-[15px] flex flex-col max-w-[360px] rounded-[10px] hover:bg-gray-100 dark:hover:bg-zinc-800 p-5 gap-[10px]">
                                         <Image
                                             src={theflix}
                                             alt="Ricardo portrait"
@@ -177,7 +174,7 @@ export default function HomeSection({ posts }: { posts: Post[] }) {
 
                                     </div>
 
-                                    <Link href={`/blog/${post.slug.current}`} className="pl-3 group hover:bg-gray-50 dark:hover:bg-zinc-900 border-[1px] border-white dark:border-zinc-950 dark:hover:border-zinc-800 inline hover:border-gray-200 p-5 ml-5 mb-5 rounded-2xl">
+                                    <Link href={`/blog/${post.slug.current}`} className="pl-3 group hover:bg-gray-50  border-[1px] border-white dark:border-zinc-900 dark:hover:border-zinc-800 dark:hover:bg-zinc-800 inline hover:border-gray-200 p-5 ml-5 mb-5 rounded-2xl">
                                         <p className="text-sm mb-1 text-slate-950/70 group-hover:text-slate-950/90 dark:text-white/90 dark:group-hover:text-slate-300  font-semibold">{formattedDate(post.publishedAt ?? "")}</p>
                                         <div className="cursor-pointer inline-block mb-2" >
                                             <h3 className="text-slate-800 dark:text-slate-300 text-lg sm:text-xl cursor-pointer">
@@ -200,20 +197,20 @@ export default function HomeSection({ posts }: { posts: Post[] }) {
 
                 </div>
                 {/* SEND EMAIL */}
-                <div className="border-[1px] border-gray-300 dark:border-zinc-300 dark:text-zinc-200 rounded-2xl p-5 my-10">
+                <div className="border-1 border-zinc-300 dark:border-zinc-800 dark:text-zinc-300 rounded-2xl p-5 my-10">
                     <div className="flex flex-row gap-2 mb-2">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6">
                             <path d="M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.928 5.493a3 3 0 0 1-3.144 0L1.5 8.67Z" />
                             <path d="M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908Z" />
                         </svg>
-                        <p>Send message</p>
+                        <p className="dark:text-zinc-300">Send message</p>
                     </div>
                     <div className=" opacity-60 mb-5">
                         <p>Send me a message, whether for collaboration, inquiries, or just a chat!</p>
                     </div>
                     <div className="flex flex-row items-center gap-5">
-                        <textarea className="border-gray-300 h-[50px] w-full rounded-md  border-[1px]"></textarea>
-                        <button className="px-[15px] rounded-md py-[10px] bg-gray-950 dark:bg-zinc-200 dark:text-zinc-950 text-white">Send</button>
+                        <textarea placeholder="Your message..." className="p-2 border-zinc-200 h-[50px] dark:bg-zinc-800 w-full rounded-md  border-[1px]"></textarea>
+                        <button className="px-[15px]  rounded-md py-[10px] bg-zinc-900 dark:bg-zinc-300 dark:text-zinc-950 text-white">Send</button>
                     </div>
                 </div>
 
