@@ -1,3 +1,4 @@
+"use client"
 import TransactionLayout from "../public/transaction_layout.png"
 import DexBarberHome from "../public/dexbarber-homepage.jpg"
 import TransactionPage from "../public/transaction_side.png"
@@ -7,13 +8,13 @@ import ChatLayout from "../public/chat_layout.png"
 import LayoutPage from "../public/layout_page.png"
 import PetaLayout from "../public/peta_layout.png"
 import Flowchart from "../public/flowchart.png"
-import Image from "@/node_modules/next/image"
+import Image from "next/image"
 import Workflow from "../public/workflow.png"
 import Testing from "../public/testing.png"
 import Header from "./header"
-import Link from "@/node_modules/next/link"
+import Link from "next/link"
 
-export default async function DexBarberPage() {
+export default function DexBarberPage() {
 
     return (
         <div>
@@ -86,14 +87,14 @@ export default async function DexBarberPage() {
                             <div className="flex flex-row gap-5 items-center">
                                 <div className="h-26 w-[5px] bg-gray-300 mx-auto" />
                                 <div className="flex flex-col gap-5">
-                                    <p className="font-serif font-bold text-[16px] md:text-[24px]">"The key is not to prioritize what's on your schedule, but to schedule your priorities."
+                                    <p className="font-serif font-bold text-[16px] md:text-[24px]">&quot;The key is not to prioritize what&apos;s on your schedule, but to schedule your priorities.&quot;
                                     </p>
                                     <p className={barberStyle.p}>— Stephen Covey</p>
                                 </div>
                             </div>
                         </div>
                         <div>
-                            <h4 className={`${barberStyle.h4} font-serif text-[#77A000] mb-[10px]`}>The app's visuals took longer </h4>
+                            <h4 className={`${barberStyle.h4} font-serif text-[#77A000] mb-[10px]`}>The app&apos;s visuals took longer </h4>
                             <p className={barberStyle.p}>Due to the tight deadline, we skipped formal design stages and went straight into implementation using React Native  a decision made to save time, though it came with trade-offs.
                             </p>
                         </div>
@@ -187,7 +188,7 @@ export default async function DexBarberPage() {
                             </h3>
                         </div>
                         <p className="text-sm text-slate-950/70 ">
-                            We divided the tasks based on each member's expertise: backend, mobile frontend, CMS, and API integration to move quickly and efficiently.</p>
+                            We divided the tasks based on each member&apos;s expertise: backend, mobile frontend, CMS, and API integration to move quickly and efficiently.</p>
                     </div>
                 </div>
 
@@ -270,7 +271,7 @@ export default async function DexBarberPage() {
                     <p className={`${barberStyle.p}`}>As part of the team, I was assigned to explore and implement key third-party APIs — specifically focusing on real-time chat and user location tracking. For user location tracking, several components were required, including React Native Geolocation and Cloud Firestore for real-time data storage and updates.
                         <br></br>
                         <br></br>
-                        Today, I’d like to share my experience setting up the user tracking feature. If you're looking to implement a similar solution, this guide is for you.
+                        Today, I&apos;d like to share my experience setting up the user tracking feature. If you&apos;re looking to implement a similar solution, this guide is for you.
                     </p>
                     <div>
                         <h4 className={`${barberStyle.h4} font-sans mb-[15px]`}>Why Use Firebase for User Location Tracking</h4>
@@ -307,7 +308,7 @@ export default async function DexBarberPage() {
                                 Finally, when the barber gets close enough (less than 30 meters), the app automatically navigates back — signaling that the barber has arrived.
                             </li>
                         </ul>
-                        <p className={`${barberStyle.p}`}>🔗 For a more technical guide on setting up and retrieving user location in React Native, <a href="/blog/real-time-location-tracking-in-react-native-using-expo-firebase-and-google-maps" className="text-blue-700 hover:underline">click here.</a></p>
+                        <p className={`${barberStyle.p}`}>🔗 For a more technical guide on setting up and retrieving user location in React Native, <Link href="/blog/real-time-location-tracking-in-react-native-using-expo-firebase-and-google-maps" className="text-blue-700 hover:underline">click here.</Link></p>
                     </div>
                 </div>
             </div>

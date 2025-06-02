@@ -1,13 +1,12 @@
 'use client';
 import { formattedDate } from "../hook/formatedDate";
 import React, { useEffect, useState } from "react";
-import photoRoihan from "../public/roihan.jpeg";
 import magurame from "../public/magurame.png";
 import magurameweb from "../public/magurameWeb.png";
 import dexbarber from "../public/dexbarber.png";
 import theflix from "../public/theflix.png";
-import Image from "@/node_modules/next/image";
-import Link from "@/node_modules/next/link";
+import Image from "next/image";
+import Link from "next/link";
 import { Post } from "../type/typePost";
 
 export default function HomeSection({ posts }: { posts: Post[] }) {
@@ -190,28 +189,28 @@ export default function HomeSection({ posts }: { posts: Post[] }) {
                         })
                     }
 
-<div  className="flex items-top max-w-full">
-                                    <div className="relative">
-                                        <div className="w-[9px] h-[9px] mt-[26.5px] rounded-full bg-zinc-600 dark:bg-white/90 relative">
-                                           
-                                        </div>
-                                        <div className="ml-[3px] w-[3px] bg-zinc-950/10 dark:bg-white/10 h-full">
-                                        </div>
+                    <div className="flex items-top max-w-full">
+                        <div className="relative">
+                            <div className="w-[9px] h-[9px] mt-[26.5px] rounded-full bg-zinc-600 dark:bg-white/90 relative">
 
-                                    </div>
+                            </div>
+                            <div className="ml-[3px] w-[3px] bg-zinc-950/10 dark:bg-white/10 h-full">
+                            </div>
 
-                                    <Link href={`/blog/dex-barber`} className="pl-3 group hover:bg-zinc-50  border-[1px] border-white dark:border-zinc-900 dark:hover:border-zinc-800 dark:hover:bg-zinc-800 inline hover:border-zinc-200 p-5 ml-5 mb-5 rounded-2xl">
-                                        <p className="text-sm mb-1 text-zinc-950/70 group-hover:text-zinc-950/90 dark:text-white/90 dark:group-hover:text-zinc-300  font-semibold">May 15, 2025</p>
-                                        <div className="cursor-pointer inline-block mb-2" >
-                                            <h3 className="text-zinc-800 dark:text-zinc-300 text-lg sm:text-xl cursor-pointer">
-                                                <span className="relative z-20 hover:text-zinc-800 dark:hover:text-zinc-300 hover:underline tracking-tight font-semibold">Dex Barber – A Fullstack Mobile App Created During My Hacktiv8 Bootcamp Journey</span>
-                                            </h3>
-                                        </div>
-                                        <p className="text-sm text-zinc-950/70 dark:text-zinc-400">
-                                        A mobile app that allows users to book barbers to come to their location, featuring real-time chat and live tracking</p>
-                                    </Link>
+                        </div>
 
-                                </div>
+                        <Link href={`/blog/dex-barber`} className="pl-3 group hover:bg-zinc-50  border-[1px] border-white dark:border-zinc-900 dark:hover:border-zinc-800 dark:hover:bg-zinc-800 inline hover:border-zinc-200 p-5 ml-5 mb-5 rounded-2xl">
+                            <p className="text-sm mb-1 text-zinc-950/70 group-hover:text-zinc-950/90 dark:text-white/90 dark:group-hover:text-zinc-300  font-semibold">May 15, 2025</p>
+                            <div className="cursor-pointer inline-block mb-2" >
+                                <h3 className="text-zinc-800 dark:text-zinc-300 text-lg sm:text-xl cursor-pointer">
+                                    <span className="relative z-20 hover:text-zinc-800 dark:hover:text-zinc-300 hover:underline tracking-tight font-semibold">Dex Barber – A Fullstack Mobile App Created During My Hacktiv8 Bootcamp Journey</span>
+                                </h3>
+                            </div>
+                            <p className="text-sm text-zinc-950/70 dark:text-zinc-400">
+                                A mobile app that allows users to book barbers to come to their location, featuring real-time chat and live tracking</p>
+                        </Link>
+
+                    </div>
                     <div className="pt-6 mt-6">
                         <Link className="underline cursor-pointer inline-block dark:text-zinc-300 text-base" href="/blog">See all posts</Link>
                     </div>

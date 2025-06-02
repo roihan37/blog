@@ -1,6 +1,6 @@
 "use client";
 
-import { usePathname } from "@/node_modules/next/navigation";
+import { usePathname } from "next/navigation";
 import React from "react";
 import { useDarkMode } from "../hook/isDark"; // sesuaikan path
 

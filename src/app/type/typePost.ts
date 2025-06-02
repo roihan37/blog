@@ -4,7 +4,8 @@ export interface Post {
         _type: string;
         asset: {
             [key: string]: any;
-        };
+        },
+        alt: string;
     };
     publishedAt: string;
     slug: {
@@ -12,5 +13,6 @@ export interface Post {
         current: string;
     };
     title: string;
-    description: string;
+    description: string,
+    body : []
 }

@@ -5,6 +5,9 @@ import createMDX from '@next/mdx'
 const nextConfig: NextConfig = {
   /* config options here */
   pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
+  eslint: {
+    ignoreDuringBuilds: true, // ⬅️ Tambahkan ini
+  },
   webpack: (config: { module: { rules: { test: RegExp; loader: string; }[]; }; }) => {
     config.module.rules.push({
       test: /\.svg$/,

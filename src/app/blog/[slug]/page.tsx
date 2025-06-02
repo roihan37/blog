@@ -1,12 +1,11 @@
 import { PortableTextRenderer } from "../../components/PortableTextRenderer";
 import { urlFor } from "../../../sanity/lib/image";
-import photoRoihan from "../../public/roihan.jpeg";
 import { getPost } from "../../hook/fetchPosts";
 import { formatDistanceToNow } from 'date-fns';
-import Image from "@/node_modules/next/image";
+import Image from "next/image";
 import Header from "../../components/header";
 import Footer from "../../components/footer";
-import Link from "@/node_modules/next/link";
+import Link from "next/link";
 
 export default async function PostPage({
   params,
@@ -29,7 +28,7 @@ export default async function PostPage({
         <h1 className="md:text-[42px] text-[36px] md:leading-13 leading-11 dark:text-[#D4D4D4] font-bold ">{post.title}</h1>
         <div className=" flex flex-row items-center gap-5 text-[15px] font-light">
           <Image
-                  src={photoRoihan}
+                  src={'/roihan3.png'}
                   alt="Roihan portrait"
                   width={192}
                   height={192}
@@ -43,6 +42,7 @@ export default async function PostPage({
         <hr className="mb-8 border-t border-gray-300 my-4" />
         <div className="flex flex-col items-center gap-3">
           {postImageUrl && (
+            // eslint-disable-next-line
             <img
             src={postImageUrl}
             alt={post.title}

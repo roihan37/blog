@@ -2,39 +2,25 @@
 import Link from 'next/link'
 import { PortableText } from '@portabletext/react'
 import { urlFor } from '../../sanity/lib/image'
-import { useState } from 'react';
 import CodeBlock from './CodeBlock';
+import Image from 'next/image';
+import { PortableTextMarkComponentProps } from '@portabletext/react'
+
 
 export const PortableTextRenderer = ({ value }: { value: any }) => {
-  const [copied, setCopied] = useState(false);
 
-  const handleCopy = () => {
-    navigator.clipboard.writeText(value.code).then(() => {
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-    });
-  };
-
-  const yamlCode = `
-version: '3.8'
-
-services:
-  vince:
-    image: ghcr.io/vinceanalytics/vince
-    ports:
-      - "8080:8080"
-`;
 
   return (
     <PortableText
       value={value}
       components={{
         types: {
+
           image: ({ value }) => {
             const imageUrl = urlFor(value).url()
             return (
               <div className="my-6">
-                <img
+                <Image
                   src={imageUrl}
                   alt={value.alt || 'Image'}
                   width={800}
@@ -45,18 +31,18 @@ services:
             )
           },
           code: ({ value }) => (
-            
-      <CodeBlock code={value.code} language={value.code.language} />
-    
+
+            <CodeBlock code={value.code} language={value.code.language} />
+
           ),
           horizontalRule: () => <hr
-          style={{
-            border: 'none',
-            borderTop: '1px solid #ccc',
-            margin: '3rem 0', // ✅ jarak atas dan bawah otomatis
-          }}
-        />,
-          table: ({value}) => (
+            style={{
+              border: 'none',
+              borderTop: '1px solid #ccc',
+              margin: '3rem 0', // ✅ jarak atas dan bawah otomatis
+            }}
+          />,
+          table: ({ value }) => (
             <table className="border border-gray-300 w-full text-left my-4">
               <tbody>
                 {value.rows?.map((row, rowIndex) => (
@@ -75,7 +61,8 @@ services:
             </table>
           ),
         },
-        horizontalRule: () => <hr className="my-8 border-t border-zinc-200 dark:border-zinc-700" />,
+        // eslint-disable-next-line
+
         block: {
           h1: ({ children }) => <h1 className="text-4xl dark:text-[#D4D4D4] font-bold mt-8 mb-4">{children}</h1>,
           h2: ({ children }) => <h2 className="text-3xl dark:text-[#D4D4D4] font-semibold mt-6 mb-3">{children}</h2>,
@@ -92,7 +79,7 @@ services:
         marks: {
           strong: ({ children }) => <strong className="font-bold">{children}</strong>,
           em: ({ children }) => <em className="italic">{children}</em>,
-          link: ({ value, children } : {value : any, children : any}) => {
+          link: ({ value, children }: PortableTextMarkComponentProps<any>) => {
             const target = value.href.startsWith('http') ? '_blank' : undefined
             return (
               <Link

@@ -1,8 +1,7 @@
 'use client';
-import Link from "@/node_modules/next/link";
+import Link from "next/link";
 import React from "react";
-import photoRoihan from "../public/roihan.jpeg"
-import { Icon } from './icon';
+import { Icon } from '../../components/icon';
 
 
 export default function Footer(): React.JSX.Element {
@@ -39,7 +38,7 @@ export default function Footer(): React.JSX.Element {
             </div>
         </div>
 
-        
+
     )
 
 }

@@ -2,7 +2,6 @@
 
 import type { Metadata } from "next";
 import { Public_Sans, Noto_Serif } from "next/font/google";
-import Header from "./components/header";
 import ThemeProviderClient from "./components/ThemeProviderClient";
 import "./globals.css";
 

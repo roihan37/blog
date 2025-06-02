@@ -9,18 +9,20 @@
     "esModuleInterop": true,
     "noImplicitAny": false,
     "module": "esnext",
-    "moduleResolution": "bundler",
+    "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+    "baseUrl": ".", // ⬅️ Tambahkan ini
     "plugins": [
       {
         "name": "next"
       }
     ],
     "paths": {
-      "@/*": ["*"],
+      // eslint-disable-next-line
+      "@/*": ["src/*"]
       
     }
   },

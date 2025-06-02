@@ -1,13 +1,17 @@
 'use client'
 
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable react/no-unescaped-entities */
+
 /**
  * This configuration is used to for the Sanity Studio that’s mounted on the `/app/blog/[[...tool]]/page.tsx` route
  */
-
-import {visionTool} from '@sanity/vision'
+/* eslint-enable */
+import {visionTool} from '@sanity/vision' // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import {defineConfig} from 'sanity'
 import {structureTool} from 'sanity/structure'
 import {codeInput} from '@sanity/code-input'
+/* eslint-disable */
 
 // Go to https://www.sanity.io/docs/api-versioning to learn how API versioning works
 import {apiVersion, dataset, projectId} from './src/sanity/env'

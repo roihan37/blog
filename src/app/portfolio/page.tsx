@@ -2,11 +2,11 @@
 "use client";
 import magurameweb from "../public/magurameWeb.png";
 import dexbarber from "../public/dexbarber.png";
-import Image from "@/node_modules/next/image";
+import Image from "next/image";
 import magurame from "../public/magurame.png";
 import theflix from "../public/theflix.png";
-import Link from "@/node_modules/next/link";
-import { Icon } from "../components/icon";
+import Link from "next/link";
+import { Icon } from "../../components/icon";
 import { motion } from "framer-motion";
 import { skillsData } from "../lib/data";
 import React from "react";
@@ -32,33 +32,33 @@ export default function IndexPage() {
     return (
         <>
             <div className="bg-white shadow-md dark:bg-zinc-900 dark:border-1 border-zinc-800 ">
-                    <div className="flex justify-end sm:mx-8 mx-[20px] lg:mx-[85px] mb-[20px] ">
+                <div className="flex justify-end sm:mx-8 mx-[20px] lg:mx-[85px] mb-[20px] ">
                     <Link href={'/'} className="  mt-[20px] fixed flex flex-row bg-black dark:text-black dark:bg-zinc-200 dark:hover:bg-zinc-700 text-white py-2 px-4 gap-3 rounded-full ">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
                         </svg>
 
-                        
+
                     </Link>
-                    </div>
+                </div>
                 <div className="sm:px-8 px-[20px] lg:px-[85px]  py-[87px]   ">
                     <div className="flex lg:flex-row flex-col gap-5 xl:gap-[129px]">
                         <div>
                             <div className="font-bold text-[35px] sm:text-[40px] leading-10 sm:leading-12 dark:text-zinc-100">
-                                <h1>I’m Roihan Salsabila, a problem-solver based in Indonesia</h1>
+                                <h1>I&apos;m Roihan Salsabila, a problem-solver based in Indonesia</h1>
                             </div>
                             <div className="mt-8 opacity-75 dark:text-zinc-100">
                                 Software Engineer from Indonesia specializing in full-stack JavaScript development using <span className="font-bold">React, Next.js, Node.js, and TypeScript</span>. I started learning JavaScript on my own and enhanced my skills through an intensive Hacktiv8 bootcamp.
                                 <br></br> <br></br>I enjoy building scalable web applications with clean, maintainable code and have experience working with <span className="font-bold">REST APIs, GraphQL</span>, and databases like <span className="font-bold">PostgreSQL and MongoDB</span>. I’m eager to grow as a developer and contribute to impactful projects.
                             </div>
-                            <a href={'/CV_Roihan Salsabila_V0.3.pdf'} className="mt-8 flex flex-row bg-black dark:bg-zinc-800 dark:hover:bg-zinc-700 text-white p-3 gap-3 rounded-full w-45">
+                            <Link href={'/CV_Roihan Salsabila_V0.3.pdf'} className="mt-8 flex flex-row bg-black dark:bg-zinc-800 dark:hover:bg-zinc-700 text-white p-3 gap-3 rounded-full w-45">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
                                     <path strokeLinecap="round" strokeLinejoin="round" d="m9 12.75 3 3m0 0 3-3m-3 3v-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                                 </svg>
                                 <p>
                                     Download CV
                                 </p>
-                            </a>
+                            </Link>
                         </div>
                         <div>
                             <Image src={'/roihan3.png'} loading={'lazy'} width={500} height={500} alt={"roihan"} className="md:w-[400px]  lg:w-[300px] lg:h-[300px] xl:w-[400px] xl:h-[400px] w-full max-w-[400px] aspect-square" />
@@ -376,9 +376,9 @@ export default function IndexPage() {
                     </div>
                     <div className="mt-3 opacity-75 ">
                         Please contact me directly at{" "}
-                        <a className="underline" href="mailto:example@gmail.com">
+                        <Link className="underline" href="pro.roihan@gmail.com">
                             example@gmail.com
-                        </a>{" "}
+                        </Link>{" "}
                         or through this form.
                     </div>
 

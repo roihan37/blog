@@ -1,9 +1,8 @@
 'use client';
-import Link from "@/node_modules/next/link";
+import Link from "next/link";
 import Image from "next/image";
 import { useDarkMode } from "../hook/isDark";
-import photoRoihan from "../public/roihan.jpeg";
-import { Icon } from './icon';
+import { Icon } from '../../components/icon';
 
 export default function Intro(): React.JSX.Element {
 
@@ -27,7 +26,7 @@ export default function Intro(): React.JSX.Element {
             </div>
             <div className="text-[16px] lg:max-w-[600px] md:max-w-[550px] sm:max-w-[530px] max-w-[530px] mt-[10px]">
                 <p className="font-sans text-left leading-[30px] ml-[5px] opacity-75 dark:text-zinc-300">
-                    Hi, I'm Roihan 👋 I write practical tutorials (short & long) for developers who love building with Next.js, React, JavaScript, and Typescript.
+                    Hi, I&apos;m Roihan 👋 I write practical tutorials (short & long) for developers who love building with Next.js, React, JavaScript, and Typescript.
                 </p>
             </div>
             <div className="flex dark:text-zinc-400 text-zinc-500  flex-row mt-[20px] ml-[5px]  gap-[20px]">

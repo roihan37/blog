@@ -17,7 +17,7 @@ function assertValue<T>(v: T | undefined, errorMessage: string): T {
   if (v === undefined) {
     console.log(errorMessage);
     
-    throw new Error(errorMessage,"<<< error")
+    throw new Error(errorMessage)
   }
 
   return v

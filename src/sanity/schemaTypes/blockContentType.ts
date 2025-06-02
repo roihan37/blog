@@ -40,7 +40,6 @@ export const blockContentType = defineType({
       },
     }),
 
-    // ✅ Tambahkan dukungan image
     defineArrayMember({
       type: 'image',
       icon: ImageIcon,
