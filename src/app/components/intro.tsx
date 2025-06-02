@@ -12,7 +12,7 @@ export default function Intro(): React.JSX.Element {
     return (
         <div className="my-[105px] relative z-10 gap-[5px] text-zinc-800">
             <Image
-                src={photoRoihan}
+                src={'/roihan3.png'}
                 alt="Ricardo portrait"
                 width={192}
                 height={192}

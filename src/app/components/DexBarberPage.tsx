@@ -307,7 +307,7 @@ export default async function DexBarberPage() {
                                 Finally, when the barber gets close enough (less than 30 meters), the app automatically navigates back — signaling that the barber has arrived.
                             </li>
                         </ul>
-                        <p className={`${barberStyle.p}`}>🔗 For a more technical guide on setting up and retrieving user location in React Native, click here.</p>
+                        <p className={`${barberStyle.p}`}>🔗 For a more technical guide on setting up and retrieving user location in React Native, <a href="/blog/real-time-location-tracking-in-react-native-using-expo-firebase-and-google-maps" className="text-blue-700 hover:underline">click here.</a></p>
                     </div>
                 </div>
             </div>

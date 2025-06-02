@@ -33,7 +33,7 @@ export default function IndexPage() {
         <>
             <div className="bg-white shadow-md dark:bg-zinc-900 dark:border-1 border-zinc-800 ">
                     <div className="flex justify-end sm:mx-8 mx-[20px] lg:mx-[85px] mb-[20px] ">
-                    <Link href={'/'} className=" mt-[20px] fixed flex flex-row bg-black dark:bg-zinc-800 dark:hover:bg-zinc-700 text-white py-2 px-4 gap-3 rounded-full ">
+                    <Link href={'/'} className="  mt-[20px] fixed flex flex-row bg-black dark:text-black dark:bg-zinc-200 dark:hover:bg-zinc-700 text-white py-2 px-4 gap-3 rounded-full ">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
                         </svg>
@@ -42,10 +42,10 @@ export default function IndexPage() {
                     </Link>
                     </div>
                 <div className="sm:px-8 px-[20px] lg:px-[85px]  py-[87px]   ">
-                    <div className="flex lg:flex-row flex-col gap-[49px]">
+                    <div className="flex lg:flex-row flex-col gap-5 xl:gap-[129px]">
                         <div>
                             <div className="font-bold text-[35px] sm:text-[40px] leading-10 sm:leading-12 dark:text-zinc-100">
-                                <h1>I’m Roihan Salsabila, a problem-solver based in  Indonesia</h1>
+                                <h1>I’m Roihan Salsabila, a problem-solver based in Indonesia</h1>
                             </div>
                             <div className="mt-8 opacity-75 dark:text-zinc-100">
                                 Software Engineer from Indonesia specializing in full-stack JavaScript development using <span className="font-bold">React, Next.js, Node.js, and TypeScript</span>. I started learning JavaScript on my own and enhanced my skills through an intensive Hacktiv8 bootcamp.
@@ -61,7 +61,8 @@ export default function IndexPage() {
                             </a>
                         </div>
                         <div>
-                            <div className="md:w-[300px]  lg:w-[300px] lg:h-[300px] xl:w-[400px] xl:h-[400px] w-full max-w-[400px] aspect-square bg-zinc-100"></div>
+                            <Image src={'/roihan3.png'} loading={'lazy'} width={500} height={500} alt={"roihan"} className="md:w-[400px]  lg:w-[300px] lg:h-[300px] xl:w-[400px] xl:h-[400px] w-full max-w-[400px] aspect-square" />
+                            {/* <div className="md:w-[300px]  lg:w-[300px] lg:h-[300px] xl:w-[400px] xl:h-[400px] w-full max-w-[400px] aspect-square bg-zinc-100"></div> */}
                             <div className="flex flex-col gap-3 mt-5 dark:text-zinc-300">
                                 <Link href={'https://github.com/roihan37'} className="flex flex-row gap-3 items-center hover:dark:text-zinc-50">
                                     <Icon name="github" width={24} height={24} color="--c-crimson-blue-500" />
@@ -369,7 +370,7 @@ export default function IndexPage() {
                     </div>
                 </div>
 
-                <div className="sm:px-8 px-[20px] lg:px-[85px] py-[87px] dark:text-zinc-100 ">
+                <div className="sm:px-8 px-[20px] lg:px-[85px] py-[87px] dark:text-zinc-100  ">
                     <div className="font-bold text-[35px] sm:text-[40px] leading-10 sm:leading-12 ">
                         <h1>Contact Me</h1>
                     </div>
@@ -398,11 +399,11 @@ export default function IndexPage() {
                         }}
                     >
                         <form
-                            className="mt-10 flex flex-col dark:text-black"
+                            className="mt-10 flex flex-col dark:text-white"
 
                         >
                             <input
-                                className="h-14 px-4 rounded-lg border-zinc-400 border-1 dark:bg-zinc-200 dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
+                                className="h-14 px-4 rounded-lg border-zinc-400 border-1 dark:bg-zinc-800 dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
                                 name="senderEmail"
                                 type="email"
                                 required
@@ -410,7 +411,7 @@ export default function IndexPage() {
                                 placeholder="Your email"
                             />
                             <textarea
-                                className="h-52 my-3 rounded-lg border-zinc-400 border-1 p-4 dark:bg-zinc-200 dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
+                                className="h-52 my-3 rounded-lg border-zinc-400 border-1 p-4 dark:bg-zinc-800 dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
                                 name="message"
                                 placeholder="Your message"
                                 required

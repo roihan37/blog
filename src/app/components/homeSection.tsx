@@ -26,7 +26,7 @@ export default function HomeSection({ posts }: { posts: Post[] }) {
 
                     <div className="max-w-[410px] xl:max-w-full">
                         <div className="flex flex-row items-center gap-5">
-                            <div className="ml-[3px]  h-10 w-[3px] bg-slate-950/10 dark:bg-white/10 rounded-t"></div>
+                            <div className="ml-[3px]  h-10 w-[3px] bg-zinc-950/10 dark:bg-white/10 rounded-t"></div>
                             <div className="dark:text-zinc-200">
                                 <p className="opacity-75 ">I build projects to learn new things and to help others. Follow my journey build in public <br></br>
                                 </p>
@@ -154,10 +154,10 @@ export default function HomeSection({ posts }: { posts: Post[] }) {
                     <h1 className="md:text-[44px] dark:text-zinc-200 sm:text-[36px] text-[31px] font-semibold">
                         Writing
                     </h1>
-                    <div className="ml-[3px] -mb-[25px] h-8 w-[3px] bg-slate-950/10 dark:bg-white/10 rounded-t">
+                    <div className="ml-[3px] -mb-[25px] h-8 w-[3px] bg-zinc-950/10 dark:bg-white/10 rounded-t">
                     </div>
                     {
-                        posts.map((post, index) => {
+                        posts.slice(0, 11).map((post, index) => {
                             return (
                                 <div key={post._id} className="flex items-top max-w-full">
                                     <div className="relative">
@@ -169,19 +169,19 @@ export default function HomeSection({ posts }: { posts: Post[] }) {
                                                     : ''
                                             }
                                         </div>
-                                        <div className="ml-[3px] w-[3px] bg-slate-950/10 dark:bg-white/10 h-full">
+                                        <div className="ml-[3px] w-[3px] bg-zinc-950/10 dark:bg-white/10 h-full">
                                         </div>
 
                                     </div>
 
                                     <Link href={`/blog/${post.slug.current}`} className="pl-3 group hover:bg-zinc-50  border-[1px] border-white dark:border-zinc-900 dark:hover:border-zinc-800 dark:hover:bg-zinc-800 inline hover:border-zinc-200 p-5 ml-5 mb-5 rounded-2xl">
-                                        <p className="text-sm mb-1 text-slate-950/70 group-hover:text-slate-950/90 dark:text-white/90 dark:group-hover:text-slate-300  font-semibold">{formattedDate(post.publishedAt ?? "")}</p>
+                                        <p className="text-sm mb-1 text-zinc-950/70 group-hover:text-zinc-950/90 dark:text-white/90 dark:group-hover:text-zinc-300  font-semibold">{formattedDate(post.publishedAt ?? "")}</p>
                                         <div className="cursor-pointer inline-block mb-2" >
-                                            <h3 className="text-slate-800 dark:text-slate-300 text-lg sm:text-xl cursor-pointer">
-                                                <span className="relative z-20 hover:text-slate-800 dark:hover:text-slate-300 hover:underline tracking-tight font-semibold">{post.title}</span>
+                                            <h3 className="text-zinc-800 dark:text-zinc-300 text-lg sm:text-xl cursor-pointer">
+                                                <span className="relative z-20 hover:text-zinc-800 dark:hover:text-zinc-300 hover:underline tracking-tight font-semibold">{post.title}</span>
                                             </h3>
                                         </div>
-                                        <p className="text-sm text-slate-950/70 dark:text-slate-400">
+                                        <p className="text-sm text-zinc-950/70 dark:text-zinc-400">
                                             {post.description}</p>
                                     </Link>
 
@@ -190,9 +190,30 @@ export default function HomeSection({ posts }: { posts: Post[] }) {
                         })
                     }
 
+<div  className="flex items-top max-w-full">
+                                    <div className="relative">
+                                        <div className="w-[9px] h-[9px] mt-[26.5px] rounded-full bg-zinc-600 dark:bg-white/90 relative">
+                                           
+                                        </div>
+                                        <div className="ml-[3px] w-[3px] bg-zinc-950/10 dark:bg-white/10 h-full">
+                                        </div>
 
+                                    </div>
+
+                                    <Link href={`/blog/dex-barber`} className="pl-3 group hover:bg-zinc-50  border-[1px] border-white dark:border-zinc-900 dark:hover:border-zinc-800 dark:hover:bg-zinc-800 inline hover:border-zinc-200 p-5 ml-5 mb-5 rounded-2xl">
+                                        <p className="text-sm mb-1 text-zinc-950/70 group-hover:text-zinc-950/90 dark:text-white/90 dark:group-hover:text-zinc-300  font-semibold">May 15, 2025</p>
+                                        <div className="cursor-pointer inline-block mb-2" >
+                                            <h3 className="text-zinc-800 dark:text-zinc-300 text-lg sm:text-xl cursor-pointer">
+                                                <span className="relative z-20 hover:text-zinc-800 dark:hover:text-zinc-300 hover:underline tracking-tight font-semibold">Dex Barber – A Fullstack Mobile App Created During My Hacktiv8 Bootcamp Journey</span>
+                                            </h3>
+                                        </div>
+                                        <p className="text-sm text-zinc-950/70 dark:text-zinc-400">
+                                        A mobile app that allows users to book barbers to come to their location, featuring real-time chat and live tracking</p>
+                                    </Link>
+
+                                </div>
                     <div className="pt-6 mt-6">
-                        <Link className="underline cursor-pointer inline-block dark:text-slate-300 text-base" href="/blog">See all posts</Link>
+                        <Link className="underline cursor-pointer inline-block dark:text-zinc-300 text-base" href="/blog">See all posts</Link>
                     </div>
 
                 </div>

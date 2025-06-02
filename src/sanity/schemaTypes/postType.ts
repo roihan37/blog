@@ -51,20 +51,6 @@ export const postType = defineType({
       type: 'datetime',
     }),
     defineField({
-      type: 'code',
-      name: 'myCodeField',
-      title: 'My code field',
-      options: {
-        language: 'javascript',
-        languageAlternatives: [
-          {title: 'Javascript', value: 'javascript'},
-          {title: 'HTML', value: 'html'},
-          {title: 'CSS', value: 'css'},
-        ],
-        withFilename: true,
-      },
-    }),
-    defineField({
       name: 'body',
       type: 'blockContent',
     }),

@@ -15,6 +15,7 @@ export const blockContentType = defineType({
         {title: 'H3', value: 'h3'},
         {title: 'H4', value: 'h4'},
         {title: 'Quote', value: 'blockquote'},
+       
       ],
       lists: [{title: 'Bullet', value: 'bullet'}],
       marks: {
@@ -53,7 +54,6 @@ export const blockContentType = defineType({
       ]
     }),
 
-    // ✅ Tambahkan dukungan code block
     defineArrayMember({
       type: 'code',
       options: {
@@ -67,6 +67,28 @@ export const blockContentType = defineType({
           {title: 'Bash', value: 'bash'},
         ],
       }
-    })
+    }),
+    defineArrayMember({ type: 'table' }),
+    defineArrayMember({
+      type: 'object',
+      name: 'horizontalRule',
+      title: 'Divider',
+      fields: [
+        {
+          name: 'dummy',
+          type: 'string',
+          title: 'Dummy Field',
+          hidden: true,  // supaya gak muncul di editor
+          readOnly: true,
+          initialValue: 'divider',
+        }
+      ],
+      preview: {
+        prepare() {
+          return { title: 'Divider' }
+        }
+      }
+    }),
+    
   ],
 })

@@ -26,6 +26,9 @@ const fontSerif = Noto_Serif({
 export const metadata: Metadata = {
   title: "Roihan Salsabila",
   description: "Roihan is a Software Engineer and Fullstack Developer",
+  icons: {
+    icon: '/favicon-redbg-circle.ico',
+  },
 };
 
 export default function RootLayout({
