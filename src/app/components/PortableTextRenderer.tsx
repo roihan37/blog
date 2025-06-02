@@ -43,14 +43,14 @@ export const PortableTextRenderer = ({ value }: { value: any }) => {
             }}
           />,
           table: ({ value }) => (
-            <table className="border border-gray-300 w-full text-left my-4">
+            <table className="border dark:text-[#D4D4D4] border-gray-300 w-full text-left my-4">
               <tbody>
                 {value.rows?.map((row, rowIndex) => (
                   <tr key={rowIndex}>
                     {row.cells.map((cell, cellIndex) => (
                       <td
                         key={cellIndex}
-                        className="border border-gray-300 px-2 py-1"
+                        className="border dark:text-[#D4D4D4] border-gray-300 px-2 py-1"
                       >
                         {cell}
                       </td>
