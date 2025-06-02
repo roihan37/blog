@@ -1,1 +1,1 @@
-export type IconsType = 'github' | 'instagram' | 'linkedin' | "twitter"; 
+export type IconsType = 'github' | 'instagram' | 'linkedin' | "twitter" | "mail"; 

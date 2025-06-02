@@ -23,10 +23,8 @@ export default function ThemeProviderClient({ children }: { children: React.Reac
   else if(isDexBarberRoute){
     bgClass = ''
   }
-  else if(isBlogSlugRoute){
-    console.log('masuk isBlogSlugRoute');
-    
-    bgClass = 'bg-[#191919]'
+  else if(isBlogSlugRoute){    
+    bgClass = 'dark:bg-[#191919] bg-[#FFFFFF]'
   } else{
     bgClass = `${isDark ? "bg-black" : "bg-zinc-100"} xl:px-[165px] md:px-15 lg:px-[80px]  sm:px-8 relative`
   }

@@ -11,15 +11,16 @@ import Image from "@/node_modules/next/image"
 import Workflow from "../public/workflow.png"
 import Testing from "../public/testing.png"
 import Header from "./header"
+import Link from "@/node_modules/next/link"
 
 export default async function DexBarberPage() {
 
     return (
         <div>
-            <div className="bg-[#1A1A1A] px-[300px] pb-[115px]">
+            <div className={`bg-[#1A1A1A] ${barberStyle.px} pb-[115px]`}>
                 <Header />
-                <h1 className="text-[#FFFFFF] pt-[50px] font-serif text-[48px] font-bold ">DEX BARBER – A Fullstack Mobile App Created During My Hacktiv8 Bootcamp Journey</h1>
-                <div className="grid grid-cols-2 gap-[90px] mt-[55px]">
+                <h1 className="text-[#FFFFFF] pt-[50px] font-serif text-[24px] md:text-[48px] font-bold ">DEX BARBER – A Fullstack Mobile App Created During My Hacktiv8 Bootcamp Journey</h1>
+                <div className="grid grid-cols-2 gap-x-9 gap-y-10 md:gap-[70px] lg:gap-[90px] mt-[55px]">
                     <div>
                         <h4 className={`${barberStyle.h4} font-serif text-[#E6FEA1]`}>Role</h4>
                         <p className={`${barberStyle.p} mt-[15px] text-[#FFFFFF]`}>Fullstack Developer Implemented Real-Time Chat and User Tracking</p>
@@ -33,23 +34,23 @@ export default async function DexBarberPage() {
                         <p className={`${barberStyle.p} mt-[15px] text-[#FFFFFF]`}>A mobile app that allows users to book barbers to come to their location, featuring real-time chat and live tracking</p>
                     </div>
                     <div>
-                        <div className={`bg-metallic max-w-[200px] rounded-full  px-[15px] py-[7px] flex gap-[10px] justify-center items-center`}>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+                        <Link href={`https://github.com/BarberDelivery`} className={`group bg-metallic max-w-[150px] rounded-full  px-[15px] py-[7px] flex gap-[10px] justify-center items-center`}>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6 group-hover:animate-spin">
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" />
                             </svg>
                             <p className="text-5 ">github.com</p>
-                        </div>
-                        <p className={`${barberStyle.p} text-[#FFFFFF] mt-[15px]`}>The UI/UX still needs improvement, but we successfully implemented real-time chat and live tracking.</p>
+                        </Link>
+                        <p className={`${barberStyle.p} text-[#FFFFFF] mt-[38px] sm:mt-[10px]`}>The UI/UX still needs improvement, but we successfully implemented real-time chat and live tracking.</p>
                     </div>
                 </div>
             </div>
 
-            <div className="bg-white px-[300px] py-[115px]">
-                <div className="flex flex-col items-center gap-[25px]">
+            <div className={`bg-white ${barberStyle.px} py-[115px]`}>
+                <div className="flex flex-col  items-center gap-[25px]">
                     <h3 className={`${barberStyle.h3} text-[#8CBB03]`}>PROJECT BRIEF</h3>
                     <h2 className={`${barberStyle.h2}`}>The idea came from a personal frustration wanting to get a haircut, but feeling too lazy to wait in line or leave the house.</h2>
-                    <div className="flex flex-row mt-[25px] gap-[110px]">
-                        <div className={`${barberStyle.p} max-w-[500px]`}>
+                    <div className="flex flex-col sm:flex-row mt-[25px] gap-[110px] xl:gap-[110px] sm:gap-5 md:gap-5">
+                        <div className={`${barberStyle.p} md:max-w-[370px] sm:max-w-[350px] lg:max-w-[500px]`}>
 
                             <p >Getting a haircut should be simple—but for many men, it’s not. The hassle of going out, waiting in line, and finding a skilled barber can make them delay it for days, even weeks.
                                 <br /><br />
@@ -64,14 +65,13 @@ export default async function DexBarberPage() {
                             </ul>
                         </div>
                         <div>
-
-                            <Image alt="dexbarber home page" src={DexBarberHome} className="" />
+                            <Image alt="dexbarber home page" src={DexBarberHome} className="w-[281px]" />
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div className="bg-[#FCFFF5] px-[300px] pt-[115px] ">
+            <div className={`bg-[#FCFFF5] ${barberStyle.px} pt-[115px]`}>
                 <div>
                     <div className="flex flex-col items-center gap-[15px] mb-[75px]">
                         <h3 className={`${barberStyle.h3} text-[#8CBB03]`}>CHALLENGES</h3>
@@ -86,7 +86,7 @@ export default async function DexBarberPage() {
                             <div className="flex flex-row gap-5 items-center">
                                 <div className="h-26 w-[5px] bg-gray-300 mx-auto" />
                                 <div className="flex flex-col gap-5">
-                                    <p className="font-serif font-bold text-[24px]">"The key is not to prioritize what's on your schedule, but to schedule your priorities."
+                                    <p className="font-serif font-bold text-[16px] md:text-[24px]">"The key is not to prioritize what's on your schedule, but to schedule your priorities."
                                     </p>
                                     <p className={barberStyle.p}>— Stephen Covey</p>
                                 </div>
@@ -108,13 +108,13 @@ export default async function DexBarberPage() {
                 </div>
             </div>
 
-            <div className="bg-white px-[300px] py-[115px]">
+            <div className={`bg-white ${barberStyle.px} py-[115px]`}>
                 <div>
-                    <div className="flex flex-col items-center gap-[15px] mb-[75px]">
+                    <div className="flex flex-col items-center gap-[15px] mb-[55px]">
                         <h3 className={`${barberStyle.h3} text-[#8CBB03]`}>SOLUTION</h3>
                         <h2 className={barberStyle.h2}>How We Tackled It</h2>
                     </div>
-                    <div className="flex flex-row gap-[130px]">
+                    <div className="grid md:grid-cols-2 grid-cols-1 gap-12  md:gap-[90px] lg:gap-[130px]">
                         <div className="w-max-[335px]">
                             <h4 className={`${barberStyle.h4} font-serif text-[#77A000] mb-[15px] `}>Strategic Team Division</h4>
                             <p className={`${barberStyle.p} `}>To manage our limited time, we divided tasks based on expertise backend, mobile app (React Native), frontend CMS, and API integration. This allowed us to work in parallel and stay efficient.</p>
@@ -127,7 +127,7 @@ export default async function DexBarberPage() {
                 </div>
             </div>
 
-            <div className="bg-[#1A1A1A] px-[300px] py-[115px]">
+            <div className={`bg-[#1A1A1A] ${barberStyle.px} py-[115px]`}>
                 <div className="flex flex-col items-center gap-[15px] mb-[50px]">
                     <h3 className={`${barberStyle.h3} text-[#E6FEA1]`}>CHALLENGES</h3>
                     <h2 className={`${barberStyle.h2} text-white`}>Time Was Our Biggest Enemy</h2>
@@ -136,80 +136,80 @@ export default async function DexBarberPage() {
                 <p className="text-[#E6FEA1] text-[15px]">*System Components meaning: Applications, APIs, and external services that form the core structure of the system</p>
             </div>
 
-            <div className="px-[300px] py-[115px]">
+            <div className={`${barberStyle.px} py-[115px]`}>
                 <div className="flex flex-col items-center gap-[15px] mb-[50px]">
                     <h3 className={`${barberStyle.h3} text-[#8CBB03]`}>PROJECT TIMELINE & PROCESS</h3>
                     <h2 className={`${barberStyle.h2} text-black`}>We went through several processes to ensure we are solving the right problem and not wasting resources and time.</h2>
                 </div>
 
                 {/* LIST */}
-                <div className="ml-[3px] -mb-[25px] h-8 w-[3px] bg-slate-950/10 dark:bg-white/10 rounded-t">
+                <div className="ml-[3px] -mb-[25px] h-8 w-[3px] bg-slate-950/10 rounded-t">
                 </div>
                 <div className="flex items-top max-w-full">
                     <div className="relative">
-                        <div className="w-[9px] h-[9px] mt-[19px] rounded-full bg-gray-600 dark:bg-white/90 relative">
+                        <div className="w-[9px] h-[9px] mt-[19px] rounded-full bg-gray-600  relative">
 
 
                         </div>
-                        <div className="ml-[3px] w-[3px] bg-slate-950/10 dark:bg-white/10 h-full">
+                        <div className="ml-[3px] w-[3px] bg-slate-950/10 h-full">
                         </div>
 
                     </div>
 
                     <div className="pl-3 group  p-3 ml-5  rounded-2xl">
-                        <p className="text-sm mb-1 text-slate-950/70 group-hover:text-slate-950/90 dark:text-white/90 dark:group-hover:text-slate-300  font-semibold">February 28, 2023</p>
+                        <p className="text-sm mb-1 text-slate-950/70 group-hover:text-slate-950/90   font-semibold">February 28, 2023</p>
                         <div className=" inline-block mb-2" >
-                            <h3 className="text-slate-800 dark:text-slate-300 text-lg sm:text-xl ">
-                                <span className="relative z-20 hover:text-slate-800 dark:hover:text-slate-300  tracking-tight font-semibold">Brainstorming idea, making mockup and scheme diagram</span>
+                            <h3 className="text-slate-800  text-lg sm:text-xl ">
+                                <span className="relative z-20 hover:text-slate-800   tracking-tight font-semibold">Brainstorming idea, making mockup and scheme diagram</span>
                             </h3>
                         </div>
-                        <p className="text-sm text-slate-950/70 dark:text-slate-400">
+                        <p className="text-sm text-slate-950/70 ">
                             We start by identifying the problem and sketching out a model. Creating diagrams before coding begins.</p>
                     </div>
                 </div>
 
                 <div className="flex items-top max-w-full">
                     <div className="relative">
-                        <div className="w-[9px] h-[9px] mt-[19px] rounded-full bg-gray-600 dark:bg-white/90 relative">
+                        <div className="w-[9px] h-[9px] mt-[19px] rounded-full bg-gray-600  relative">
 
 
                         </div>
-                        <div className="ml-[3px] w-[3px] bg-slate-950/10 dark:bg-white/10 h-full">
+                        <div className="ml-[3px] w-[3px] bg-slate-950/10 h-full">
                         </div>
 
                     </div>
 
                     <div className="pl-3 group  p-3 ml-5  rounded-2xl">
-                        <p className="text-sm mb-1 text-slate-950/70 group-hover:text-slate-950/90 dark:text-white/90 dark:group-hover:text-slate-300  font-semibold">March 1, 2023</p>
+                        <p className="text-sm mb-1 text-slate-950/70 group-hover:text-slate-950/90   font-semibold">March 1, 2023</p>
                         <div className=" inline-block mb-2" >
-                            <h3 className="text-slate-800 dark:text-slate-300 text-lg sm:text-xl ">
-                                <span className="relative z-20 hover:text-slate-800 dark:hover:text-slate-300  tracking-tight font-semibold">Sprinting Backend Setup and Started Layouting</span>
+                            <h3 className="text-slate-800  text-lg sm:text-xl ">
+                                <span className="relative z-20 hover:text-slate-800   tracking-tight font-semibold">Sprinting Backend Setup and Started Layouting</span>
                             </h3>
                         </div>
-                        <p className="text-sm text-slate-950/70 dark:text-slate-400">
+                        <p className="text-sm text-slate-950/70 ">
                             We divided the tasks based on each member's expertise: backend, mobile frontend, CMS, and API integration to move quickly and efficiently.</p>
                     </div>
                 </div>
 
                 <div className="flex items-top max-w-full">
                     <div className="relative">
-                        <div className="w-[9px] h-[9px] mt-[19px] rounded-full bg-gray-600 dark:bg-white/90 relative">
+                        <div className="w-[9px] h-[9px] mt-[19px] rounded-full bg-gray-600  relative">
 
 
                         </div>
-                        <div className="ml-[3px] w-[3px] bg-slate-950/10 dark:bg-white/10 h-full">
+                        <div className="ml-[3px] w-[3px] bg-slate-950/10 h-full">
                         </div>
 
                     </div>
 
                     <div className="pl-3 group  p-3 ml-5  rounded-2xl">
-                        <p className="text-sm mb-1 text-slate-950/70 group-hover:text-slate-950/90 dark:text-white/90 dark:group-hover:text-slate-300  font-semibold">March 4, 2023</p>
+                        <p className="text-sm mb-1 text-slate-950/70 group-hover:text-slate-950/90   font-semibold">March 4, 2023</p>
                         <div className=" inline-block mb-2" >
-                            <h3 className="text-slate-800 dark:text-slate-300 text-lg sm:text-xl ">
-                                <span className="relative z-20 hover:text-slate-800 dark:hover:text-slate-300  tracking-tight font-semibold">Exploring Third Party API</span>
+                            <h3 className="text-slate-800  text-lg sm:text-xl ">
+                                <span className="relative z-20 hover:text-slate-800   tracking-tight font-semibold">Exploring Third Party API</span>
                             </h3>
                         </div>
-                        <p className="text-sm text-slate-950/70 dark:text-slate-400">
+                        <p className="text-sm text-slate-950/70 ">
                             We explored the APIs for key features in the existing documentation, features used for real-time chat, map tracking, payments (Xendit), and image uploads (Cloudinary).</p>
                     </div>
 
@@ -217,51 +217,51 @@ export default async function DexBarberPage() {
 
                 <div className="flex items-top max-w-full">
                     <div className="relative">
-                        <div className="w-[9px] h-[9px] mt-[19px] rounded-full bg-gray-600 dark:bg-white/90 relative">
+                        <div className="w-[9px] h-[9px] mt-[19px] rounded-full bg-gray-600  relative">
 
 
                         </div>
-                        <div className="ml-[3px] w-[3px] bg-slate-950/10 dark:bg-white/10 h-full">
+                        <div className="ml-[3px] w-[3px] bg-slate-950/10 h-full">
                         </div>
 
                     </div>
                     <div className="pl-3 group  p-3 ml-5  rounded-2xl">
-                        <p className="text-sm mb-1 text-slate-950/70 group-hover:text-slate-950/90 dark:text-white/90 dark:group-hover:text-slate-300  font-semibold">March 6, 2023</p>
+                        <p className="text-sm mb-1 text-slate-950/70 group-hover:text-slate-950/90   font-semibold">March 6, 2023</p>
                         <div className=" inline-block mb-2" >
-                            <h3 className="text-slate-800 dark:text-slate-300 text-lg sm:text-xl ">
-                                <span className="relative z-20 hover:text-slate-800 dark:hover:text-slate-300  tracking-tight font-semibold">Wiring Code for Backend and Frontend</span>
+                            <h3 className="text-slate-800  text-lg sm:text-xl ">
+                                <span className="relative z-20 hover:text-slate-800   tracking-tight font-semibold">Wiring Code for Backend and Frontend</span>
                             </h3>
                         </div>
-                        <p className="text-sm text-slate-950/70 dark:text-slate-400">
+                        <p className="text-sm text-slate-950/70 ">
                             All parts were wired together syncing APIs, backend logic, and frontend components into one system.</p>
                     </div>
                 </div>
 
                 <div className="flex items-top max-w-full">
                     <div className="relative">
-                        <div className="w-[9px] h-[9px] mt-[19px] rounded-full bg-gray-600 dark:bg-white/90 relative">
+                        <div className="w-[9px] h-[9px] mt-[19px] rounded-full bg-gray-600  relative">
 
 
                         </div>
-                        <div className="ml-[3px] w-[3px] bg-slate-950/10 dark:bg-white/10 h-full">
+                        <div className="ml-[3px] w-[3px] bg-slate-950/10 h-full">
                         </div>
 
                     </div>
                     <div className="pl-3 group  p-3 ml-5  rounded-2xl">
-                        <p className="text-sm mb-1 text-slate-950/70 group-hover:text-slate-950/90 dark:text-white/90 dark:group-hover:text-slate-300  font-semibold">March 8, 2023</p>
+                        <p className="text-sm mb-1 text-slate-950/70 group-hover:text-slate-950/90   font-semibold">March 8, 2023</p>
                         <div className=" inline-block mb-2" >
-                            <h3 className="text-slate-800 dark:text-slate-300 text-lg sm:text-xl ">
-                                <span className="relative z-20 hover:text-slate-800 dark:hover:text-slate-300  tracking-tight font-semibold">Debugging Code</span>
+                            <h3 className="text-slate-800  text-lg sm:text-xl ">
+                                <span className="relative z-20 hover:text-slate-800   tracking-tight font-semibold">Debugging Code</span>
                             </h3>
                         </div>
-                        <p className="text-sm text-slate-950/70 dark:text-slate-400">
+                        <p className="text-sm text-slate-950/70 ">
                             We fixed bugs, ran unit tests, and ensured the core features ran smoothly before final deployment.</p>
                     </div>
                 </div>
 
             </div>
 
-            <div className="px-[300px] py-[115px] bg-[#EFF3F6]">
+            <div className={`${barberStyle.px} py-[115px] bg-[#EFF3F6]`}>
                 <div className="flex flex-col items-center gap-[15px] mb-[50px]">
                     <h3 className={`${barberStyle.h3} text-[#8CBB03]`}>MY HANDLE</h3>
                     <h2 className={`${barberStyle.h2} text-black`}>User Tracking Experience</h2>
@@ -312,13 +312,13 @@ export default async function DexBarberPage() {
                 </div>
             </div>
 
-            <div className="px-[300px] py-[115px] bg-[#1A1A1A]">
+            <div className={`${barberStyle.px} py-[115px] bg-[#1A1A1A]`}>
                 <div className="flex flex-col items-center gap-[15px] mb-[50px]">
                     <h3 className={`${barberStyle.h3} text-[#E6FEA1]`}>PROJECT RESULT</h3>
                     <h2 className={`${barberStyle.h2} text-white`}>With a tight deadline, we prioritized core features — and this is what we delivered.</h2>
                 </div>
                 <div >
-                    <div className="flex flex-row gap-[25px] ">
+                    <div className="flex flex-row gap-2 md:gap-[25px] ">
                         <Image alt="dexbarber peta page" src={PetaLayout} className="" />
                         <Image alt="dexbarber layout page" src={LayoutPage} className="" />
                         <Image alt="dexbarber transaction page" src={TransactionLayout} className="" />
@@ -338,7 +338,7 @@ export default async function DexBarberPage() {
                 </div>
             </div>
 
-            <div className="px-[300px] py-[115px] bg-[#EFF3F6]">
+            <div className={`${barberStyle.px} py-[115px] bg-[#EFF3F6]`}>
                 <div className="flex flex-col">
                     <h3 className={`${barberStyle.h3} text-[#8CBB03] text-center`}>LESSONS LEARNED</h3>
                     <div>
@@ -352,7 +352,7 @@ export default async function DexBarberPage() {
                 </div>
             </div>
 
-            <div className="px-[300px] py-[115px] bg-[#1A1A1A]">
+            <div className={`${barberStyle.px} py-[115px] bg-[#1A1A1A]`}>
                 <div className="flex flex-col items-center gap-[15px] mb-[50px]">
                     <h3 className={`${barberStyle.h3} text-[#E6FEA1]`}>THANKS FOR READING!</h3>
                     <h2 className={`${barberStyle.h2} text-white`}>Check out my other projects:</h2>

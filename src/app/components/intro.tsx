@@ -18,9 +18,9 @@ export default function Intro(): React.JSX.Element {
                 height={192}
                 quality={95}
                 priority={true}
-                className="h-[95px] w-[95px] rounded-full object-cover border-[0.35rem] bg-metallic shadow-xl"
+                className={`h-[95px] w-[95px] rounded-full object-cover border-[0.35rem] ${isDark ? 'bg-metallic' : ''}  shadow-xl`}
             />
-            <div className="md:text-[60px] sm:text-[45px] text-[37px] md:max-w-[628px] sm:w-full ">
+            <div className="md:text-[60px] sm:text-[45px] text-[35px] md:max-w-[628px] sm:w-full ">
                 <p className={`font-semibold ${isDark ? "text-gradient-soft" : "text-zinc-900"} font-sans md:leading-[70px] sm:leading-[50px] leading-11 mt-[15px]`}>
                     Software engineer<br></br>and tech enthusiast.
                 </p>

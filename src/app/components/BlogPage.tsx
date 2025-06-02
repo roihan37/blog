@@ -15,7 +15,7 @@ export default function BlogPage({ posts }: { posts: Post[] }) {
       
 
     return (
-        <div className="xl:px-[170px] lg:px-[100px] sm:px-8 px-[10px] bg-white dark:bg-zinc-950 dark:border-1 border-zinc-800 shadow-md ">
+        <div className="xl:px-[170px] lg:px-[100px] sm:px-8 px-[20px] bg-white dark:bg-zinc-950 dark:border-1 border-zinc-800 shadow-md ">
             <Header />
             <div className="my-[50px] relative z-10 gap-[5px] text-zinc-800">
 
