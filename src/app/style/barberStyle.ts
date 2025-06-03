@@ -3,5 +3,6 @@ export const barberStyle = {
      h4 : `text-[20px] md:text-[24px] font-bold`,
      h3 : `text-[20px] md:text-[24px] font-sans font-bold`,
      h2 : "text-[24px] md:text-[39px] leading-8 md:leading-13 font-bold text-center font-serif",
-     px : "xl:px-[300px] lg:px-[100px] sm:px-8 px-[20px]"
+     px : "xl:px-[300px] lg:px-[100px] sm:px-8 px-[20px]",
+     py : "py-[50px] sm:py-[115px]"
 }

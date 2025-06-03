@@ -90,7 +90,7 @@ export default function IndexPage() {
                             Here are some of the web and mobile applications I’ve built, each focused on solving problems and delivering value.
                         </div>
                     </div>
-                    <div className="grid lg:grid-cols-2 grid-cols-1 dark:text-zinc-200 gap-[25px] mt-13">
+                    <div className="grid md:grid-cols-2 md:gap-1 grid-cols-1 dark:text-zinc-200 gap-[25px] mt-13">
                         {/* Cards */}
                         <div className="text-black text-[15px] flex flex-col max-w-[455px] dark:bg-zinc-900 dark:hover:bg-zinc-800 dark:text-zinc-100 bg-zinc-100 p-5 gap-[10px]">
                             <Image
@@ -294,7 +294,7 @@ export default function IndexPage() {
 
                             </div>
 
-                            <div className="pl-3 group hover:bg-zinc-50 dark:hover:bg-zinc-800 border-[1px] border-white dark:border-zinc-950 dark:hover:border-zinc-800 inline hover:border-zinc-200 p-5 ml-5 mb-5 rounded-2xl">
+                            <div className="pl-3 group hover:bg-zinc-50 dark:hover:bg-zinc-800 border-[1px] border-white dark:border-zinc-900 dark:hover:border-zinc-800 inline hover:border-zinc-200 p-5 ml-5 mb-5 rounded-2xl">
                                 <p className="text-sm mb-1 text-zinc-950/70 group-hover:text-zinc-950/90 dark:text-white/90 dark:group-hover:text-zinc-300  font-semibold">November - March 2022</p>
                                 <div className="cursor-pointer inline-block mb-2" >
                                     <h3 className="text-zinc-800 dark:text-zinc-100 text-lg sm:text-xl cursor-pointer">
@@ -320,7 +320,7 @@ export default function IndexPage() {
 
                             </div>
 
-                            <div className="pl-3 group hover:bg-zinc-50 dark:hover:bg-zinc-800 border-[1px] border-white dark:border-zinc-950 dark:hover:border-zinc-800 inline hover:border-zinc-200 p-5 ml-5 mb-5 rounded-2xl">
+                            <div className="pl-3 group hover:bg-zinc-50 dark:hover:bg-zinc-800 border-[1px] border-white dark:border-zinc-900 dark:hover:border-zinc-800 inline hover:border-zinc-200 p-5 ml-5 mb-5 rounded-2xl">
                                 <p className="text-sm mb-1 text-zinc-950/70 group-hover:text-zinc-950/90 dark:text-white/90 dark:group-hover:text-zinc-300  font-semibold">April - Agust 2023</p>
                                 <div className="cursor-pointer inline-block mb-2" >
                                     <h3 className="text-zinc-800 dark:text-zinc-100 text-lg sm:text-xl cursor-pointer">
@@ -349,7 +349,7 @@ export default function IndexPage() {
 
                             </div>
 
-                            <div className="pl-3 group hover:bg-zinc-50 dark:hover:bg-zinc-800 border-[1px] border-white dark:border-zinc-950 dark:hover:border-zinc-800 inline hover:border-zinc-200 p-5 ml-5 mb-5 rounded-2xl">
+                            <div className="pl-3 group hover:bg-zinc-50 dark:hover:bg-zinc-800 border-[1px] border-white dark:border-zinc-900 dark:hover:border-zinc-800 inline hover:border-zinc-200 p-5 ml-5 mb-5 rounded-2xl">
                                 <p className="text-sm mb-1 text-zinc-950/70 group-hover:text-zinc-950/90 dark:text-white/90 dark:group-hover:text-zinc-300  font-semibold">June - October 2023</p>
                                 <div className="cursor-pointer inline-block mb-2" >
                                     <h3 className="text-zinc-800 dark:text-zinc-100 text-lg sm:text-xl cursor-pointer">

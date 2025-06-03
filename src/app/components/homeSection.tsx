@@ -2,18 +2,13 @@
 import { formattedDate } from "../hook/formatedDate";
 import React, { useEffect, useState } from "react";
 import magurame from "../public/magurame.png";
-import magurameweb from "../public/magurameWeb.png";
 import dexbarber from "../public/dexbarber.png";
-import theflix from "../public/theflix.png";
 import Image from "next/image";
 import Link from "next/link";
 import { Post } from "../type/typePost";
 
 export default function HomeSection({ posts }: { posts: Post[] }) {
-    const [displayAllProjects, setDisplayAllProjects] = useState(false)
-    useEffect(() => {
-        console.log("Display all projects:", displayAllProjects);
-    }, [displayAllProjects]);
+    
     return (
         <>
             <div className="text-[16px]  text-zinc-800">
@@ -29,15 +24,13 @@ export default function HomeSection({ posts }: { posts: Post[] }) {
                             <div className="dark:text-zinc-200">
                                 <p className="opacity-75 ">I build projects to learn new things and to help others. Follow my journey build in public <br></br>
                                 </p>
-                                <button className="cursor-pointer hover:underline" onClick={() => {
-                                    displayAllProjects ? setDisplayAllProjects(false) : setDisplayAllProjects(true)
-                                }}>
-                                    👉 See more here.
-                                </button>
+                                <Link href={'/portfolio'} className="cursor-pointer hover:underline" >
+                                  <p>👉 See more here.</p>  
+                                </Link>
                             </div>
                         </div>
                     </div>
-                    <div className="grid lg:grid-cols-2 grid-cols-1  gap-[5px] ">
+                    <div className="grid md:grid-cols-2 grid-cols-1  gap-[5px] ">
                         {/* Cards */}
                         <div className=" text-black dark:text-zinc-300 text-[15px]  flex flex-col w-full rounded-[10px] hover:bg-zinc-100 dark:hover:bg-zinc-800 p-5 gap-[10px]">
                             <Image
@@ -90,61 +83,8 @@ export default function HomeSection({ posts }: { posts: Post[] }) {
 
                             </div>
                         </div>
-                        {
-                            displayAllProjects
-                                ? <>
-                                    <div className="text-black dark:text-zinc-300 text-[15px] flex flex-col w-full rounded-[10px] hover:bg-zinc-100 dark:hover:bg-zinc-800 p-5 gap-[10px]">
-                                        <Image
-                                            src={magurameweb}
-                                            alt="Ricardo portrait"
-                                            width={150}
-                                            height={150}
-                                            quality={95}
-                                            priority={true}
-                                            className="h-[45px] w-[45px] rounded-full object-cover border-[0.40rem] shadow-md"
-                                        />
-                                        <h1 className="font-semibold">Magurameudon Clone Website and Admin Side</h1>
-                                        <p className="font-light">A Web clone Restaurant Magurameudon and admin side.</p>
-                                        <div>
-                                            <Link href={`https://github.com/roihan37/Magurameudon-Web-Clone`} className="cursor-pointer hover:underline flex gap-2 flex-row items-center rounded-full opacity-55 text-sm">
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-4">
-                                                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" />
-                                                </svg>
-                                                <p>View on GitHub</p>
-                                            </Link>
-
-                                        </div>
-
-                                    </div>
-
-                                    <div className="text-black dark:text-zinc-300 text-[15px] flex flex-col w-full rounded-[10px] hover:bg-zinc-100 dark:hover:bg-zinc-800 p-5 gap-[10px]">
-                                        <Image
-                                            src={theflix}
-                                            alt="Ricardo portrait"
-                                            width={150}
-                                            height={150}
-                                            quality={95}
-                                            priority={true}
-                                            className="h-[45px] w-[45px] rounded-full object-cover border-[0.40rem] shadow-md"
-                                        />
-                                        <h1 className="font-semibold">The Flix</h1>
-                                        <p className="font-light">A web movies list and IMDB.</p>
-                                        <div>
-                                            <Link href={`https://github.com/roihan37/p2-iproject-client`} className="cursor-pointer hover:underline flex gap-2 flex-row items-center rounded-full opacity-55 text-sm">
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-4">
-                                                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" />
-                                                </svg>
-                                                <p>View on GitHub</p>
-                                            </Link>
-
-                                        </div>
-
-                                    </div>
-                                </>
-
-                                : ''
-
-                        }
+                       
+                               
 
                     </div>
                 </div>

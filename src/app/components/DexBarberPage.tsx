@@ -18,7 +18,7 @@ export default function DexBarberPage() {
 
     return (
         <div>
-            <div className={`bg-[#1A1A1A] ${barberStyle.px} pb-[115px]`}>
+            <div className={`bg-[#1A1A1A] ${barberStyle.px} pb-[50px] sm:pb-[115px]`}>
                 <Header />
                 <h1 className="text-[#FFFFFF] pt-[50px] font-serif text-[24px] md:text-[48px] font-bold ">DEX BARBER – A Fullstack Mobile App Created During My Hacktiv8 Bootcamp Journey</h1>
                 <div className="grid grid-cols-2 gap-x-9 gap-y-10 md:gap-[70px] lg:gap-[90px] mt-[55px]">
@@ -46,12 +46,12 @@ export default function DexBarberPage() {
                 </div>
             </div>
 
-            <div className={`bg-white ${barberStyle.px} py-[115px]`}>
-                <div className="flex flex-col  items-center gap-[25px]">
+            <div className={`bg-white ${barberStyle.px} ${barberStyle.py}`}>
+                <div className="flex flex-col items-center gap-[25px]">
                     <h3 className={`${barberStyle.h3} text-[#8CBB03]`}>PROJECT BRIEF</h3>
                     <h2 className={`${barberStyle.h2}`}>The idea came from a personal frustration wanting to get a haircut, but feeling too lazy to wait in line or leave the house.</h2>
-                    <div className="flex flex-col sm:flex-row mt-[25px] gap-[110px] xl:gap-[110px] sm:gap-5 md:gap-5">
-                        <div className={`${barberStyle.p} md:max-w-[370px] sm:max-w-[350px] lg:max-w-[500px]`}>
+                    <div className="flex flex-col sm:flex-row mt-[25px] gap-[110px] xl:gap-[110px] sm:gap-5 md:justify-between">
+                        <div className={`${barberStyle.p} md:max-w-[500px] sm:max-w-[350px] lg:max-w-[500px]`}>
 
                             <p >Getting a haircut should be simple—but for many men, it’s not. The hassle of going out, waiting in line, and finding a skilled barber can make them delay it for days, even weeks.
                                 <br /><br />
@@ -65,14 +65,14 @@ export default function DexBarberPage() {
                                 <li><span className="font-bold italic">Standardization</span> – Offering a cleaner, more elegant grooming experience through consistent service quality.</li>
                             </ul>
                         </div>
-                        <div>
+                        <div className="flex justify-center items-center w-full">
                             <Image alt="dexbarber home page" src={DexBarberHome} className="w-[281px]" />
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div className={`bg-[#FCFFF5] ${barberStyle.px} pt-[115px]`}>
+            <div className={`bg-[#FCFFF5] ${barberStyle.px} pt-[50px] sm:pt-[115px]`}>
                 <div>
                     <div className="flex flex-col items-center gap-[15px] mb-[75px]">
                         <h3 className={`${barberStyle.h3} text-[#8CBB03]`}>CHALLENGES</h3>
@@ -109,7 +109,8 @@ export default function DexBarberPage() {
                 </div>
             </div>
 
-            <div className={`bg-white ${barberStyle.px} py-[115px]`}>
+
+            <div className={`bg-white ${barberStyle.px} ${barberStyle.py}`}>
                 <div>
                     <div className="flex flex-col items-center gap-[15px] mb-[55px]">
                         <h3 className={`${barberStyle.h3} text-[#8CBB03]`}>SOLUTION</h3>
@@ -128,16 +129,18 @@ export default function DexBarberPage() {
                 </div>
             </div>
 
-            <div className={`bg-[#1A1A1A] ${barberStyle.px} py-[115px]`}>
+{/* WORKFLOW */}
+            <div className={`bg-[#1A1A1A] ${barberStyle.px} ${barberStyle.py} flex flex-col items-center`}>
                 <div className="flex flex-col items-center gap-[15px] mb-[50px]">
-                    <h3 className={`${barberStyle.h3} text-[#E6FEA1]`}>CHALLENGES</h3>
-                    <h2 className={`${barberStyle.h2} text-white`}>Time Was Our Biggest Enemy</h2>
+                    <h3 className={`${barberStyle.h3} text-[#E6FEA1]`}>WORKFLOW</h3>
+                    <h2 className={`${barberStyle.h2} text-white max-w-[600px]`}>Understanding the Workflow Behind Dex Barber</h2>
                 </div>
                 <Image alt="dexbarber workflow page" src={Workflow} className="mb-[50px]" />
                 <p className="text-[#E6FEA1] text-[15px]">*System Components meaning: Applications, APIs, and external services that form the core structure of the system</p>
             </div>
 
-            <div className={`${barberStyle.px} py-[115px]`}>
+
+            <div className={`${barberStyle.px} ${barberStyle.py}`}>
                 <div className="flex flex-col items-center gap-[15px] mb-[50px]">
                     <h3 className={`${barberStyle.h3} text-[#8CBB03]`}>PROJECT TIMELINE & PROCESS</h3>
                     <h2 className={`${barberStyle.h2} text-black`}>We went through several processes to ensure we are solving the right problem and not wasting resources and time.</h2>
@@ -262,7 +265,7 @@ export default function DexBarberPage() {
 
             </div>
 
-            <div className={`${barberStyle.px} py-[115px] bg-[#EFF3F6]`}>
+            <div className={`${barberStyle.px} ${barberStyle.py} bg-[#EFF3F6]`}>
                 <div className="flex flex-col items-center gap-[15px] mb-[50px]">
                     <h3 className={`${barberStyle.h3} text-[#8CBB03]`}>MY HANDLE</h3>
                     <h2 className={`${barberStyle.h2} text-black`}>User Tracking Experience</h2>
@@ -313,17 +316,20 @@ export default function DexBarberPage() {
                 </div>
             </div>
 
-            <div className={`${barberStyle.px} py-[115px] bg-[#1A1A1A]`}>
+{/* PROJECT RESULT */}
+            <div className={`${barberStyle.px} ${barberStyle.py} bg-[#1A1A1A]`}>
                 <div className="flex flex-col items-center gap-[15px] mb-[50px]">
                     <h3 className={`${barberStyle.h3} text-[#E6FEA1]`}>PROJECT RESULT</h3>
                     <h2 className={`${barberStyle.h2} text-white`}>With a tight deadline, we prioritized core features — and this is what we delivered.</h2>
                 </div>
                 <div >
-                    <div className="flex flex-row gap-2 md:gap-[25px] ">
-                        <Image alt="dexbarber peta page" src={PetaLayout} className="" />
-                        <Image alt="dexbarber layout page" src={LayoutPage} className="" />
-                        <Image alt="dexbarber transaction page" src={TransactionLayout} className="" />
-                        <Image alt="dexbarber chat page" src={ChatLayout} className="" />
+                    <div className="overflow-x-auto">
+                        <div className="flex flex-row gap-2 md:gap-[25px] ">
+                            <Image alt="dexbarber peta page" src={PetaLayout} className="w-full  h-auto" />
+                            <Image alt="dexbarber layout page" src={LayoutPage} className="w-full  h-auto" />
+                            <Image alt="dexbarber transaction page" src={TransactionLayout} className="w-full  h-auto" />
+                            <Image alt="dexbarber chat page" src={ChatLayout} className="w-full  h-auto" />
+                        </div>
                     </div>
                     <h4 className={`${barberStyle.h4} font-serif text-[#E6FEA1] mt-[25px]`}>Not Perfect, But Everything Works</h4>
                     <p className={`${barberStyle.p} text-white mt-[15px]`}>I know the UI/UX is far from perfect, but all core features are up and running smoothly. These include user location tracking, real-time chat, upload photo and payment integration. It may not be perfect visually, but it works — and that’s a solid foundation.</p>
@@ -339,7 +345,7 @@ export default function DexBarberPage() {
                 </div>
             </div>
 
-            <div className={`${barberStyle.px} py-[115px] bg-[#EFF3F6]`}>
+            <div className={`${barberStyle.px} ${barberStyle.py} bg-[#EFF3F6]`}>
                 <div className="flex flex-col">
                     <h3 className={`${barberStyle.h3} text-[#8CBB03] text-center`}>LESSONS LEARNED</h3>
                     <div>
@@ -353,7 +359,7 @@ export default function DexBarberPage() {
                 </div>
             </div>
 
-            <div className={`${barberStyle.px} py-[115px] bg-[#1A1A1A]`}>
+            <div className={`${barberStyle.px} ${barberStyle.py} bg-[#1A1A1A]`}>
                 <div className="flex flex-col items-center gap-[15px] mb-[50px]">
                     <h3 className={`${barberStyle.h3} text-[#E6FEA1]`}>THANKS FOR READING!</h3>
                     <h2 className={`${barberStyle.h2} text-white`}>Check out my other projects:</h2>

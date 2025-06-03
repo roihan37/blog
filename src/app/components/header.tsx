@@ -22,7 +22,7 @@ export default function Header(): React.JSX.Element {
                     <h1 className="font-semibold text-[20px] dark:text-zinc-300">Let&apos;s learn</h1>
                     <p className=" font-light dark:text-zinc-400">with Roihan Salsabila</p>
                 </Link>
-                <div className="flex justify-end gap-2 sm:gap-[25px]  items-center">
+                <div className="flex justify-end gap-5 sm:gap-[25px]  items-center">
                     {
                         isBlogRoute || isDexBarberRoute ? <>
                             <Link href={'/blog'}>
