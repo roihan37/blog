@@ -66,7 +66,7 @@ export default function DexBarberPage() {
                             </ul>
                         </div>
                         <div className="flex justify-center items-center w-full">
-                            <Image alt="dexbarber home page" src={DexBarberHome} className="w-[281px]" />
+                            <Image alt="dexbarber home page" src={DexBarberHome} loading={'lazy'} className="w-[281px]" />
                         </div>
                     </div>
                 </div>
@@ -101,8 +101,8 @@ export default function DexBarberPage() {
                         <div className="flex items-center justify-center mt-[85px]">
 
                             <div className="flex flex-row gap-2">
-                                <Image alt="dexbarber landing page" src={LandingPage} className="" />
-                                <Image alt="dexbarber transaction page" src={TransactionPage} className="" />
+                                <Image alt="dexbarber landing page" src={LandingPage} loading={'lazy'} className="" />
+                                <Image alt="dexbarber transaction page" src={TransactionPage} loading={'lazy'} className="" />
                             </div>
                         </div>
                     </div>
@@ -135,7 +135,7 @@ export default function DexBarberPage() {
                     <h3 className={`${barberStyle.h3} text-[#E6FEA1]`}>WORKFLOW</h3>
                     <h2 className={`${barberStyle.h2} text-white max-w-[600px]`}>Understanding the Workflow Behind Dex Barber</h2>
                 </div>
-                <Image alt="dexbarber workflow page" src={Workflow} className="mb-[50px]" />
+                <Image alt="dexbarber workflow page" src={Workflow} loading={'lazy'} className="mb-[50px]" />
                 <p className="text-[#E6FEA1] text-[15px]">*System Components meaning: Applications, APIs, and external services that form the core structure of the system</p>
             </div>
 
@@ -293,7 +293,7 @@ export default function DexBarberPage() {
                     </div>
                     <div>
                         <h4 className={`${barberStyle.h4} font-sans mb-[20px]`}>Flowchart: What Happens Behind the Scenes</h4>
-                        <Image alt="dexbarber Flowchart page" src={Flowchart} className="mb-[20px]" />
+                        <Image alt="dexbarber Flowchart page" src={Flowchart} loading={'lazy'} className="mb-[20px]" />
                         <ul className={`list-decimal pl-6 space-y-2 text-base text-gray-800 mb-[25px] ${barberStyle.p}`}>
                             <li>
                                 First, the app asks for location permissions.
@@ -325,17 +325,17 @@ export default function DexBarberPage() {
                 <div >
                     <div className="overflow-x-auto">
                         <div className="flex flex-row gap-2 md:gap-[25px] ">
-                            <Image alt="dexbarber peta page" src={PetaLayout} className="w-full  h-auto" />
-                            <Image alt="dexbarber layout page" src={LayoutPage} className="w-full  h-auto" />
-                            <Image alt="dexbarber transaction page" src={TransactionLayout} className="w-full  h-auto" />
-                            <Image alt="dexbarber chat page" src={ChatLayout} className="w-full  h-auto" />
+                            <Image alt="dexbarber peta page" src={PetaLayout} loading={'lazy'} className="w-full  h-auto" />
+                            <Image alt="dexbarber layout page" src={LayoutPage} loading={'lazy'} className="w-full  h-auto" />
+                            <Image alt="dexbarber transaction page" src={TransactionLayout} loading={'lazy'} className="w-full  h-auto" />
+                            <Image alt="dexbarber chat page" src={ChatLayout} loading={'lazy'} className="w-full  h-auto" />
                         </div>
                     </div>
                     <h4 className={`${barberStyle.h4} font-serif text-[#E6FEA1] mt-[25px]`}>Not Perfect, But Everything Works</h4>
                     <p className={`${barberStyle.p} text-white mt-[15px]`}>I know the UI/UX is far from perfect, but all core features are up and running smoothly. These include user location tracking, real-time chat, upload photo and payment integration. It may not be perfect visually, but it works — and that’s a solid foundation.</p>
                 </div>
                 <div className="mt-[50px]">
-                    <Image alt="dexbarber testing" src={Testing} className="" />
+                    <Image alt="dexbarber testing" src={Testing} loading={'lazy'} className="" />
                     <h4 className={`${barberStyle.h4} font-serif text-[#E6FEA1] mt-[25px]`}>Solid Test Coverage: 91.1%</h4>
                     <p className={`${barberStyle.p} text-white mt-[15px]`}>With a total of 113 test cases and a 91.1% test coverage, we ensured that most critical paths in our application are well-tested</p>
                 </div>

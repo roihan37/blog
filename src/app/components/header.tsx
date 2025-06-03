@@ -1,6 +1,5 @@
 'use client';
 import React from "react";
-import { motion } from "framer-motion"
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { useDarkMode } from "../hook/isDark";
@@ -14,9 +13,8 @@ export default function Header(): React.JSX.Element {
     const isDark = useDarkMode()
     return (
         <header>
-            <motion.div className=" text-gray-800  relative z-10 text-[13px] pt-[25px] flex justify-between"
-                initial={{ y: -100, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
+            <div className=" text-gray-800  relative z-10 text-[13px] pt-[25px] flex justify-between"
+                
             >
                 <Link href={'/'} className={`flex flex-col justify-start ${isDexBarberRoute ? `text-zinc-300` : ``}`}>
                     <h1 className="font-semibold text-[20px] dark:text-zinc-300">Let&apos;s learn</h1>
@@ -50,7 +48,7 @@ export default function Header(): React.JSX.Element {
 
 
                 </div>
-            </motion.div>
+            </div>
         </header>
     )
 

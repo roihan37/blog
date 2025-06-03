@@ -83,6 +83,7 @@ export default function BlogPage({ posts }: { posts: Post[] }) {
                         src={'/dex-barber.png'}
                         alt="Dex Barber"
                         className="w-full h-[185px] object-cover"
+                        loading={'lazy'}
                     />
                     {/* headline */}
                     <div className="flex flex-col p-[12px] gap-2 flex-1 dark:text-zinc-100 overflow-hidden">

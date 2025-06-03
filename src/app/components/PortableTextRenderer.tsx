@@ -26,6 +26,7 @@ export const PortableTextRenderer = ({ value }: { value: any }) => {
                   width={800}
                   height={500}
                   className="rounded-lg"
+                  loading={'lazy'}
                 />
               </div>
             )

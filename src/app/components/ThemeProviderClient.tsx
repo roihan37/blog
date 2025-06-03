@@ -18,7 +18,7 @@ export default function ThemeProviderClient({ children }: { children: React.Reac
 
   if(isBlogRoute){
     bgClass = "bg-zinc-100 dark:bg-black xl:px-[165px] md:px-15 lg:px-[80px] sm:px-8 relative"
-    console.log('masuk isBlogRoute');
+    
   }
   else if(isDexBarberRoute){
     bgClass = ''
@@ -29,7 +29,7 @@ export default function ThemeProviderClient({ children }: { children: React.Reac
     bgClass = `${isDark ? "bg-black" : "bg-zinc-100"} xl:px-[165px] md:px-15 lg:px-[80px]  sm:px-8 relative`
   }
   
-  console.log(bgClass);
+  
   
   return (
     <div className={`${bgClass}`}>

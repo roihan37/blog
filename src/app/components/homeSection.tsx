@@ -41,6 +41,7 @@ export default function HomeSection({ posts }: { posts: Post[] }) {
                                 quality={95}
                                 priority={true}
                                 className="h-[45px] w-[45px] rounded-full object-cover border-[0.40rem] shadow-md"
+                                
                             />
                             <h1 className="font-semibold">Barber Dex</h1>
                             <p className="font-light">An on-demand mobile app for home haircut services</p>

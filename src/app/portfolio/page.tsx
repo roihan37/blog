@@ -61,7 +61,7 @@ export default function IndexPage() {
                             </Link>
                         </div>
                         <div>
-                            <Image src={'/roihan3.png'} loading={'lazy'} width={500} height={500} alt={"roihan"} className="md:w-[400px]  lg:w-[300px] lg:h-[300px] xl:w-[400px] xl:h-[400px] w-full max-w-[400px] aspect-square" />
+                            <Image src={'/roihan3.png'}  width={500} height={500} alt={"roihan"} className="md:w-[400px]  lg:w-[300px] lg:h-[300px] xl:w-[400px] xl:h-[400px] w-full max-w-[400px] aspect-square" />
                             {/* <div className="md:w-[300px]  lg:w-[300px] lg:h-[300px] xl:w-[400px] xl:h-[400px] w-full max-w-[400px] aspect-square bg-zinc-100"></div> */}
                             <div className="flex flex-col gap-3 mt-5 dark:text-zinc-300">
                                 <Link href={'https://github.com/roihan37'} className="flex flex-row gap-3 items-center hover:dark:text-zinc-50">
@@ -101,6 +101,7 @@ export default function IndexPage() {
                                 quality={95}
                                 priority={true}
                                 className="h-[45px] w-[45px] rounded-full object-cover border-[0.40rem] shadow-md"
+                                
                             />
                             <h1 className="font-semibold">Barber Dex</h1>
                             <p className="font-light">An on-demand mobile app for home haircut services</p>
@@ -131,6 +132,7 @@ export default function IndexPage() {
                                 quality={95}
                                 priority={true}
                                 className="h-[45px] w-[45px] rounded-full object-cover border-[0.40rem] shadow-md"
+                                
                             />
                             <h1 className="font-semibold">Magurameudon App Mobile Clone</h1>
                             <p className="font-light">A mobile application to display Restaurant Magurameudon</p>
@@ -155,6 +157,7 @@ export default function IndexPage() {
                                 quality={95}
                                 priority={true}
                                 className="h-[45px] w-[45px] rounded-full object-cover border-[0.40rem] shadow-md"
+                                
                             />
                             <h1 className="font-semibold">Magurameudon Clone Website and Admin Side</h1>
                             <p className="font-light">A Web clone Restaurant Magurameudon and admin side.</p>
@@ -180,6 +183,7 @@ export default function IndexPage() {
                                 quality={95}
                                 priority={true}
                                 className="h-[45px] w-[45px] rounded-full object-cover border-[0.40rem] shadow-md"
+                                
                             />
                             <h1 className="font-semibold">The Flix</h1>
                             <p className="font-light">A web movies list and IMDB.</p>
@@ -224,7 +228,7 @@ export default function IndexPage() {
                                         viewport={{ once: true }}
                                         custom={index}
                                     >
-                                        <Image src={skill.logo} alt={skill.name} width={24} height={24} />
+                                        <Image src={skill.logo} alt={skill.name} width={24} height={24} loading="lazy" />
                                         <span>{skill.name}</span>
                                     </motion.div>
                                 ))}
