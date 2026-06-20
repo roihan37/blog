@@ -24,7 +24,7 @@
     "framer-motion": "^12.12.1",
     "fs": "^0.0.1-security",
     "gray-matter": "^4.0.3",
-    "next": "^15.3.2",
+    "next": "15.3.8",
     "next-sanity": "^9.11.1",
     "path": "^0.12.7",
     "prismjs": "^1.30.0",
