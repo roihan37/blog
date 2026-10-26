@@ -1,6 +1,6 @@
 export default function Loading() {
   return (
-    <main className="container mx-auto min-h-screen max-w-3xl xl:px-1 px-[20px] flex flex-col gap-4">
+    <main className="article-content min-h-screen flex flex-col gap-4">
             {/* Header Skeleton */}
             <div className="mb-8 h-[60px] bg-zinc-200 dark:bg-zinc-800 rounded animate-pulse mt-[30px]"></div>
 
@@ -8,7 +8,7 @@ export default function Loading() {
             <div className="h-[70px] w-[80%] bg-zinc-200 dark:bg-zinc-800 rounded animate-pulse"></div>
 
             {/* Author + Date */}
-            <div className="flex flex-row items-center gap-5 mt-2">
+            <div className="flex flex-wrap items-center gap-x-3 gap-y-2 mt-2">
                 <div className="h-[32px] w-[32px] bg-zinc-300 dark:bg-zinc-700 rounded-full animate-pulse"></div>
                 <div className="h-[16px] w-[120px] bg-zinc-200 dark:bg-zinc-800 rounded animate-pulse"></div>
                 <div className="h-[16px] w-[60px] bg-zinc-200 dark:bg-zinc-800 rounded animate-pulse"></div>

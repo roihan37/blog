@@ -18,10 +18,10 @@ export default function DexBarberPage() {
 
     return (
         <div>
-            <div className={`bg-[#1A1A1A] ${barberStyle.px} pb-[50px] sm:pb-[115px]`}>
+            <div className={`bg-[#1A1A1A] ${barberStyle.px} pb-12 sm:pb-16 lg:pb-[115px]`}>
                 <Header />
                 <h1 className="text-[#FFFFFF] pt-[50px] font-serif text-[24px] md:text-[48px] font-bold ">DEX BARBER – A Fullstack Mobile App Created During My Hacktiv8 Bootcamp Journey</h1>
-                <div className="grid grid-cols-2 gap-x-9 gap-y-10 md:gap-[70px] lg:gap-[90px] mt-[55px]">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 md:gap-12 lg:gap-[90px] mt-[55px]">
                     <div>
                         <h4 className={`${barberStyle.h4} font-serif text-[#E6FEA1]`}>Role</h4>
                         <p className={`${barberStyle.p} mt-[15px] text-[#FFFFFF]`}>Fullstack Developer Implemented Real-Time Chat and User Tracking</p>
@@ -50,8 +50,8 @@ export default function DexBarberPage() {
                 <div className="flex flex-col items-center gap-[25px]">
                     <h3 className={`${barberStyle.h3} text-[#8CBB03]`}>PROJECT BRIEF</h3>
                     <h2 className={`${barberStyle.h2}`}>The idea came from a personal frustration wanting to get a haircut, but feeling too lazy to wait in line or leave the house.</h2>
-                    <div className="flex flex-col sm:flex-row mt-[25px] gap-[110px] xl:gap-[110px] sm:gap-5 md:justify-between">
-                        <div className={`${barberStyle.p} md:max-w-[500px] sm:max-w-[350px] lg:max-w-[500px]`}>
+                    <div className="grid md:grid-cols-[minmax(0,1.5fr)_minmax(0,1fr)] items-center mt-6 lg:mt-[25px] gap-8 lg:gap-[110px]">
+                        <div className={`${barberStyle.p} min-w-0`}>
 
                             <p >Getting a haircut should be simple—but for many men, it’s not. The hassle of going out, waiting in line, and finding a skilled barber can make them delay it for days, even weeks.
                                 <br /><br />
@@ -66,13 +66,13 @@ export default function DexBarberPage() {
                             </ul>
                         </div>
                         <div className="flex justify-center items-center w-full">
-                            <Image alt="dexbarber home page" src={DexBarberHome} loading={'lazy'} className="w-[281px]" />
+                            <Image alt="dexbarber home page" src={DexBarberHome} loading={'lazy'} className="w-full max-w-[281px] h-auto" />
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div className={`bg-[#FCFFF5] ${barberStyle.px} pt-[50px] sm:pt-[115px]`}>
+            <div className={`bg-[#FCFFF5] ${barberStyle.px} pt-12 sm:pt-16 lg:pt-[115px]`}>
                 <div>
                     <div className="flex flex-col items-center gap-[15px] mb-[75px]">
                         <h3 className={`${barberStyle.h3} text-[#8CBB03]`}>CHALLENGES</h3>
@@ -85,7 +85,7 @@ export default function DexBarberPage() {
                                 <br></br>Too many features quickly became overwhelming. We had to rethink our priorities and adapt fast.
                             </p>
                             <div className="flex flex-row gap-5 items-center">
-                                <div className="h-26 w-[5px] bg-gray-300 mx-auto" />
+                                <div className="shrink-0 h-26 w-[5px] bg-gray-300 mx-auto" />
                                 <div className="flex flex-col gap-5">
                                     <p className="font-serif font-bold text-[16px] md:text-[24px]">&quot;The key is not to prioritize what&apos;s on your schedule, but to schedule your priorities.&quot;
                                     </p>
@@ -100,9 +100,9 @@ export default function DexBarberPage() {
                         </div>
                         <div className="flex items-center justify-center mt-[85px]">
 
-                            <div className="flex flex-row gap-2">
-                                <Image alt="dexbarber landing page" src={LandingPage} loading={'lazy'} className="" />
-                                <Image alt="dexbarber transaction page" src={TransactionPage} loading={'lazy'} className="" />
+                            <div className="grid grid-cols-2 gap-2 min-w-0">
+                                <Image alt="dexbarber landing page" src={LandingPage} loading={'lazy'} className="w-full h-auto min-w-0" />
+                                <Image alt="dexbarber transaction page" src={TransactionPage} loading={'lazy'} className="w-full h-auto min-w-0" />
                             </div>
                         </div>
                     </div>
@@ -116,12 +116,12 @@ export default function DexBarberPage() {
                         <h3 className={`${barberStyle.h3} text-[#8CBB03]`}>SOLUTION</h3>
                         <h2 className={barberStyle.h2}>How We Tackled It</h2>
                     </div>
-                    <div className="grid md:grid-cols-2 grid-cols-1 gap-12  md:gap-[90px] lg:gap-[130px]">
-                        <div className="w-max-[335px]">
+                    <div className="grid md:grid-cols-2 grid-cols-1 gap-8 lg:gap-[130px]">
+                        <div className="min-w-0">
                             <h4 className={`${barberStyle.h4} font-serif text-[#77A000] mb-[15px] `}>Strategic Team Division</h4>
                             <p className={`${barberStyle.p} `}>To manage our limited time, we divided tasks based on expertise backend, mobile app (React Native), frontend CMS, and API integration. This allowed us to work in parallel and stay efficient.</p>
                         </div>
-                        <div className="w-max-[335px]">
+                        <div className="min-w-0">
                             <h4 className={`${barberStyle.h4} font-serif text-[#77A000] mb-[15px]`}>Using Clear Mockups</h4>
                             <p className={barberStyle.p}>We created quick sketches and mockups to align on the app’s purpose, flow, and features even without formal UI/UX design.</p>
                         </div>
@@ -149,8 +149,8 @@ export default function DexBarberPage() {
                 {/* LIST */}
                 <div className="ml-[3px] -mb-[25px] h-8 w-[3px] bg-slate-950/10 rounded-t">
                 </div>
-                <div className="flex items-top max-w-full">
-                    <div className="relative">
+                <div className="flex items-start max-w-full">
+                    <div className="relative shrink-0 self-stretch">
                         <div className="w-[9px] h-[9px] mt-[19px] rounded-full bg-gray-600  relative">
 
 
@@ -160,7 +160,7 @@ export default function DexBarberPage() {
 
                     </div>
 
-                    <div className="pl-3 group  p-3 ml-5  rounded-2xl">
+                    <div className="min-w-0 flex-1 break-words pl-3 group  p-3 ml-2 sm:ml-5  rounded-2xl">
                         <p className="text-sm mb-1 text-slate-950/70 group-hover:text-slate-950/90   font-semibold">February 28, 2023</p>
                         <div className=" inline-block mb-2" >
                             <h3 className="text-slate-800  text-lg sm:text-xl ">
@@ -172,8 +172,8 @@ export default function DexBarberPage() {
                     </div>
                 </div>
 
-                <div className="flex items-top max-w-full">
-                    <div className="relative">
+                <div className="flex items-start max-w-full">
+                    <div className="relative shrink-0 self-stretch">
                         <div className="w-[9px] h-[9px] mt-[19px] rounded-full bg-gray-600  relative">
 
 
@@ -183,7 +183,7 @@ export default function DexBarberPage() {
 
                     </div>
 
-                    <div className="pl-3 group  p-3 ml-5  rounded-2xl">
+                    <div className="min-w-0 flex-1 break-words pl-3 group  p-3 ml-2 sm:ml-5  rounded-2xl">
                         <p className="text-sm mb-1 text-slate-950/70 group-hover:text-slate-950/90   font-semibold">March 1, 2023</p>
                         <div className=" inline-block mb-2" >
                             <h3 className="text-slate-800  text-lg sm:text-xl ">
@@ -195,8 +195,8 @@ export default function DexBarberPage() {
                     </div>
                 </div>
 
-                <div className="flex items-top max-w-full">
-                    <div className="relative">
+                <div className="flex items-start max-w-full">
+                    <div className="relative shrink-0 self-stretch">
                         <div className="w-[9px] h-[9px] mt-[19px] rounded-full bg-gray-600  relative">
 
 
@@ -206,7 +206,7 @@ export default function DexBarberPage() {
 
                     </div>
 
-                    <div className="pl-3 group  p-3 ml-5  rounded-2xl">
+                    <div className="min-w-0 flex-1 break-words pl-3 group  p-3 ml-2 sm:ml-5  rounded-2xl">
                         <p className="text-sm mb-1 text-slate-950/70 group-hover:text-slate-950/90   font-semibold">March 4, 2023</p>
                         <div className=" inline-block mb-2" >
                             <h3 className="text-slate-800  text-lg sm:text-xl ">
@@ -219,8 +219,8 @@ export default function DexBarberPage() {
 
                 </div>
 
-                <div className="flex items-top max-w-full">
-                    <div className="relative">
+                <div className="flex items-start max-w-full">
+                    <div className="relative shrink-0 self-stretch">
                         <div className="w-[9px] h-[9px] mt-[19px] rounded-full bg-gray-600  relative">
 
 
@@ -229,7 +229,7 @@ export default function DexBarberPage() {
                         </div>
 
                     </div>
-                    <div className="pl-3 group  p-3 ml-5  rounded-2xl">
+                    <div className="min-w-0 flex-1 break-words pl-3 group  p-3 ml-2 sm:ml-5  rounded-2xl">
                         <p className="text-sm mb-1 text-slate-950/70 group-hover:text-slate-950/90   font-semibold">March 6, 2023</p>
                         <div className=" inline-block mb-2" >
                             <h3 className="text-slate-800  text-lg sm:text-xl ">
@@ -241,8 +241,8 @@ export default function DexBarberPage() {
                     </div>
                 </div>
 
-                <div className="flex items-top max-w-full">
-                    <div className="relative">
+                <div className="flex items-start max-w-full">
+                    <div className="relative shrink-0 self-stretch">
                         <div className="w-[9px] h-[9px] mt-[19px] rounded-full bg-gray-600  relative">
 
 
@@ -251,7 +251,7 @@ export default function DexBarberPage() {
                         </div>
 
                     </div>
-                    <div className="pl-3 group  p-3 ml-5  rounded-2xl">
+                    <div className="min-w-0 flex-1 break-words pl-3 group  p-3 ml-2 sm:ml-5  rounded-2xl">
                         <p className="text-sm mb-1 text-slate-950/70 group-hover:text-slate-950/90   font-semibold">March 8, 2023</p>
                         <div className=" inline-block mb-2" >
                             <h3 className="text-slate-800  text-lg sm:text-xl ">
@@ -323,19 +323,19 @@ export default function DexBarberPage() {
                     <h2 className={`${barberStyle.h2} text-white`}>With a tight deadline, we prioritized core features — and this is what we delivered.</h2>
                 </div>
                 <div >
-                    <div className="overflow-x-auto">
-                        <div className="flex flex-row gap-2 md:gap-[25px] ">
-                            <Image alt="dexbarber peta page" src={PetaLayout} loading={'lazy'} className="w-full  h-auto" />
-                            <Image alt="dexbarber layout page" src={LayoutPage} loading={'lazy'} className="w-full  h-auto" />
-                            <Image alt="dexbarber transaction page" src={TransactionLayout} loading={'lazy'} className="w-full  h-auto" />
-                            <Image alt="dexbarber chat page" src={ChatLayout} loading={'lazy'} className="w-full  h-auto" />
+                    <div className="overflow-x-auto overscroll-x-contain pb-4" tabIndex={0} role="region" aria-label="Dex Barber app screenshots">
+                        <div className="flex gap-4 md:grid md:grid-cols-4 md:gap-6 lg:gap-[25px]">
+                            <Image alt="dexbarber peta page" src={PetaLayout} loading={'lazy'} className="w-[min(70vw,16rem)] md:w-full shrink-0 h-auto min-w-0 self-start" />
+                            <Image alt="dexbarber layout page" src={LayoutPage} loading={'lazy'} className="w-[min(70vw,16rem)] md:w-full shrink-0 h-auto min-w-0 self-start" />
+                            <Image alt="dexbarber transaction page" src={TransactionLayout} loading={'lazy'} className="w-[min(70vw,16rem)] md:w-full shrink-0 h-auto min-w-0 self-start" />
+                            <Image alt="dexbarber chat page" src={ChatLayout} loading={'lazy'} className="w-[min(70vw,16rem)] md:w-full shrink-0 h-auto min-w-0 self-start" />
                         </div>
                     </div>
                     <h4 className={`${barberStyle.h4} font-serif text-[#E6FEA1] mt-[25px]`}>Not Perfect, But Everything Works</h4>
                     <p className={`${barberStyle.p} text-white mt-[15px]`}>I know the UI/UX is far from perfect, but all core features are up and running smoothly. These include user location tracking, real-time chat, upload photo and payment integration. It may not be perfect visually, but it works — and that’s a solid foundation.</p>
                 </div>
                 <div className="mt-[50px]">
-                    <Image alt="dexbarber testing" src={Testing} loading={'lazy'} className="" />
+                    <Image alt="dexbarber testing" src={Testing} loading={'lazy'} className="w-full h-auto min-w-0" />
                     <h4 className={`${barberStyle.h4} font-serif text-[#E6FEA1] mt-[25px]`}>Solid Test Coverage: 91.1%</h4>
                     <p className={`${barberStyle.p} text-white mt-[15px]`}>With a total of 113 test cases and a 91.1% test coverage, we ensured that most critical paths in our application are well-tested</p>
                 </div>

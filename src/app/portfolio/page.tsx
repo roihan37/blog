@@ -32,8 +32,8 @@ export default function IndexPage() {
     return (
         <>
             <div className="bg-white shadow-md dark:bg-zinc-900 dark:border-1 border-zinc-800 ">
-                <div className="flex justify-end sm:mx-8 mx-[20px] lg:mx-[85px] mb-[20px] ">
-                    <Link href={'/'} className="  mt-[20px] fixed flex flex-row bg-black dark:text-black dark:bg-zinc-200 dark:hover:bg-zinc-700 text-white py-2 px-4 gap-3 rounded-full ">
+                <div className="page-content portfolio-content flex justify-end pt-5 ">
+                    <Link href={'/'} aria-label="Back to home" className="min-h-11 items-center flex flex-row bg-black dark:text-black dark:bg-zinc-200 dark:hover:bg-zinc-700 text-white py-2 px-4 gap-3 rounded-full ">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
                         </svg>
@@ -41,8 +41,8 @@ export default function IndexPage() {
 
                     </Link>
                 </div>
-                <div className="sm:px-8 px-[20px] lg:px-[85px]  py-[87px]   ">
-                    <div className="flex lg:flex-row flex-col gap-5 xl:gap-[129px]">
+                <div className="page-content portfolio-content  py-12 sm:py-16 lg:py-[87px]   ">
+                    <div className="grid lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] gap-10 lg:gap-5 xl:gap-[129px] items-start">
                         <div>
                             <div className="font-bold text-[35px] sm:text-[40px] leading-10 sm:leading-12 dark:text-zinc-100">
                                 <h1>I&apos;m Roihan Salsabila, a problem-solver based in Indonesia</h1>
@@ -61,18 +61,18 @@ export default function IndexPage() {
                             </Link>
                         </div>
                         <div>
-                            <Image src={'/roihan3.png'}  width={500} height={500} alt={"roihan"} className="md:w-[400px]  lg:w-[300px] lg:h-[300px] xl:w-[400px] xl:h-[400px] w-full max-w-[400px] aspect-square" />
+                            <Image src={'/roihan3.png'}  width={500} height={500} alt={"roihan"} className="w-full h-auto max-w-[400px] aspect-square object-cover rounded-xl" />
                             {/* <div className="md:w-[300px]  lg:w-[300px] lg:h-[300px] xl:w-[400px] xl:h-[400px] w-full max-w-[400px] aspect-square bg-zinc-100"></div> */}
                             <div className="flex flex-col gap-3 mt-5 dark:text-zinc-300">
-                                <Link href={'https://github.com/roihan37'} className="flex flex-row gap-3 items-center hover:dark:text-zinc-50">
+                                <Link href={'https://github.com/roihan37'} className="flex min-h-11 flex-row gap-3 items-center hover:dark:text-zinc-50">
                                     <Icon name="github" width={24} height={24} color="--c-crimson-blue-500" />
                                     <p>Follow in GitHub</p>
                                 </Link>
-                                <Link href={'https://www.linkedin.com/in/roihan-salsabila/'} className="flex flex-row gap-3 items-center hover:dark:text-zinc-50">
+                                <Link href={'https://www.linkedin.com/in/roihan-salsabila/'} className="flex min-h-11 flex-row gap-3 items-center hover:dark:text-zinc-50">
                                     <Icon name="linkedin" width={24} height={24} color="--c-crimson-blue-500" />
                                     <p>Follow in Linkedin</p>
                                 </Link>
-                                <Link href={'mailto:pro.roihan@gmail.com'} className="flex flex-row gap-3 items-center hover:dark:text-zinc-50">
+                                <Link href={'mailto:pro.roihan@gmail.com'} className="flex min-h-11 flex-row gap-3 items-center hover:dark:text-zinc-50">
                                     <Icon name="mail" width={24} height={24} color="--c-crimson-blue-500" />
                                     <p>pro.roihan@gmail.com</p>
                                 </Link>
@@ -81,7 +81,7 @@ export default function IndexPage() {
                     </div>
                 </div>
 
-                <div className="sm:px-8 px-[20px] lg:px-[85px] py-[87px]  ">
+                <div className="page-content portfolio-content py-12 sm:py-16 lg:py-[87px]  ">
                     <div className="max-w-[362px]">
                         <div className="font-bold dark:text-zinc-100 text-[35px] sm:text-[40px] leading-10 sm:leading-12 ">
                             <h1>Bringing Ideas to Life Through Code</h1>
@@ -90,9 +90,9 @@ export default function IndexPage() {
                             Here are some of the web and mobile applications I’ve built, each focused on solving problems and delivering value.
                         </div>
                     </div>
-                    <div className="grid md:grid-cols-2 md:gap-1 grid-cols-1 dark:text-zinc-200 gap-[25px] mt-13">
+                    <div className="grid md:grid-cols-2 grid-cols-1 dark:text-zinc-200 gap-5 lg:gap-1 mt-13">
                         {/* Cards */}
-                        <div className="text-black text-[15px] flex flex-col max-w-[455px] dark:bg-zinc-900 dark:hover:bg-zinc-800 dark:text-zinc-100 bg-zinc-100 p-5 gap-[10px]">
+                        <div className="text-black text-[15px] flex flex-col min-w-0 w-full rounded-xl dark:bg-zinc-900 dark:hover:bg-zinc-800 dark:text-zinc-100 bg-zinc-100 p-5 gap-[10px]">
                             <Image
                                 src={dexbarber}
                                 alt="Ricardo portrait"
@@ -106,7 +106,7 @@ export default function IndexPage() {
                             <h1 className="font-semibold">Barber Dex</h1>
                             <p className="font-light">An on-demand mobile app for home haircut services</p>
                             <p className="font-light text-[12px] opacity-75">Tech Stack; React Native, React, Redux, Native Paper, Express.js, PostgreSQL, Sequelize, MongoDB, Firestore, Cloudinary, Geomap API, 3rd Party API, Stream.io</p>
-                            <div className="flex flex-row gap-5 mt-2">
+                            <div className="flex flex-wrap gap-x-5 gap-y-2 mt-2">
                                 <Link href={`https://github.com/BarberDelivery`} className="cursor-pointer hover:underline flex gap-2 flex-row items-center rounded-full opacity-55 text-sm">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-4">
                                         <path strokeLinecap="round" strokeLinejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" />
@@ -123,7 +123,7 @@ export default function IndexPage() {
                             </div>
                         </div>
 
-                        <div className="text-black text-[15px] flex flex-col max-w-[455px] dark:bg-zinc-900 dark:hover:bg-zinc-800 dark:text-zinc-100 bg-zinc-100 p-5 gap-[10px]">
+                        <div className="text-black text-[15px] flex flex-col min-w-0 w-full rounded-xl dark:bg-zinc-900 dark:hover:bg-zinc-800 dark:text-zinc-100 bg-zinc-100 p-5 gap-[10px]">
                             <Image
                                 src={magurame}
                                 alt="Ricardo portrait"
@@ -148,7 +148,7 @@ export default function IndexPage() {
                             </div>
                         </div>
 
-                        <div className="text-black text-[15px] flex flex-col max-w-[455px] dark:bg-zinc-900 dark:hover:bg-zinc-800 dark:text-zinc-100 bg-zinc-100 p-5 gap-[10px]">
+                        <div className="text-black text-[15px] flex flex-col min-w-0 w-full rounded-xl dark:bg-zinc-900 dark:hover:bg-zinc-800 dark:text-zinc-100 bg-zinc-100 p-5 gap-[10px]">
                             <Image
                                 src={magurameweb}
                                 alt="Ricardo portrait"
@@ -174,7 +174,7 @@ export default function IndexPage() {
 
                         </div>
 
-                        <div className="text-black text-[15px] flex flex-col max-w-[455px] dark:bg-zinc-900 dark:hover:bg-zinc-800 dark:text-zinc-100 bg-zinc-100 p-5 gap-[10px]">
+                        <div className="text-black text-[15px] flex flex-col min-w-0 w-full rounded-xl dark:bg-zinc-900 dark:hover:bg-zinc-800 dark:text-zinc-100 bg-zinc-100 p-5 gap-[10px]">
                             <Image
                                 src={theflix}
                                 alt="Ricardo portrait"
@@ -206,7 +206,7 @@ export default function IndexPage() {
 
                 </div>
 
-                <div className="sm:px-8 px-[20px] lg:px-[85px] py-[87px] dark:text-zinc-100 ">
+                <div className="page-content portfolio-content py-12 sm:py-16 lg:py-[87px] dark:text-zinc-100 ">
                     <div className="font-bold text-[35px] sm:text-[40px] leading-10 sm:leading-12 ">
                         <h1>Tech Stack & Capabilities</h1>
                     </div>
@@ -217,10 +217,10 @@ export default function IndexPage() {
                         <div className="grid grid-row-3 gap-3 text-lg text-zinc-800 mt-10 dark:text-zinc-100">
                             <h2 className="font-semibold ">Language</h2>
                             {/* Language */}
-                            <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-2">
+                            <div className="skills-grid">
                                 {skillsData.language.map((skill, index) => (
                                     <motion.div
-                                        className="bg-zinc-100 dark:bg-zinc-800 borderBlack rounded-sm px-5 py-3 flex items-center gap-3 dark:text-white/80"
+                                        className="bg-zinc-100 dark:bg-zinc-800 rounded-lg min-w-0 px-3 lg:px-5 py-3 flex items-center gap-2 lg:gap-3 text-sm sm:text-base dark:text-white/80"
                                         key={index}
                                         variants={fadeInAnimationVariants}
                                         initial="initial"
@@ -228,18 +228,18 @@ export default function IndexPage() {
                                         viewport={{ once: true }}
                                         custom={index}
                                     >
-                                        <Image src={skill.logo} alt={skill.name} width={24} height={24} loading="lazy" />
-                                        <span>{skill.name}</span>
+                                        <Image src={skill.logo} alt={skill.name} width={24} height={24} className="shrink-0" loading="lazy" />
+                                        <span className="min-w-0 break-words">{skill.name}</span>
                                     </motion.div>
                                 ))}
                             </div>
 
                             {/* Front End */}
                             <h2 className="font-semibold mt-5">Front End</h2>
-                            <div className="grid sm:grid-cols-3 grid-cols-2 lg:grid-cols-4 md:grid-cols-3  gap-2">
+                            <div className="skills-grid">
                                 {skillsData.frontend.map((skill, index) => (
                                     <motion.div
-                                        className="bg-zinc-100 dark:bg-zinc-800 borderBlack rounded-sm px-5 py-3 flex items-center gap-3 dark:text-white/80"
+                                        className="bg-zinc-100 dark:bg-zinc-800 rounded-lg min-w-0 px-3 lg:px-5 py-3 flex items-center gap-2 lg:gap-3 text-sm sm:text-base dark:text-white/80"
                                         key={index}
                                         variants={fadeInAnimationVariants}
                                         initial="initial"
@@ -247,18 +247,18 @@ export default function IndexPage() {
                                         viewport={{ once: true }}
                                         custom={index}
                                     >
-                                        <Image src={skill.logo} alt={skill.name} width={24} height={24} loading="lazy" />
-                                        <span>{skill.name}</span>
+                                        <Image src={skill.logo} alt={skill.name} width={24} height={24} className="shrink-0" loading="lazy" />
+                                        <span className="min-w-0 break-words">{skill.name}</span>
                                     </motion.div>
                                 ))}
                             </div>
 
                             {/* Back End */}
                             <h2 className="font-semibold mt-5">Back End</h2>
-                            <div className="grid sm:grid-cols-3 grid-cols-2 lg:grid-cols-4 md:grid-cols-3  gap-2">
+                            <div className="skills-grid">
                                 {skillsData.backend.map((skill, index) => (
                                     <motion.div
-                                        className="bg-zinc-100 dark:bg-zinc-800 borderBlack rounded-sm px-5 py-3 flex items-center gap-3 dark:text-white/80 "
+                                        className="bg-zinc-100 dark:bg-zinc-800 rounded-lg min-w-0 px-3 lg:px-5 py-3 flex items-center gap-2 lg:gap-3 text-sm sm:text-base dark:text-white/80 "
                                         key={index}
                                         variants={fadeInAnimationVariants}
                                         initial="initial"
@@ -266,8 +266,8 @@ export default function IndexPage() {
                                         viewport={{ once: true }}
                                         custom={index}
                                     >
-                                        <Image src={skill.logo} alt={skill.name} width={24} height={24} loading="lazy" />
-                                        <span>{skill.name}</span>
+                                        <Image src={skill.logo} alt={skill.name} width={24} height={24} className="shrink-0" loading="lazy" />
+                                        <span className="min-w-0 break-words">{skill.name}</span>
                                     </motion.div>
                                 ))}
                             </div>
@@ -275,19 +275,19 @@ export default function IndexPage() {
                     </div>
                 </div>
 
-                <div className="sm:px-8 px-[20px] lg:px-[85px] py-[87px] dark:text-zinc-100 ">
+                <div className="page-content portfolio-content py-12 sm:py-16 lg:py-[87px] dark:text-zinc-100 ">
                     <div className="font-bold text-[35px] sm:text-[40px] leading-10 sm:leading-12 ">
                         <h1>Hands-On Industry <br></br> Experience</h1>
                     </div>
                     <div className="mt-3 opacity-75 max-w-[493px]">
                         Each role has strengthened not just my technical skills, but also my mindset — focusing on building value-driven software, collaborating effectively, and adapting in fast-paced environments.
                     </div>
-                    <div className="py-15 pl-2">
+                    <div className="py-10 sm:py-15 lg:pl-2">
                         <div className="ml-[3px] -mb-[25px] h-8 w-[3px] bg-zinc-950/10 dark:bg-white/10 rounded-t">
                         </div>
 
-                        <div className="flex items-top max-w-full">
-                            <div className="relative">
+                        <div className="flex items-start max-w-full">
+                            <div className="relative shrink-0 self-stretch">
                                 <div className="w-[9px] h-[9px] mt-[26.5px] rounded-full bg-zinc-600 dark:bg-white/90 relative">
                                     <div className="bg-zinc-500  dark:bg-white/90 animate-ping w-[9px] h-[9px] rounded-full absolute">
                                     </div>
@@ -298,7 +298,7 @@ export default function IndexPage() {
 
                             </div>
 
-                            <div className="pl-3 group hover:bg-zinc-50 dark:hover:bg-zinc-800 border-[1px] border-white dark:border-zinc-900 dark:hover:border-zinc-800 inline hover:border-zinc-200 p-5 ml-5 mb-5 rounded-2xl">
+                            <div className="min-w-0 flex-1 break-words pl-3 group hover:bg-zinc-50 dark:hover:bg-zinc-800 border-[1px] border-white dark:border-zinc-900 dark:hover:border-zinc-800 inline hover:border-zinc-200 p-3 sm:p-5 ml-3 sm:ml-5 mb-5 rounded-2xl">
                                 <p className="text-sm mb-1 text-zinc-950/70 group-hover:text-zinc-950/90 dark:text-white/90 dark:group-hover:text-zinc-300  font-semibold">November - March 2022</p>
                                 <div className="cursor-pointer inline-block mb-2" >
                                     <h3 className="text-zinc-800 dark:text-zinc-100 text-lg sm:text-xl cursor-pointer">
@@ -312,8 +312,8 @@ export default function IndexPage() {
                         </div>
 
 
-                        <div className="flex items-top max-w-full">
-                            <div className="relative">
+                        <div className="flex items-start max-w-full">
+                            <div className="relative shrink-0 self-stretch">
                                 <div className="w-[9px] h-[9px] mt-[26.5px] rounded-full bg-zinc-600 dark:bg-white/90 relative">
                                     <div className="bg-zinc-500  dark:bg-white/90 animate-ping w-[9px] h-[9px] rounded-full absolute">
                                     </div>
@@ -324,7 +324,7 @@ export default function IndexPage() {
 
                             </div>
 
-                            <div className="pl-3 group hover:bg-zinc-50 dark:hover:bg-zinc-800 border-[1px] border-white dark:border-zinc-900 dark:hover:border-zinc-800 inline hover:border-zinc-200 p-5 ml-5 mb-5 rounded-2xl">
+                            <div className="min-w-0 flex-1 break-words pl-3 group hover:bg-zinc-50 dark:hover:bg-zinc-800 border-[1px] border-white dark:border-zinc-900 dark:hover:border-zinc-800 inline hover:border-zinc-200 p-3 sm:p-5 ml-3 sm:ml-5 mb-5 rounded-2xl">
                                 <p className="text-sm mb-1 text-zinc-950/70 group-hover:text-zinc-950/90 dark:text-white/90 dark:group-hover:text-zinc-300  font-semibold">April - Agust 2023</p>
                                 <div className="cursor-pointer inline-block mb-2" >
                                     <h3 className="text-zinc-800 dark:text-zinc-100 text-lg sm:text-xl cursor-pointer">
@@ -341,8 +341,8 @@ export default function IndexPage() {
 
                         </div>
 
-                        <div className="flex items-top max-w-full">
-                            <div className="relative">
+                        <div className="flex items-start max-w-full">
+                            <div className="relative shrink-0 self-stretch">
                                 <div className="w-[9px] h-[9px] mt-[26.5px] rounded-full bg-zinc-600 dark:bg-white/90 relative">
                                     <div className="bg-zinc-500  dark:bg-white/90 animate-ping w-[9px] h-[9px] rounded-full absolute">
                                     </div>
@@ -353,7 +353,7 @@ export default function IndexPage() {
 
                             </div>
 
-                            <div className="pl-3 group hover:bg-zinc-50 dark:hover:bg-zinc-800 border-[1px] border-white dark:border-zinc-900 dark:hover:border-zinc-800 inline hover:border-zinc-200 p-5 ml-5 mb-5 rounded-2xl">
+                            <div className="min-w-0 flex-1 break-words pl-3 group hover:bg-zinc-50 dark:hover:bg-zinc-800 border-[1px] border-white dark:border-zinc-900 dark:hover:border-zinc-800 inline hover:border-zinc-200 p-3 sm:p-5 ml-3 sm:ml-5 mb-5 rounded-2xl">
                                 <p className="text-sm mb-1 text-zinc-950/70 group-hover:text-zinc-950/90 dark:text-white/90 dark:group-hover:text-zinc-300  font-semibold">June - October 2023</p>
                                 <div className="cursor-pointer inline-block mb-2" >
                                     <h3 className="text-zinc-800 dark:text-zinc-100 text-lg sm:text-xl cursor-pointer">
@@ -374,7 +374,7 @@ export default function IndexPage() {
                     </div>
                 </div>
 
-                <div className="sm:px-8 px-[20px] lg:px-[85px] py-[87px] dark:text-zinc-100  ">
+                <div className="page-content portfolio-content py-12 sm:py-16 lg:py-[87px] dark:text-zinc-100  ">
                     <div className="font-bold text-[35px] sm:text-[40px] leading-10 sm:leading-12 ">
                         <h1>Contact Me</h1>
                     </div>
@@ -408,6 +408,7 @@ export default function IndexPage() {
                         >
                             <input
                                 className="h-14 px-4 rounded-lg border-zinc-400 border-1 dark:bg-zinc-800 dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
+                                aria-label="Your email"
                                 name="senderEmail"
                                 type="email"
                                 required
@@ -416,6 +417,7 @@ export default function IndexPage() {
                             />
                             <textarea
                                 className="h-52 my-3 rounded-lg border-zinc-400 border-1 p-4 dark:bg-zinc-800 dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
+                                aria-label="Your message"
                                 name="message"
                                 placeholder="Your message"
                                 required
@@ -432,7 +434,7 @@ export default function IndexPage() {
                     </motion.section>
                 </div>
 
-                <div className="sm:px-8 px-[20px] lg:px-[85px]  ">
+                <div className="page-content portfolio-content  ">
                     <Footer />
                 </div>
             </div>

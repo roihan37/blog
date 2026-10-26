@@ -21,12 +21,12 @@ export default async function PostPage({
 
   return (
     <div>
-      <main className="container mx-auto min-h-screen max-w-3xl xl:px-1 px-[20px] flex flex-col gap-4">
+      <main className="article-content min-h-screen flex flex-col gap-4">
         <div className="mb-8">
           <Header />
         </div>
-        <h1 className="md:text-[42px] text-[36px] md:leading-13 leading-11 dark:text-[#D4D4D4] font-bold ">{post.title}</h1>
-        <div className=" flex flex-row items-center gap-5 text-[15px] font-light">
+        <h1 className="text-[clamp(1.875rem,4.5vw,2.625rem)] leading-tight break-words dark:text-[#D4D4D4] font-bold ">{post.title}</h1>
+        <div className=" flex flex-wrap items-center gap-x-3 gap-y-2 text-[15px] font-light">
           <Image
                   src={'/roihan3.png'}
                   alt="Roihan portrait"
@@ -34,7 +34,7 @@ export default async function PostPage({
                   height={192}
                   quality={95}
                   priority={true}
-                  className="h-[32px] w-[32px] rounded-full object-cover  shadow-xl"
+                  className="h-[32px] w-[32px] shrink-0 rounded-full object-cover  shadow-xl"
               />
               <Link href={'/'} className="cursor-pointer dark:text-[#D4D4D4] hover:underline">Roihan Salsabila</Link>
               <p className="opacity-50 dark:text-[#D4D4D4]">{relativeDate}</p>
@@ -51,9 +51,9 @@ export default async function PostPage({
             height={620}
           />
           )}
-          <p className="opacity-75 dark:text-[#D4D4D4] ">{post.mainImage.alt}</p>
+          <p className="opacity-75 dark:text-[#D4D4D4] ">{post.mainImage?.alt}</p>
         </div>
-        <div className="prose mt-8">
+        <div className="article-body min-w-0 mt-4 sm:mt-8">
           {Array.isArray(post.body) && <PortableTextRenderer value={post.body} />}
         </div>
         <Footer />

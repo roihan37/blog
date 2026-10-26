@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 
-export default function CodeBlock({ code, language = "javascript" }) {
+export default function CodeBlock({ code, language = "javascript" }: { code: string; language?: string }) {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = () => {
@@ -13,12 +13,12 @@ export default function CodeBlock({ code, language = "javascript" }) {
   };
 
   return (
-    <div className="relative bg-[#282c34] rounded-lg overflow-auto text-white my-4">
+    <div className="relative min-w-0 max-w-full bg-[#282c34] rounded-lg overflow-hidden text-white my-4">
       <div className="flex items-center bg-zinc-700 justify-between px-4 py-2 border-b border-gray-700">
         <p className="text-xs opacity-70">{language}</p>
         <button
           onClick={handleCopy}
-          className="text-xs px-2 py-1 cursor-pointer"
+          className="min-h-11 shrink-0 text-xs px-2 py-1 cursor-pointer"
         >
           {copied ? "✅ Copied!" : "📋 Copy code"}
         </button>

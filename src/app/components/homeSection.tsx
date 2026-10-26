@@ -1,6 +1,6 @@
 'use client';
 import { formattedDate } from "../hook/formatedDate";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import magurame from "../public/magurame.png";
 import dexbarber from "../public/dexbarber.png";
 import Image from "next/image";
@@ -19,8 +19,8 @@ export default function HomeSection({ posts }: { posts: Post[] }) {
                     </h1>
 
                     <div className="max-w-[410px] xl:max-w-full">
-                        <div className="flex flex-row items-center gap-5">
-                            <div className="ml-[3px]  h-10 w-[3px] bg-zinc-950/10 dark:bg-white/10 rounded-t"></div>
+                        <div className="flex items-start lg:items-center gap-4 lg:gap-5">
+                            <div className="shrink-0 ml-[3px]  h-10 w-[3px] bg-zinc-950/10 dark:bg-white/10 rounded-t"></div>
                             <div className="dark:text-zinc-200">
                                 <p className="opacity-75 ">I build projects to learn new things and to help others. Follow my journey build in public <br></br>
                                 </p>
@@ -30,7 +30,7 @@ export default function HomeSection({ posts }: { posts: Post[] }) {
                             </div>
                         </div>
                     </div>
-                    <div className="grid md:grid-cols-2 grid-cols-1  gap-[5px] ">
+                    <div className="grid md:grid-cols-2 grid-cols-1 gap-4 lg:gap-[5px] ">
                         {/* Cards */}
                         <div className=" text-black dark:text-zinc-300 text-[15px]  flex flex-col w-full rounded-[10px] hover:bg-zinc-100 dark:hover:bg-zinc-800 p-5 gap-[10px]">
                             <Image
@@ -45,7 +45,7 @@ export default function HomeSection({ posts }: { posts: Post[] }) {
                             />
                             <h1 className="font-semibold">Barber Dex</h1>
                             <p className="font-light">An on-demand mobile app for home haircut services</p>
-                            <div className="flex flex-row gap-4 items-center sm:flex-cols">
+                            <div className="flex flex-wrap gap-x-4 gap-y-2 items-center">
                                 <Link href={`https://github.com/BarberDelivery`} className="cursor-pointer hover:underline flex gap-2 flex-row items-center rounded-full opacity-55 text-sm">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-4">
                                         <path strokeLinecap="round" strokeLinejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" />
@@ -90,7 +90,7 @@ export default function HomeSection({ posts }: { posts: Post[] }) {
                     </div>
                 </div>
                 {/* List Blog */}
-                <div className="py-15 pl-2">
+                <div className="py-10 sm:py-15 lg:pl-2">
                     <h1 className="md:text-[44px] dark:text-zinc-200 sm:text-[36px] text-[31px] font-semibold">
                         Writing
                     </h1>
@@ -99,8 +99,8 @@ export default function HomeSection({ posts }: { posts: Post[] }) {
                     {
                         posts.slice(0, 11).map((post, index) => {
                             return (
-                                <div key={post._id} className="flex items-top max-w-full">
-                                    <div className="relative">
+                                <div key={post._id} className="flex items-start max-w-full">
+                                    <div className="relative shrink-0 self-stretch">
                                         <div className="w-[9px] h-[9px] mt-[26.5px] rounded-full bg-zinc-600 dark:bg-white/90 relative">
                                             {
                                                 index === 0
@@ -114,7 +114,7 @@ export default function HomeSection({ posts }: { posts: Post[] }) {
 
                                     </div>
 
-                                    <Link href={`/blog/${post.slug.current}`} className="pl-3 group hover:bg-zinc-50  border-[1px] border-white dark:border-zinc-900 dark:hover:border-zinc-800 dark:hover:bg-zinc-800 inline hover:border-zinc-200 p-5 ml-5 mb-5 rounded-2xl">
+                                    <Link href={`/blog/${post.slug.current}`} className="min-w-0 flex-1 break-words pl-3 group hover:bg-zinc-50  border-[1px] border-white dark:border-zinc-900 dark:hover:border-zinc-800 dark:hover:bg-zinc-800 inline hover:border-zinc-200 p-3 sm:p-5 ml-3 sm:ml-5 mb-5 rounded-2xl">
                                         <p className="text-sm mb-1 text-zinc-950/70 group-hover:text-zinc-950/90 dark:text-white/90 dark:group-hover:text-zinc-300  font-semibold">{formattedDate(post.publishedAt ?? "")}</p>
                                         <div className="cursor-pointer inline-block mb-2" >
                                             <h3 className="text-zinc-800 dark:text-zinc-300 text-lg sm:text-xl cursor-pointer">
@@ -130,8 +130,8 @@ export default function HomeSection({ posts }: { posts: Post[] }) {
                         })
                     }
 
-                    <div className="flex items-top max-w-full">
-                        <div className="relative">
+                    <div className="flex items-start max-w-full">
+                        <div className="relative shrink-0 self-stretch">
                             <div className="w-[9px] h-[9px] mt-[26.5px] rounded-full bg-zinc-600 dark:bg-white/90 relative">
 
                             </div>
@@ -140,7 +140,7 @@ export default function HomeSection({ posts }: { posts: Post[] }) {
 
                         </div>
 
-                        <Link href={`/blog/dex-barber`} className="pl-3 group hover:bg-zinc-50  border-[1px] border-white dark:border-zinc-900 dark:hover:border-zinc-800 dark:hover:bg-zinc-800 inline hover:border-zinc-200 p-5 ml-5 mb-5 rounded-2xl">
+                        <Link href={`/blog/dex-barber`} className="min-w-0 flex-1 break-words pl-3 group hover:bg-zinc-50  border-[1px] border-white dark:border-zinc-900 dark:hover:border-zinc-800 dark:hover:bg-zinc-800 inline hover:border-zinc-200 p-3 sm:p-5 ml-3 sm:ml-5 mb-5 rounded-2xl">
                             <p className="text-sm mb-1 text-zinc-950/70 group-hover:text-zinc-950/90 dark:text-white/90 dark:group-hover:text-zinc-300  font-semibold">May 15, 2025</p>
                             <div className="cursor-pointer inline-block mb-2" >
                                 <h3 className="text-zinc-800 dark:text-zinc-300 text-lg sm:text-xl cursor-pointer">
@@ -169,9 +169,9 @@ export default function HomeSection({ posts }: { posts: Post[] }) {
                     <div className=" opacity-60 mb-5">
                         <p>Send me a message, whether for collaboration, inquiries, or just a chat!</p>
                     </div>
-                    <div className="flex flex-row items-center gap-5">
-                        <textarea placeholder="Your message..." className="p-2 border-zinc-200 dark:border-zinc-500 h-[50px] dark:bg-zinc-800 w-full rounded-md  border-[1px]"></textarea>
-                        <button className="px-[15px]  rounded-md py-[10px] bg-zinc-900 dark:bg-zinc-300 dark:text-zinc-950 text-white">Send</button>
+                    <div className="flex flex-col sm:flex-row sm:items-end lg:items-center gap-3 lg:gap-5">
+                        <textarea aria-label="Your message" placeholder="Your message..." className="p-2 border-zinc-200 dark:border-zinc-500 min-h-24 sm:min-h-20 lg:min-h-0 lg:h-[50px] min-w-0 dark:bg-zinc-800 w-full rounded-md  border-[1px]"></textarea>
+                        <button className="min-h-11 w-full sm:w-auto shrink-0 px-[15px] rounded-md py-[10px] bg-zinc-900 dark:bg-zinc-300 dark:text-zinc-950 text-white">Send</button>
                     </div>
                 </div>
 

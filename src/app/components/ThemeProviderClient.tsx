@@ -12,12 +12,9 @@ export default function ThemeProviderClient({ children }: { children: React.Reac
   const isBlogSlugRoute = segments[0] === "blog" && segments.length === 2 && segments[1] !== "dex-barber";
   const isBlogRoute = pathname.startsWith("/blog") && !isDexBarberRoute && !isBlogSlugRoute;
   let bgClass;
-  // let bgClass = isBlogRoute? "bg-zinc-100 dark:bg-black xl:px-[165px] md:px-15 lg:px-[80px] sm:px-8 relative" 
-  // : isDexBarberRoute? ``
-  // :`${isDark ? "bg-black" : "bg-zinc-100"} xl:px-[165px] md:px-15 lg:px-[80px]  sm:px-8 relative`
 
   if(isBlogRoute){
-    bgClass = "bg-zinc-100 dark:bg-black xl:px-[165px] md:px-15 lg:px-[80px] sm:px-8 relative"
+    bgClass = "bg-zinc-100 dark:bg-black site-frame relative"
     
   }
   else if(isDexBarberRoute){
@@ -26,7 +23,7 @@ export default function ThemeProviderClient({ children }: { children: React.Reac
   else if(isBlogSlugRoute){    
     bgClass = 'dark:bg-[#191919] bg-[#FFFFFF]'
   } else{
-    bgClass = `${isDark ? "bg-black" : "bg-zinc-100"} xl:px-[165px] md:px-15 lg:px-[80px]  sm:px-8 relative`
+    bgClass = `${isDark ? "bg-black" : "bg-zinc-100"} site-frame relative`
   }
   
   

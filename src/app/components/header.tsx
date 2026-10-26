@@ -13,24 +13,24 @@ export default function Header(): React.JSX.Element {
     const isDark = useDarkMode()
     return (
         <header>
-            <div className=" text-gray-800  relative z-10 text-[13px] pt-[25px] flex justify-between"
+            <div className=" text-gray-800  relative z-10 text-[13px] py-5 sm:py-6 lg:pt-[25px] lg:pb-0 flex flex-wrap items-center justify-between gap-x-4 gap-y-3"
                 
             >
-                <Link href={'/'} className={`flex flex-col justify-start ${isDexBarberRoute ? `text-zinc-300` : ``}`}>
+                <Link href={'/'} className={`flex shrink-0 flex-col justify-start ${isDexBarberRoute ? `text-zinc-300` : ``}`}>
                     <h1 className="font-semibold text-[20px] dark:text-zinc-300">Let&apos;s learn</h1>
                     <p className=" font-light dark:text-zinc-400">with Roihan Salsabila</p>
                 </Link>
-                <div className="flex justify-end gap-5 sm:gap-[25px]  items-center">
+                <div className="flex flex-wrap gap-3 sm:gap-5 lg:gap-[25px] items-center">
                     {
                         isBlogRoute || isDexBarberRoute ? <>
-                            <Link href={'/blog'}>
+                            <Link href={'/blog'} className="inline-flex min-h-11 items-center">
                                 <p className={`text-[15px] dark:text-zinc-300 ${isDexBarberRoute ? `text-zinc-300 ` : ``} hover:underline`}>Blog</p>
                             </Link>
                         </>
                             : ''
                     }
 
-                    <Link href={'/portfolio'} className={`group ${isDark ? 'bg-metallic' : 'bg-zinc-900 text-zinc-100'}   rounded-full px-[10px] py-[7px]  sm:px-[15px] sm:py-[7px] flex gap-[10px] justify-center items-center`}>
+                    <Link href={'/portfolio'} className={`group ${isDark ? 'bg-metallic' : 'bg-zinc-900 text-zinc-100'}   min-h-11 whitespace-nowrap rounded-full px-3 py-2 sm:px-4 lg:px-[15px] lg:py-[7px] lg:min-h-0 flex gap-2 lg:gap-[10px] justify-center items-center`}>
                         {
                             isBlogRoute || isDexBarberRoute
                                 ? <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 ">
@@ -43,7 +43,7 @@ export default function Header(): React.JSX.Element {
                         }
 
 
-                        <p className="text-5">{isBlogRoute || isDexBarberRoute ? "Subscribe" : "Show Portofolio"}</p>
+                        <p className="text-xs sm:text-sm">{isBlogRoute || isDexBarberRoute ? "Subscribe" : "Show Portofolio"}</p>
                     </Link>
 
 

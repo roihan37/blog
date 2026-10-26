@@ -15,9 +15,9 @@ export default function BlogPage({ posts }: { posts: Post[] }) {
 
 
     return (
-        <div className="xl:px-[170px] lg:px-[100px] sm:px-8 px-[20px] bg-white dark:bg-zinc-950 dark:border-1 border-zinc-800 shadow-md ">
+        <div className="page-content bg-white dark:bg-zinc-950 dark:border-1 border-zinc-800 shadow-md ">
             <Header />
-            <div className="my-[50px] relative z-10 gap-[5px] text-zinc-800">
+            <div className="my-10 sm:my-14 lg:my-[50px] relative z-10 gap-[5px] text-zinc-800">
 
                 <div className="md:text-[55px] sm:text-[55px] text-[40px] md:max-w-[628px] sm:w-full max-w-[400px]">
                     <p className={`font-bold "text-zinc-800" dark:text-zinc-100 font-sans md:leading-[70px] sm:leading-[50px] leading-11 mt-[15px]`}>
@@ -29,7 +29,7 @@ export default function BlogPage({ posts }: { posts: Post[] }) {
                         Hi 🙋‍♂️, thanks for coming, I share anything that may help others, technologies I&apos;m using and cool things I&apos;ve made.
                     </p>
                 </div>
-                <div className="flex dark:text-zinc-400 text-zinc-500 flex-row mt-[20px] ml-[5px]  gap-[20px]">
+                <div className="social-links flex flex-wrap dark:text-zinc-400 text-zinc-500 flex-row mt-[20px] ml-[5px]  gap-[20px]">
                     <Link href={'https://github.com/roihan37'}>
                         <Icon name="github" width={24} height={24} color="--c-crimson-blue-500" className="dark:hover:text-white hover:text-zinc-800" />
                     </Link>
@@ -45,13 +45,12 @@ export default function BlogPage({ posts }: { posts: Post[] }) {
                 </div>
             </div>
             {/* CARD LIST */}
-            <div className="grid sm:grid-cols-2  gap-8">
+            <div className="grid sm:grid-cols-2 gap-5 lg:gap-8">
                 {posts.map((post) => (
-                    // eslint-disable-next-line
                     <Link
                         href={`/blog/${post.slug.current}`}
                         key={post._id}
-                        className="max-w-[420px] sm:max-w-[420px] dark:border-1 border-zinc-700 h-full rounded-lg cursor-pointer flex flex-col overflow-hidden bg-white dark:bg-zinc-950 shadow-md "
+                        className="min-w-0 w-full dark:border-1 border-zinc-700 h-full rounded-lg cursor-pointer flex flex-col overflow-hidden bg-white dark:bg-zinc-950 shadow-md "
                     >
                         <img
                             src={
@@ -60,14 +59,14 @@ export default function BlogPage({ posts }: { posts: Post[] }) {
                                     : ""
                             }
                             alt={post.title}
-                            className="w-full h-[185px] object-cover"
+                            className="aspect-video w-full h-auto object-cover"
                         />
                         {/* headline */}
                         <div className="flex flex-col p-[12px] gap-2 flex-1 dark:text-zinc-100 overflow-hidden">
                             <p className="text-[12px]">
                                 {formattedDate(post.publishedAt ?? "")}
                             </p>
-                            <h1 className="text-xl pb-[10px] font-semibold hover:underline">
+                            <h1 className="text-lg sm:text-xl break-words pb-[10px] font-semibold hover:underline">
                                 {post.title}
                             </h1>
                         </div>
@@ -75,14 +74,14 @@ export default function BlogPage({ posts }: { posts: Post[] }) {
                 ))}
                 <Link
                     href={`/blog/dex-barber`}
-                    className="max-w-[420px] sm:max-w-[420px] dark:border-1 border-zinc-700 h-full rounded-lg cursor-pointer flex flex-col overflow-hidden bg-white dark:bg-zinc-950 shadow-md "
+                    className="min-w-0 w-full dark:border-1 border-zinc-700 h-full rounded-lg cursor-pointer flex flex-col overflow-hidden bg-white dark:bg-zinc-950 shadow-md "
                 >
                     <Image
                         width={300}
                         height={300}
                         src={'/dex-barber.png'}
                         alt="Dex Barber"
-                        className="w-full h-[185px] object-cover"
+                        className="aspect-video w-full h-auto object-cover"
                         loading={'lazy'}
                     />
                     {/* headline */}
@@ -90,7 +89,7 @@ export default function BlogPage({ posts }: { posts: Post[] }) {
                         <p className="text-[12px]">
                             May 15, 2025
                         </p>
-                        <h1 className="text-xl pb-[10px] font-semibold hover:underline">
+                        <h1 className="text-lg sm:text-xl break-words pb-[10px] font-semibold hover:underline">
                             Dex Barber – A Fullstack Mobile App Created During My Hacktiv8 Bootcamp Journey
                         </h1>
                     </div>

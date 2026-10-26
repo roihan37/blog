@@ -1,5 +1,118 @@
 @import "tailwindcss";
 
+/* Fluid gutters for phones and tablets; original desktop spacing below. */
+.site-frame {
+  padding-inline: clamp(0px, calc((100vw - 768px) / 8), 48px);
+}
+
+.site-frame > * {
+  max-width: 1280px;
+  margin-inline: auto;
+}
+
+.page-content {
+  padding-inline: clamp(20px, 5vw, 80px);
+}
+
+.article-content {
+  width: 100%;
+  max-width: 816px;
+  margin-inline: auto;
+  padding-inline: 20px;
+}
+
+.case-study-section {
+  padding-inline: max(20px, calc((100% - 1024px) / 2));
+  overflow-wrap: break-word;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr));
+  gap: 8px;
+}
+
+.social-links > a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+.article-body {
+  overflow-wrap: anywhere;
+}
+
+.article-body pre,
+.article-body table {
+  overflow-wrap: normal;
+}
+
+@media (min-width: 640px) {
+  .article-content {
+    padding-inline: 32px;
+  }
+
+  .case-study-section {
+    padding-inline: max(32px, calc((100% - 1024px) / 2));
+  }
+}
+
+@media (min-width: 1024px) {
+  .site-frame {
+    padding-inline: 80px;
+  }
+
+  .site-frame > * {
+    max-width: none;
+  }
+
+  .page-content {
+    padding-inline: 100px;
+  }
+
+  .portfolio-content {
+    padding-inline: 85px;
+  }
+
+  .article-content {
+    max-width: 768px;
+    padding-inline: 20px;
+  }
+
+  .case-study-section {
+    padding-inline: 100px;
+  }
+
+  .social-links > a {
+    min-width: 0;
+    min-height: 0;
+  }
+}
+
+@media (min-width: 1280px) {
+  .site-frame {
+    padding-inline: 165px;
+  }
+
+  .page-content {
+    padding-inline: 170px;
+  }
+
+  .portfolio-content {
+    padding-inline: 85px;
+  }
+
+  .article-content {
+    padding-inline: 4px;
+  }
+
+  .case-study-section {
+    padding-inline: 300px;
+  }
+}
+
 @layer utilities {
   .bg-metallic {
     background: conic-gradient(
