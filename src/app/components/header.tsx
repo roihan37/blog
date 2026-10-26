@@ -17,7 +17,7 @@ export default function Header(): React.JSX.Element {
                 
             >
                 <Link href={'/'} className={`flex shrink-0 flex-col justify-start ${isDexBarberRoute ? `text-zinc-300` : ``}`}>
-                    <h1 className="font-semibold text-[20px] dark:text-zinc-300">Let&apos;s learn</h1>
+                    <p className="font-semibold text-[20px] dark:text-zinc-300">Let&apos;s learn</p>
                     <p className=" font-light dark:text-zinc-400">with Roihan Salsabila</p>
                 </Link>
                 <div className="flex flex-wrap gap-3 sm:gap-5 lg:gap-[25px] items-center">

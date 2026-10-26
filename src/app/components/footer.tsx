@@ -10,7 +10,7 @@ export default function Footer(): React.JSX.Element {
         <div className="flex flex-col lg:items-center xl:flex-row dark:text-zinc-200 justify-between pt-16 sm:pt-24 lg:pt-35 pb-10 sm:pb-15 gap-8 lg:gap-5 text-gray-600 ">
             <div className="min-w-0 flex flex-col lg:items-center xl:items-start" >
                 <div className="mb-4 lg:mb-5 text-base sm:text-xl break-words">
-                    {/* <h1 className="text-gray-400">Say hi</h1> */}
+                    {/* Contact details */}
                     <p><span className="text-gray-400 mr-2">Say hi  </span><a href="mailto:pro.roihan@gmail.com" className="inline-block py-2 lg:py-0">pro.roihan@gmail.com</a></p>
                 </div>
                 <div>

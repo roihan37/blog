@@ -23,15 +23,15 @@ export default function DexBarberPage() {
                 <h1 className="text-[#FFFFFF] pt-[50px] font-serif text-[24px] md:text-[48px] font-bold ">DEX BARBER – A Fullstack Mobile App Created During My Hacktiv8 Bootcamp Journey</h1>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 md:gap-12 lg:gap-[90px] mt-[55px]">
                     <div>
-                        <h4 className={`${barberStyle.h4} font-serif text-[#E6FEA1]`}>Role</h4>
+                        <p className={`${barberStyle.h4} font-serif text-[#E6FEA1]`}>Role</p>
                         <p className={`${barberStyle.p} mt-[15px] text-[#FFFFFF]`}>Fullstack Developer Implemented Real-Time Chat and User Tracking</p>
                     </div>
                     <div>
-                        <h4 className={`${barberStyle.h4} font-serif text-[#E6FEA1]`}>Timeline</h4>
+                        <p className={`${barberStyle.h4} font-serif text-[#E6FEA1]`}>Timeline</p>
                         <p className={`${barberStyle.p} mt-[15px] text-[#FFFFFF]`}>Just One Week, 2023</p>
                     </div>
                     <div>
-                        <h4 className={`${barberStyle.h4} font-serif text-[#E6FEA1]`}>Product & Platform</h4>
+                        <p className={`${barberStyle.h4} font-serif text-[#E6FEA1]`}>Product & Platform</p>
                         <p className={`${barberStyle.p} mt-[15px] text-[#FFFFFF]`}>A mobile app that allows users to book barbers to come to their location, featuring real-time chat and live tracking</p>
                     </div>
                     <div>
@@ -48,7 +48,7 @@ export default function DexBarberPage() {
 
             <div className={`bg-white ${barberStyle.px} ${barberStyle.py}`}>
                 <div className="flex flex-col items-center gap-[25px]">
-                    <h3 className={`${barberStyle.h3} text-[#8CBB03]`}>PROJECT BRIEF</h3>
+                    <p className={`${barberStyle.h3} text-[#8CBB03]`}>PROJECT BRIEF</p>
                     <h2 className={`${barberStyle.h2}`}>The idea came from a personal frustration wanting to get a haircut, but feeling too lazy to wait in line or leave the house.</h2>
                     <div className="grid md:grid-cols-[minmax(0,1.5fr)_minmax(0,1fr)] items-center mt-6 lg:mt-[25px] gap-8 lg:gap-[110px]">
                         <div className={`${barberStyle.p} min-w-0`}>
@@ -75,12 +75,12 @@ export default function DexBarberPage() {
             <div className={`bg-[#FCFFF5] ${barberStyle.px} pt-12 sm:pt-16 lg:pt-[115px]`}>
                 <div>
                     <div className="flex flex-col items-center gap-[15px] mb-[75px]">
-                        <h3 className={`${barberStyle.h3} text-[#8CBB03]`}>CHALLENGES</h3>
+                        <p className={`${barberStyle.h3} text-[#8CBB03]`}>CHALLENGES</p>
                         <h2 className={barberStyle.h2}>Time Was Our Biggest Enemy</h2>
                     </div>
                     <div className="flex flex-col gap-[25px]">
                         <div>
-                            <h4 className={`${barberStyle.h4} font-serif text-[#77A000] mb-[10px]`}>At first, we were confident</h4>
+                            <h3 className={`${barberStyle.h4} font-serif text-[#77A000] mb-[10px]`}>At first, we were confident</h3>
                             <p className={`${barberStyle.p} mb-[25px]`}>Our team had skilled members and ambitious ideas  with advanced, feature-rich plans. But as we got deeper into development, we realized we had aimed too high for the limited time we had. <br></br>
                                 <br></br>Too many features quickly became overwhelming. We had to rethink our priorities and adapt fast.
                             </p>
@@ -94,7 +94,7 @@ export default function DexBarberPage() {
                             </div>
                         </div>
                         <div>
-                            <h4 className={`${barberStyle.h4} font-serif text-[#77A000] mb-[10px]`}>The app&apos;s visuals took longer </h4>
+                            <h3 className={`${barberStyle.h4} font-serif text-[#77A000] mb-[10px]`}>The app&apos;s visuals took longer </h3>
                             <p className={barberStyle.p}>Due to the tight deadline, we skipped formal design stages and went straight into implementation using React Native  a decision made to save time, though it came with trade-offs.
                             </p>
                         </div>
@@ -113,16 +113,16 @@ export default function DexBarberPage() {
             <div className={`bg-white ${barberStyle.px} ${barberStyle.py}`}>
                 <div>
                     <div className="flex flex-col items-center gap-[15px] mb-[55px]">
-                        <h3 className={`${barberStyle.h3} text-[#8CBB03]`}>SOLUTION</h3>
+                        <p className={`${barberStyle.h3} text-[#8CBB03]`}>SOLUTION</p>
                         <h2 className={barberStyle.h2}>How We Tackled It</h2>
                     </div>
                     <div className="grid md:grid-cols-2 grid-cols-1 gap-8 lg:gap-[130px]">
                         <div className="min-w-0">
-                            <h4 className={`${barberStyle.h4} font-serif text-[#77A000] mb-[15px] `}>Strategic Team Division</h4>
+                            <h3 className={`${barberStyle.h4} font-serif text-[#77A000] mb-[15px] `}>Strategic Team Division</h3>
                             <p className={`${barberStyle.p} `}>To manage our limited time, we divided tasks based on expertise backend, mobile app (React Native), frontend CMS, and API integration. This allowed us to work in parallel and stay efficient.</p>
                         </div>
                         <div className="min-w-0">
-                            <h4 className={`${barberStyle.h4} font-serif text-[#77A000] mb-[15px]`}>Using Clear Mockups</h4>
+                            <h3 className={`${barberStyle.h4} font-serif text-[#77A000] mb-[15px]`}>Using Clear Mockups</h3>
                             <p className={barberStyle.p}>We created quick sketches and mockups to align on the app’s purpose, flow, and features even without formal UI/UX design.</p>
                         </div>
                     </div>
@@ -132,7 +132,7 @@ export default function DexBarberPage() {
 {/* WORKFLOW */}
             <div className={`bg-[#1A1A1A] ${barberStyle.px} ${barberStyle.py} flex flex-col items-center`}>
                 <div className="flex flex-col items-center gap-[15px] mb-[50px]">
-                    <h3 className={`${barberStyle.h3} text-[#E6FEA1]`}>WORKFLOW</h3>
+                    <p className={`${barberStyle.h3} text-[#E6FEA1]`}>WORKFLOW</p>
                     <h2 className={`${barberStyle.h2} text-white max-w-[600px]`}>Understanding the Workflow Behind Dex Barber</h2>
                 </div>
                 <Image alt="dexbarber workflow page" src={Workflow} loading={'lazy'} className="mb-[50px]" />
@@ -142,7 +142,7 @@ export default function DexBarberPage() {
 
             <div className={`${barberStyle.px} ${barberStyle.py}`}>
                 <div className="flex flex-col items-center gap-[15px] mb-[50px]">
-                    <h3 className={`${barberStyle.h3} text-[#8CBB03]`}>PROJECT TIMELINE & PROCESS</h3>
+                    <p className={`${barberStyle.h3} text-[#8CBB03]`}>PROJECT TIMELINE & PROCESS</p>
                     <h2 className={`${barberStyle.h2} text-black`}>We went through several processes to ensure we are solving the right problem and not wasting resources and time.</h2>
                 </div>
 
@@ -267,7 +267,7 @@ export default function DexBarberPage() {
 
             <div className={`${barberStyle.px} ${barberStyle.py} bg-[#EFF3F6]`}>
                 <div className="flex flex-col items-center gap-[15px] mb-[50px]">
-                    <h3 className={`${barberStyle.h3} text-[#8CBB03]`}>MY HANDLE</h3>
+                    <p className={`${barberStyle.h3} text-[#8CBB03]`}>MY HANDLE</p>
                     <h2 className={`${barberStyle.h2} text-black`}>User Tracking Experience</h2>
                 </div>
                 <div className="flex flex-col gap-[35px]">
@@ -277,7 +277,7 @@ export default function DexBarberPage() {
                         Today, I&apos;d like to share my experience setting up the user tracking feature. If you&apos;re looking to implement a similar solution, this guide is for you.
                     </p>
                     <div>
-                        <h4 className={`${barberStyle.h4} font-sans mb-[15px]`}>Why Use Firebase for User Location Tracking</h4>
+                        <h3 className={`${barberStyle.h4} font-sans mb-[15px]`}>Why Use Firebase for User Location Tracking</h3>
                         <p className={`${barberStyle.p}`}>The main reasons why to choose firestore as a database :</p>
                         <ol className={`list-decimal pl-6 space-y-2 text-base text-gray-800 ${barberStyle.p}`}>
                             <li>
@@ -292,7 +292,7 @@ export default function DexBarberPage() {
                         </ol>
                     </div>
                     <div>
-                        <h4 className={`${barberStyle.h4} font-sans mb-[20px]`}>Flowchart: What Happens Behind the Scenes</h4>
+                        <h3 className={`${barberStyle.h4} font-sans mb-[20px]`}>Flowchart: What Happens Behind the Scenes</h3>
                         <Image alt="dexbarber Flowchart page" src={Flowchart} loading={'lazy'} className="mb-[20px]" />
                         <ul className={`list-decimal pl-6 space-y-2 text-base text-gray-800 mb-[25px] ${barberStyle.p}`}>
                             <li>
@@ -319,7 +319,7 @@ export default function DexBarberPage() {
 {/* PROJECT RESULT */}
             <div className={`${barberStyle.px} ${barberStyle.py} bg-[#1A1A1A]`}>
                 <div className="flex flex-col items-center gap-[15px] mb-[50px]">
-                    <h3 className={`${barberStyle.h3} text-[#E6FEA1]`}>PROJECT RESULT</h3>
+                    <p className={`${barberStyle.h3} text-[#E6FEA1]`}>PROJECT RESULT</p>
                     <h2 className={`${barberStyle.h2} text-white`}>With a tight deadline, we prioritized core features — and this is what we delivered.</h2>
                 </div>
                 <div >
@@ -331,29 +331,29 @@ export default function DexBarberPage() {
                             <Image alt="dexbarber chat page" src={ChatLayout} loading={'lazy'} className="w-[min(70vw,16rem)] md:w-full shrink-0 h-auto min-w-0 self-start" />
                         </div>
                     </div>
-                    <h4 className={`${barberStyle.h4} font-serif text-[#E6FEA1] mt-[25px]`}>Not Perfect, But Everything Works</h4>
+                    <h3 className={`${barberStyle.h4} font-serif text-[#E6FEA1] mt-[25px]`}>Not Perfect, But Everything Works</h3>
                     <p className={`${barberStyle.p} text-white mt-[15px]`}>I know the UI/UX is far from perfect, but all core features are up and running smoothly. These include user location tracking, real-time chat, upload photo and payment integration. It may not be perfect visually, but it works — and that’s a solid foundation.</p>
                 </div>
                 <div className="mt-[50px]">
                     <Image alt="dexbarber testing" src={Testing} loading={'lazy'} className="w-full h-auto min-w-0" />
-                    <h4 className={`${barberStyle.h4} font-serif text-[#E6FEA1] mt-[25px]`}>Solid Test Coverage: 91.1%</h4>
+                    <h3 className={`${barberStyle.h4} font-serif text-[#E6FEA1] mt-[25px]`}>Solid Test Coverage: 91.1%</h3>
                     <p className={`${barberStyle.p} text-white mt-[15px]`}>With a total of 113 test cases and a 91.1% test coverage, we ensured that most critical paths in our application are well-tested</p>
                 </div>
                 <div className="flex flex-col items-center gap-[15px] mt-[50px]">
-                    <h3 className={`${barberStyle.h3} text-[#E6FEA1]`}>FINAL QUOTE</h3>
+                    <p className={`${barberStyle.h3} text-[#E6FEA1]`}>FINAL QUOTE</p>
                     <h2 className={`${barberStyle.h2} text-white`}>From a Simple <span className="text-[#E6FEA1]">Daily Frustration</span> to a Real Product It <span className="text-[#E6FEA1]">Pushed Us, Taught Us,</span> and Proved <span className="text-[#E6FEA1]">the Power</span> of a Small Team.</h2>
                 </div>
             </div>
 
             <div className={`${barberStyle.px} ${barberStyle.py} bg-[#EFF3F6]`}>
                 <div className="flex flex-col">
-                    <h3 className={`${barberStyle.h3} text-[#8CBB03] text-center`}>LESSONS LEARNED</h3>
+                    <h2 className={`${barberStyle.h3} text-[#8CBB03] text-center`}>LESSONS LEARNED</h2>
                     <div>
-                        <h4 className={`${barberStyle.h4} font-serif text-[#1A1A1A] mt-[35px]`}>Focus on What Matters, Not on Doing Everything</h4>
+                        <h3 className={`${barberStyle.h4} font-serif text-[#1A1A1A] mt-[35px]`}>Focus on What Matters, Not on Doing Everything</h3>
                         <p className={`${barberStyle.p} mt-[15px]`}>At first, we were too ambitious. We wanted to build everything — chat, tracking, CMS, payment — all at once. But as the deadline got closer, we realized that it’s not about having the most features, but about delivering the right ones. This taught us how to prioritize and focus on what’s essential.</p>
                     </div>
                     <div>
-                        <h4 className={`${barberStyle.h4} font-serif text-[#1A1A1A] mt-[35px]`}>We Learned the Most When Things Went Wrong</h4>
+                        <h3 className={`${barberStyle.h4} font-serif text-[#1A1A1A] mt-[35px]`}>We Learned the Most When Things Went Wrong</h3>
                         <p className={`${barberStyle.p} mt-[15px]`}>From integration errors to rushed designs and last-minute changes, we ran into all kinds of issues. But those moments were also our biggest teachers. We learned to debug better, communicate more, and adapt quickly. In the end, this project wasn’t just about building an app — it was about growing through every challenge.</p>
                     </div>
                 </div>
@@ -361,7 +361,7 @@ export default function DexBarberPage() {
 
             <div className={`${barberStyle.px} ${barberStyle.py} bg-[#1A1A1A]`}>
                 <div className="flex flex-col items-center gap-[15px] mb-[50px]">
-                    <h3 className={`${barberStyle.h3} text-[#E6FEA1]`}>THANKS FOR READING!</h3>
+                    <p className={`${barberStyle.h3} text-[#E6FEA1]`}>THANKS FOR READING!</p>
                     <h2 className={`${barberStyle.h2} text-white`}>Check out my other projects:</h2>
                 </div>
             </div>

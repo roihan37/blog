@@ -1,16 +1,16 @@
 
 "use client";
-import magurameweb from "../public/magurameWeb.png";
-import dexbarber from "../public/dexbarber.png";
 import Image from "next/image";
-import magurame from "../public/magurame.png";
-import theflix from "../public/theflix.png";
 import Link from "next/link";
 import { Icon } from "../../components/icon";
 import { motion } from "framer-motion";
 import { skillsData } from "../lib/data";
+import { portfolioProjects } from "../lib/projects";
+import { FiArrowUpRight, FiAward } from "react-icons/fi";
+import { certifications } from "../lib/certifications";
 import React from "react";
 import Footer from "../components/footer";
+import ContactForm from "../components/ContactForm";
 
 const fadeInAnimationVariants = {
     initial: {
@@ -84,200 +84,115 @@ export default function IndexPage() {
                 <div className="page-content portfolio-content py-12 sm:py-16 lg:py-[87px]  ">
                     <div className="max-w-[362px]">
                         <div className="font-bold dark:text-zinc-100 text-[35px] sm:text-[40px] leading-10 sm:leading-12 ">
-                            <h1>Bringing Ideas to Life Through Code</h1>
+                            <h2>Bringing Ideas to Life Through Code</h2>
                         </div>
                         <div className="mt-3 opacity-75 max-w-[456px] dark:text-zinc-100">
                             Here are some of the web and mobile applications I’ve built, each focused on solving problems and delivering value.
                         </div>
                     </div>
-                    <div className="grid md:grid-cols-2 grid-cols-1 dark:text-zinc-200 gap-5 lg:gap-1 mt-13">
-                        {/* Cards */}
-                        <div className="text-black text-[15px] flex flex-col min-w-0 w-full rounded-xl dark:bg-zinc-900 dark:hover:bg-zinc-800 dark:text-zinc-100 bg-zinc-100 p-5 gap-[10px]">
-                            <Image
-                                src={dexbarber}
-                                alt="Ricardo portrait"
-                                width={150}
-                                height={150}
-                                quality={95}
-                                priority={true}
-                                className="h-[45px] w-[45px] rounded-full object-cover border-[0.40rem] shadow-md"
-                                
-                            />
-                            <h1 className="font-semibold">Barber Dex</h1>
-                            <p className="font-light">An on-demand mobile app for home haircut services</p>
-                            <p className="font-light text-[12px] opacity-75">Tech Stack; React Native, React, Redux, Native Paper, Express.js, PostgreSQL, Sequelize, MongoDB, Firestore, Cloudinary, Geomap API, 3rd Party API, Stream.io</p>
-                            <div className="flex flex-wrap gap-x-5 gap-y-2 mt-2">
-                                <Link href={`https://github.com/BarberDelivery`} className="cursor-pointer hover:underline flex gap-2 flex-row items-center rounded-full opacity-55 text-sm">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-4">
-                                        <path strokeLinecap="round" strokeLinejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" />
-                                    </svg>
-                                    <p>View on GitHub</p>
-                                </Link>
-                                <Link href={'/blog/dex-barber'} className="cursor-pointer hover:underline flex gap-2  flex-row items-center rounded-full opacity-55 text-sm">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-4">
-                                        <path strokeLinecap="round" strokeLinejoin="round" d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z" />
-                                    </svg>
-
-                                    <p>Read the Story</p>
-                                </Link>
-                            </div>
-                        </div>
-
-                        <div className="text-black text-[15px] flex flex-col min-w-0 w-full rounded-xl dark:bg-zinc-900 dark:hover:bg-zinc-800 dark:text-zinc-100 bg-zinc-100 p-5 gap-[10px]">
-                            <Image
-                                src={magurame}
-                                alt="Ricardo portrait"
-                                width={150}
-                                height={150}
-                                quality={95}
-                                priority={true}
-                                className="h-[45px] w-[45px] rounded-full object-cover border-[0.40rem] shadow-md"
-                                
-                            />
-                            <h1 className="font-semibold">Magurameudon App Mobile Clone</h1>
-                            <p className="font-light">A mobile application to display Restaurant Magurameudon</p>
-                            <p className="font-light text-[12px] opacity-75">Tech Stack; Express JS, PostgreSQL, React Native, Redux, React JS, Apollo Server, AWS, Apollo Server, Mongo DB, NativeWind, Expo, Supabase.</p>
-                            <div className="mt-2">
-                                <Link href={`https://github.com/roihan37/Magurameudon-Mobile-App-Clone`} className="cursor-pointer hover:underline flex gap-2 flex-row items-center rounded-full opacity-55 text-sm">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-4">
-                                        <path strokeLinecap="round" strokeLinejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" />
-                                    </svg>
-                                    <p>View on GitHub</p>
-                                </Link>
-
-                            </div>
-                        </div>
-
-                        <div className="text-black text-[15px] flex flex-col min-w-0 w-full rounded-xl dark:bg-zinc-900 dark:hover:bg-zinc-800 dark:text-zinc-100 bg-zinc-100 p-5 gap-[10px]">
-                            <Image
-                                src={magurameweb}
-                                alt="Ricardo portrait"
-                                width={150}
-                                height={150}
-                                quality={95}
-                                priority={true}
-                                className="h-[45px] w-[45px] rounded-full object-cover border-[0.40rem] shadow-md"
-                                
-                            />
-                            <h1 className="font-semibold">Magurameudon Clone Website and Admin Side</h1>
-                            <p className="font-light">A Web clone Restaurant Magurameudon and admin side.</p>
-                            <p className="font-light text-[12px] opacity-75">Tech stack: Express JS, PostgreSQL, React, Redux, AWS, Tailwind Css, Supabase, Firebase, AWS.</p>
-                            <div className="mt-2">
-                                <Link href={`https://github.com/roihan37/Magurameudon-Web-Clone`} className="cursor-pointer hover:underline flex gap-2 flex-row items-center rounded-full opacity-55 text-sm">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-4">
-                                        <path strokeLinecap="round" strokeLinejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" />
-                                    </svg>
-                                    <p>View on GitHub</p>
-                                </Link>
-
-                            </div>
-
-                        </div>
-
-                        <div className="text-black text-[15px] flex flex-col min-w-0 w-full rounded-xl dark:bg-zinc-900 dark:hover:bg-zinc-800 dark:text-zinc-100 bg-zinc-100 p-5 gap-[10px]">
-                            <Image
-                                src={theflix}
-                                alt="Ricardo portrait"
-                                width={150}
-                                height={150}
-                                quality={95}
-                                priority={true}
-                                className="h-[45px] w-[45px] rounded-full object-cover border-[0.40rem] shadow-md"
-                                
-                            />
-                            <h1 className="font-semibold">The Flix</h1>
-                            <p className="font-light">A web movies list and IMDB.</p>
-                            <p className="font-light text-[12px] opacity-75">Tech stack: Express JS, PostgreSQL, Vue Js, Pinia, 3rd party API for server-side, Boostrap,Supabase, Firebase, Railway.</p>
-                            <div className="mt-2">
-                                <Link href={`https://github.com/roihan37/p2-iproject-client`} className="cursor-pointer hover:underline flex gap-2 flex-row items-center rounded-full opacity-55 text-sm">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-4">
-                                        <path strokeLinecap="round" strokeLinejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" />
-                                    </svg>
-                                    <p>View on GitHub</p>
-                                </Link>
-
-                            </div>
-
-                        </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 dark:text-zinc-200 gap-5 lg:gap-1 mt-13">
+                        {portfolioProjects.map((project) => (
+                            <article key={project.name} className="text-black text-[15px] flex flex-col min-w-0 w-full rounded-xl dark:bg-zinc-900 dark:hover:bg-zinc-800 dark:text-zinc-100 bg-zinc-100 p-5 gap-3">
+                                <div className="flex flex-wrap items-center justify-between gap-3">
+                                    <div className="flex size-11 shrink-0 items-center justify-center rounded-full bg-white shadow-sm dark:bg-zinc-800" aria-hidden="true">
+                                        {project.image ? (
+                                            <Image src={project.image} alt="" width={44} height={44} className="size-11 rounded-full object-cover" />
+                                        ) : (
+                                            <project.icon size={22} />
+                                        )}
+                                    </div>
+                                    {project.inProgress && (
+                                        <span className="rounded-full border border-zinc-300 px-3 py-1 text-xs font-medium dark:border-zinc-600">
+                                            In Progress
+                                        </span>
+                                    )}
+                                </div>
+                                <div>
+                                    <h3 className="font-semibold text-lg">{project.name}</h3>
+                                    <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-300">{project.subtitle}</p>
+                                    {project.date && <p className="mt-2 text-xs text-zinc-500 dark:text-zinc-400">{project.date}</p>}
+                                </div>
+                                <p className="font-light leading-relaxed">{project.description}</p>
+                                <div className="mt-auto pt-2">
+                                    <p className="text-xs font-medium text-zinc-600 dark:text-zinc-400">Tech stack</p>
+                                    <ul className="mt-2 flex flex-wrap gap-2" aria-label={`${project.name} technologies`}>
+                                        {project.technologies.map((technology) => (
+                                            <li key={technology} className="rounded-md bg-white px-2 py-1 text-xs text-zinc-700 dark:bg-zinc-800 dark:text-zinc-300">
+                                                {technology}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                    <div className="flex flex-wrap gap-x-5 gap-y-1">
+                                    {project.github && (
+                                        <a href={project.github} target="_blank" rel="noopener noreferrer" className="mt-3 inline-flex min-h-11 items-center gap-2 rounded text-sm text-zinc-600 hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 dark:text-zinc-300" aria-label={`View ${project.name} on GitHub (opens in a new tab)`}>
+                                            View on GitHub
+                                            <FiArrowUpRight size={16} aria-hidden="true" />
+                                        </a>
+                                    )}
+                                    {project.story && (
+                                        <Link href={project.story} className="mt-3 inline-flex min-h-11 items-center gap-2 rounded text-sm text-zinc-600 hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 dark:text-zinc-300">
+                                            Read the Story
+                                            <FiArrowUpRight size={16} aria-hidden="true" />
+                                        </Link>
+                                    )}
+                                    {project.demo && (
+                                        <a href={project.demo} target="_blank" rel="noopener noreferrer" className="mt-3 inline-flex min-h-11 items-center gap-2 rounded text-sm text-zinc-600 hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 dark:text-zinc-300" aria-label={`View ${project.name} live demo (opens in a new tab)`}>
+                                            View Live Demo
+                                            <FiArrowUpRight size={16} aria-hidden="true" />
+                                        </a>
+                                    )}
+                                    </div>
+                                </div>
+                            </article>
+                        ))}
                     </div>
-
-
-
-
                 </div>
 
                 <div className="page-content portfolio-content py-12 sm:py-16 lg:py-[87px] dark:text-zinc-100 ">
                     <div className="font-bold text-[35px] sm:text-[40px] leading-10 sm:leading-12 ">
-                        <h1>Tech Stack & Capabilities</h1>
+                        <h2>Tech Stack & Capabilities</h2>
                     </div>
                     <div className="mt-3 opacity-75 max-w-[500px]">
-                        I specialize in full-stack JavaScript development using React, Next.js, Node.js, and MongoDB — with a strong focus on clean code, system design, and building features that solve real user problems.
+                        I build web and mobile applications with JavaScript, TypeScript, and Python — combining front-end development, back-end systems, cloud tools, and testing to solve real user problems.
                     </div>
-                    <div>
-                        <div className="grid grid-row-3 gap-3 text-lg text-zinc-800 mt-10 dark:text-zinc-100">
-                            <h2 className="font-semibold ">Language</h2>
-                            {/* Language */}
-                            <div className="skills-grid">
-                                {skillsData.language.map((skill, index) => (
-                                    <motion.div
-                                        className="bg-zinc-100 dark:bg-zinc-800 rounded-lg min-w-0 px-3 lg:px-5 py-3 flex items-center gap-2 lg:gap-3 text-sm sm:text-base dark:text-white/80"
-                                        key={index}
-                                        variants={fadeInAnimationVariants}
-                                        initial="initial"
-                                        whileInView="animate"
-                                        viewport={{ once: true }}
-                                        custom={index}
-                                    >
-                                        <Image src={skill.logo} alt={skill.name} width={24} height={24} className="shrink-0" loading="lazy" />
-                                        <span className="min-w-0 break-words">{skill.name}</span>
-                                    </motion.div>
-                                ))}
-                            </div>
-
-                            {/* Front End */}
-                            <h2 className="font-semibold mt-5">Front End</h2>
-                            <div className="skills-grid">
-                                {skillsData.frontend.map((skill, index) => (
-                                    <motion.div
-                                        className="bg-zinc-100 dark:bg-zinc-800 rounded-lg min-w-0 px-3 lg:px-5 py-3 flex items-center gap-2 lg:gap-3 text-sm sm:text-base dark:text-white/80"
-                                        key={index}
-                                        variants={fadeInAnimationVariants}
-                                        initial="initial"
-                                        whileInView="animate"
-                                        viewport={{ once: true }}
-                                        custom={index}
-                                    >
-                                        <Image src={skill.logo} alt={skill.name} width={24} height={24} className="shrink-0" loading="lazy" />
-                                        <span className="min-w-0 break-words">{skill.name}</span>
-                                    </motion.div>
-                                ))}
-                            </div>
-
-                            {/* Back End */}
-                            <h2 className="font-semibold mt-5">Back End</h2>
-                            <div className="skills-grid">
-                                {skillsData.backend.map((skill, index) => (
-                                    <motion.div
-                                        className="bg-zinc-100 dark:bg-zinc-800 rounded-lg min-w-0 px-3 lg:px-5 py-3 flex items-center gap-2 lg:gap-3 text-sm sm:text-base dark:text-white/80 "
-                                        key={index}
-                                        variants={fadeInAnimationVariants}
-                                        initial="initial"
-                                        whileInView="animate"
-                                        viewport={{ once: true }}
-                                        custom={index}
-                                    >
-                                        <Image src={skill.logo} alt={skill.name} width={24} height={24} className="shrink-0" loading="lazy" />
-                                        <span className="min-w-0 break-words">{skill.name}</span>
-                                    </motion.div>
-                                ))}
-                            </div>
-                        </div>
+                    <div className="mt-10 space-y-8 text-zinc-800 dark:text-zinc-100">
+                        {skillsData.map((group) => (
+                            <section key={group.title} aria-labelledby={`skills-${group.title.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`}>
+                                <h3 id={`skills-${group.title.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`} className="text-lg font-semibold mb-3">
+                                    {group.title}
+                                </h3>
+                                <ul className="skills-grid">
+                                    {group.skills.map((skill, index) => (
+                                        <motion.li
+                                            className="bg-zinc-100 dark:bg-zinc-800 rounded-lg min-w-0 px-3 lg:px-5 py-3 flex items-center gap-2 lg:gap-3 text-sm sm:text-base dark:text-white/80"
+                                            key={skill.name}
+                                            variants={fadeInAnimationVariants}
+                                            initial="initial"
+                                            whileInView="animate"
+                                            viewport={{ once: true }}
+                                            custom={index}
+                                        >
+                                            {skill.logo ? (
+                                                <Image src={skill.logo} alt="" width={24} height={24} className="shrink-0" loading="lazy" />
+                                            ) : skill.icon ? (
+                                                <skill.icon aria-hidden="true" size={24} className="shrink-0 text-zinc-700 dark:text-zinc-200" />
+                                            ) : (
+                                                <span aria-hidden="true" className="flex size-6 shrink-0 items-center justify-center rounded bg-zinc-200 text-[9px] font-bold text-zinc-700 dark:bg-zinc-700 dark:text-zinc-200">
+                                                    {skill.initials}
+                                                </span>
+                                            )}
+                                            <span className="min-w-0 break-words">{skill.name}</span>
+                                        </motion.li>
+                                    ))}
+                                </ul>
+                            </section>
+                        ))}
                     </div>
                 </div>
 
                 <div className="page-content portfolio-content py-12 sm:py-16 lg:py-[87px] dark:text-zinc-100 ">
                     <div className="font-bold text-[35px] sm:text-[40px] leading-10 sm:leading-12 ">
-                        <h1>Hands-On Industry <br></br> Experience</h1>
+                        <h2>Hands-On Industry <br></br> Experience</h2>
                     </div>
                     <div className="mt-3 opacity-75 max-w-[493px]">
                         Each role has strengthened not just my technical skills, but also my mindset — focusing on building value-driven software, collaborating effectively, and adapting in fast-paced environments.
@@ -299,19 +214,21 @@ export default function IndexPage() {
                             </div>
 
                             <div className="min-w-0 flex-1 break-words pl-3 group hover:bg-zinc-50 dark:hover:bg-zinc-800 border-[1px] border-white dark:border-zinc-900 dark:hover:border-zinc-800 inline hover:border-zinc-200 p-3 sm:p-5 ml-3 sm:ml-5 mb-5 rounded-2xl">
-                                <p className="text-sm mb-1 text-zinc-950/70 group-hover:text-zinc-950/90 dark:text-white/90 dark:group-hover:text-zinc-300  font-semibold">November - March 2022</p>
+                                <p className="text-sm mb-1 text-zinc-950/70 group-hover:text-zinc-950/90 dark:text-white/90 dark:group-hover:text-zinc-300  font-semibold">June - October 2023</p>
                                 <div className="cursor-pointer inline-block mb-2" >
                                     <h3 className="text-zinc-800 dark:text-zinc-100 text-lg sm:text-xl cursor-pointer">
-                                        <span className="relative z-20 hover:text-zinc-800 dark:hover:text-zinc-300 hover:underline tracking-tight font-semibold">Graduated bootcamp Full Stack JavaScript Immersive Program - Hacktiv8</span>
+                                        <span className="relative z-20 hover:text-zinc-800 dark:hover:text-zinc-300 hover:underline tracking-tight font-semibold">Remote Full Stack Developer - PT Okta Prima Mulya</span>
                                     </h3>
                                 </div>
                                 <p className="text-sm text-zinc-950/70 dark:text-zinc-400">
-                                    Graduated from the Full Stack JavaScript Immersive Program at Hacktiv8 after 4 months of intensive training, where I gained hands-on experience in both frontend and backend development using modern technologies. Shortly after graduating, I secured a position as a Full Stack Developer and began applying the skills I learned in real-world projects.</p>
+                                    Worked as a Full Stack Developer to build a web marketplace using Node.js, MongoDB, TypeScript, and React and Nextjs; developed core features like product management, payment integration (Stripe/PayPal), real-time chat with Socket.io, responsive UI with Tailwind/Material UI, and implemented JWT-based auth with unit testing.</p>
                             </div>
 
+
+
+
+
                         </div>
-
-
                         <div className="flex items-start max-w-full">
                             <div className="relative shrink-0 self-stretch">
                                 <div className="w-[9px] h-[9px] mt-[26.5px] rounded-full bg-zinc-600 dark:bg-white/90 relative">
@@ -354,34 +271,59 @@ export default function IndexPage() {
                             </div>
 
                             <div className="min-w-0 flex-1 break-words pl-3 group hover:bg-zinc-50 dark:hover:bg-zinc-800 border-[1px] border-white dark:border-zinc-900 dark:hover:border-zinc-800 inline hover:border-zinc-200 p-3 sm:p-5 ml-3 sm:ml-5 mb-5 rounded-2xl">
-                                <p className="text-sm mb-1 text-zinc-950/70 group-hover:text-zinc-950/90 dark:text-white/90 dark:group-hover:text-zinc-300  font-semibold">June - October 2023</p>
+                                <p className="text-sm mb-1 text-zinc-950/70 group-hover:text-zinc-950/90 dark:text-white/90 dark:group-hover:text-zinc-300  font-semibold">November - March 2022</p>
                                 <div className="cursor-pointer inline-block mb-2" >
                                     <h3 className="text-zinc-800 dark:text-zinc-100 text-lg sm:text-xl cursor-pointer">
-                                        <span className="relative z-20 hover:text-zinc-800 dark:hover:text-zinc-300 hover:underline tracking-tight font-semibold">Remote Full Stack Developer - PT Okta Prima Mulya</span>
+                                        <span className="relative z-20 hover:text-zinc-800 dark:hover:text-zinc-300 hover:underline tracking-tight font-semibold">Graduated bootcamp Full Stack JavaScript Immersive Program - Hacktiv8</span>
                                     </h3>
                                 </div>
                                 <p className="text-sm text-zinc-950/70 dark:text-zinc-400">
-                                    Worked as a Full Stack Developer to build a web marketplace using Node.js, MongoDB, TypeScript, and React and Nextjs; developed core features like product management, payment integration (Stripe/PayPal), real-time chat with Socket.io, responsive UI with Tailwind/Material UI, and implemented JWT-based auth with unit testing.</p>
+                                    Graduated from the Full Stack JavaScript Immersive Program at Hacktiv8 after 4 months of intensive training, where I gained hands-on experience in both frontend and backend development using modern technologies. Shortly after graduating, I secured a position as a Full Stack Developer and began applying the skills I learned in real-world projects.</p>
                             </div>
 
-
-
-
-
                         </div>
+
+
 
 
                     </div>
                 </div>
 
+                <section aria-labelledby="certifications-title" className="page-content portfolio-content py-12 sm:py-16 lg:py-[87px] dark:text-zinc-100">
+                    <h2 id="certifications-title" className="font-bold text-[35px] sm:text-[40px] leading-10 sm:leading-12">
+                        Certifications
+                    </h2>
+                    <p className="mt-3 max-w-[500px] text-zinc-600 dark:text-zinc-300">
+                        Continuous learning in web development, AI, and cloud technologies to build better software.
+                    </p>
+                    <ul className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-2 lg:gap-4">
+                        {certifications.map((certification) => (
+                            <li key={certification.title} className="flex min-w-0 items-start gap-4 rounded-xl bg-zinc-100 p-5 dark:bg-zinc-800">
+                                <span aria-hidden="true" className="flex size-11 shrink-0 items-center justify-center rounded-full bg-white text-zinc-700 shadow-sm dark:bg-zinc-700 dark:text-zinc-200">
+                                    <FiAward size={22} />
+                                </span>
+                                <div className="min-w-0">
+                                    <h3 className="break-words text-base font-semibold leading-relaxed">{certification.title}</h3>
+                                    <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-300">{certification.issuer}</p>
+                                    <time dateTime={certification.dateTime} className="mt-2 block text-xs text-zinc-500 dark:text-zinc-400">{certification.date}</time>
+                                    <a href={certification.url} target="_blank" rel="noopener noreferrer" aria-label={`View ${certification.title} certificate (opens in a new tab)`} className="mt-2 inline-flex min-h-11 items-center gap-2 rounded text-sm text-zinc-600 hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 dark:text-zinc-300">
+                                        View Certificate
+                                        <FiArrowUpRight size={16} aria-hidden="true" />
+                                    </a>
+                                </div>
+                            </li>
+                        ))}
+                    </ul>
+                </section>
+
                 <div className="page-content portfolio-content py-12 sm:py-16 lg:py-[87px] dark:text-zinc-100  ">
                     <div className="font-bold text-[35px] sm:text-[40px] leading-10 sm:leading-12 ">
-                        <h1>Contact Me</h1>
+                        <h2>Contact Me</h2>
                     </div>
                     <div className="mt-3 opacity-75 ">
                         Please contact me directly at{" "}
-                        <Link className="underline" href="pro.roihan@gmail.com">
-                            example@gmail.com
+                        <Link className="underline" href="mailto:pro.roihan@gmail.com">
+                            pro.roihan@gmail.com
                         </Link>{" "}
                         or through this form.
                     </div>
@@ -402,35 +344,7 @@ export default function IndexPage() {
                             once: true,
                         }}
                     >
-                        <form
-                            className="mt-10 flex flex-col dark:text-white"
-
-                        >
-                            <input
-                                className="h-14 px-4 rounded-lg border-zinc-400 border-1 dark:bg-zinc-800 dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
-                                aria-label="Your email"
-                                name="senderEmail"
-                                type="email"
-                                required
-                                maxLength={500}
-                                placeholder="Your email"
-                            />
-                            <textarea
-                                className="h-52 my-3 rounded-lg border-zinc-400 border-1 p-4 dark:bg-zinc-800 dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
-                                aria-label="Your message"
-                                name="message"
-                                placeholder="Your message"
-                                required
-                                maxLength={5000}
-                            />
-                            <div className="rounded-full max-w-[150px] text-zinc-50 flex flex-row gap-2 p-3 justify-center bg-zinc-800">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6">
-                                    <path d="M3.478 2.404a.75.75 0 0 0-.926.941l2.432 7.905H13.5a.75.75 0 0 1 0 1.5H4.984l-2.432 7.905a.75.75 0 0 0 .926.94 60.519 60.519 0 0 0 18.445-8.986.75.75 0 0 0 0-1.218A60.517 60.517 0 0 0 3.478 2.404Z" />
-                                </svg>
-
-                                <p>Submit</p>
-                            </div>
-                        </form>
+                        <ContactForm />
                     </motion.section>
                 </div>
 

@@ -1,5 +1,6 @@
 export interface Post {
     _id: string;
+    _updatedAt?: string;
     mainImage: {
         _type: string;
         asset: {

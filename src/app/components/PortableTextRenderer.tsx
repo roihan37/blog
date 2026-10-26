@@ -66,7 +66,8 @@ export const PortableTextRenderer = ({ value }: { value: (PortableTextBlock | Ty
           ),
         },
         block: {
-          h1: ({ children }) => <h1 className="text-3xl sm:text-4xl dark:text-[#D4D4D4] font-bold mt-8 mb-4">{children}</h1>,
+          // The page owns the h1; legacy CMS h1 blocks are article sections.
+          h1: ({ children }) => <h2 className="text-3xl sm:text-4xl dark:text-[#D4D4D4] font-bold mt-8 mb-4">{children}</h2>,
           h2: ({ children }) => <h2 className="text-2xl sm:text-3xl dark:text-[#D4D4D4] font-semibold mt-6 mb-3">{children}</h2>,
           h3: ({ children }) => <h3 className="text-2xl dark:text-[#D4D4D4] font-semibold mt-5 mb-2">{children}</h3>,
           h4: ({ children }) => <h4 className="text-xl dark:text-[#D4D4D4] font-semibold mt-4 mb-2">{children}</h4>,

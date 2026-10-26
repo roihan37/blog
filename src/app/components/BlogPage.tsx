@@ -20,9 +20,9 @@ export default function BlogPage({ posts }: { posts: Post[] }) {
             <div className="my-10 sm:my-14 lg:my-[50px] relative z-10 gap-[5px] text-zinc-800">
 
                 <div className="md:text-[55px] sm:text-[55px] text-[40px] md:max-w-[628px] sm:w-full max-w-[400px]">
-                    <p className={`font-bold "text-zinc-800" dark:text-zinc-100 font-sans md:leading-[70px] sm:leading-[50px] leading-11 mt-[15px]`}>
+                    <h1 className={`font-bold "text-zinc-800" dark:text-zinc-100 font-sans md:leading-[70px] sm:leading-[50px] leading-11 mt-[15px]`}>
                         DevSolve
-                    </p>
+                    </h1>
                 </div>
                 <div className="text-[18px] lg:max-w-[500px] md:max-w-[500px] sm:max-w-[500px] max-w-[500px] mt-[10px]">
                     <p className="font-sans font-light text-left leading-[30px] ml-[5px]  dark:text-zinc-100">
@@ -66,9 +66,9 @@ export default function BlogPage({ posts }: { posts: Post[] }) {
                             <p className="text-[12px]">
                                 {formattedDate(post.publishedAt ?? "")}
                             </p>
-                            <h1 className="text-lg sm:text-xl break-words pb-[10px] font-semibold hover:underline">
+                            <h2 className="text-lg sm:text-xl break-words pb-[10px] font-semibold hover:underline">
                                 {post.title}
-                            </h1>
+                            </h2>
                         </div>
                     </Link>
                 ))}
@@ -89,9 +89,9 @@ export default function BlogPage({ posts }: { posts: Post[] }) {
                         <p className="text-[12px]">
                             May 15, 2025
                         </p>
-                        <h1 className="text-lg sm:text-xl break-words pb-[10px] font-semibold hover:underline">
+                        <h2 className="text-lg sm:text-xl break-words pb-[10px] font-semibold hover:underline">
                             Dex Barber – A Fullstack Mobile App Created During My Hacktiv8 Bootcamp Journey
-                        </h1>
+                        </h2>
                     </div>
                 </Link>
             </div>

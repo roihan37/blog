@@ -138,3 +138,40 @@
 }
 
 
+
+/* Keep filled, focus and browser autofill colors consistent. Hover is dark-mode only. */
+.contact-field {
+  --contact-active-bg: #09090b;
+  --contact-active-text: #fafafa;
+  --contact-text: #18181b;
+  color: var(--contact-text);
+}
+
+.dark .contact-field {
+  --contact-text: #f4f4f5;
+  color-scheme: dark;
+}
+
+.dark .contact-field:hover,
+.contact-field:focus,
+.contact-field:not(:placeholder-shown) {
+  background-color: var(--contact-active-bg);
+  color: var(--contact-active-text);
+  caret-color: var(--contact-active-text);
+}
+
+.contact-field:autofill {
+  background-color: var(--contact-active-bg);
+  color: var(--contact-active-text);
+}
+
+.contact-field:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px var(--contact-active-bg) inset;
+  -webkit-text-fill-color: var(--contact-active-text);
+  caret-color: var(--contact-active-text);
+}
+
+.dark .contact-field:hover::placeholder,
+.contact-field:focus::placeholder {
+  color: #a1a1aa;
+}

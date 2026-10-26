@@ -1,5 +1,6 @@
 
 
+import { cache } from "react";
 import { client } from "../../sanity/lib/client";
 import { Post } from "../type/typePost";
 
@@ -10,15 +11,17 @@ export async function getAllposts(){
         _type == "post"
         && defined(slug.current)
       ]|order(publishedAt desc)[0...12]{_id, title, slug, publishedAt, mainImage, description, link }`;
-      // eslint-disable-next-line
     const posts = await client.fetch<Post[]>(POSTS_QUERY, {}, options);
     return posts
 }
 
-export async function getPost(params:any) {
+const fetchPost = cache(async (slug: string) => {
   const POST_QUERY = `*[_type == "post" && slug.current == $slug][0]`;
-  // eslint-disable-next-line
-  const post = await client.fetch<Post>(POST_QUERY, await params, options);
+  const post = await client.fetch<Post | null>(POST_QUERY, { slug }, options);
   return post
 
+});
+
+export async function getPost(params: Promise<{ slug: string }>) {
+  return fetchPost((await params).slug);
 }

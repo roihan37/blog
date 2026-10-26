@@ -1,6 +1,7 @@
 
 
 import type { Metadata } from "next";
+import { siteUrl, siteName, siteDescription, defaultImage } from "./lib/seo";
 import { Public_Sans, Noto_Serif } from "next/font/google";
 import ThemeProviderClient from "./components/ThemeProviderClient";
 import "./globals.css";
@@ -23,11 +24,15 @@ const fontSerif = Noto_Serif({
 // });
 
 export const metadata: Metadata = {
-  title: "Roihan Salsabila",
-  description: "Roihan is a Software Engineer and Fullstack Developer",
-  icons: {
-    icon: '/favicon-redbg-circle.ico',
-  },
+  metadataBase: new URL(siteUrl),
+  title: { default: "Roihan Salsabila | Software Engineer & Full-stack Developer", template: "%s | Roihan Salsabila" },
+  description: siteDescription,
+  applicationName: siteName,
+  authors: [{ name: siteName, url: siteUrl }],
+  creator: siteName,
+  openGraph: { type: "website", siteName, locale: "en_US", title: siteName, description: siteDescription, images: [defaultImage] },
+  twitter: { card: "summary_large_image", title: siteName, description: siteDescription, images: [defaultImage] },
+  icons: { icon: "/favicon-redbg-circle.ico" },
 };
 
 export default function RootLayout({

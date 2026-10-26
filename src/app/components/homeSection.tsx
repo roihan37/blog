@@ -1,11 +1,18 @@
 'use client';
 import { formattedDate } from "../hook/formatedDate";
 import React from "react";
-import magurame from "../public/magurame.png";
-import dexbarber from "../public/dexbarber.png";
-import Image from "next/image";
+import { FiArrowUpRight, FiGithub } from "react-icons/fi";
+import { portfolioProjects } from "../lib/projects";
 import Link from "next/link";
 import { Post } from "../type/typePost";
+import ContactForm from "./ContactForm";
+
+const featuredDescriptions: Record<string, string> = {
+    "HelpDesk Mini": "A multi-tenant helpdesk with ticket management and real-time messaging.",
+    SIAKAD: "An academic management system for courses, attendance, grades, and payments.",
+};
+
+const featuredProjects = portfolioProjects.filter((project) => project.name in featuredDescriptions);
 
 export default function HomeSection({ posts }: { posts: Post[] }) {
     
@@ -14,9 +21,9 @@ export default function HomeSection({ posts }: { posts: Post[] }) {
             <div className="text-[16px]  text-zinc-800">
                 <div className="my-[35px] flex flex-col gap-[20px] ">
 
-                    <h1 className="md:text-[44px] dark:text-zinc-200 sm:text-[36px] text-[31px] font-semibold">
+                    <h2 className="md:text-[44px] dark:text-zinc-200 sm:text-[36px] text-[31px] font-semibold">
                         Project
-                    </h1>
+                    </h2>
 
                     <div className="max-w-[410px] xl:max-w-full">
                         <div className="flex items-start lg:items-center gap-4 lg:gap-5">
@@ -31,69 +38,45 @@ export default function HomeSection({ posts }: { posts: Post[] }) {
                         </div>
                     </div>
                     <div className="grid md:grid-cols-2 grid-cols-1 gap-4 lg:gap-[5px] ">
-                        {/* Cards */}
-                        <div className=" text-black dark:text-zinc-300 text-[15px]  flex flex-col w-full rounded-[10px] hover:bg-zinc-100 dark:hover:bg-zinc-800 p-5 gap-[10px]">
-                            <Image
-                                src={dexbarber}
-                                alt="Ricardo portrait"
-                                width={150}
-                                height={150}
-                                quality={95}
-                                priority={true}
-                                className="h-[45px] w-[45px] rounded-full object-cover border-[0.40rem] shadow-md"
-                                
-                            />
-                            <h1 className="font-semibold">Barber Dex</h1>
-                            <p className="font-light">An on-demand mobile app for home haircut services</p>
-                            <div className="flex flex-wrap gap-x-4 gap-y-2 items-center">
-                                <Link href={`https://github.com/BarberDelivery`} className="cursor-pointer hover:underline flex gap-2 flex-row items-center rounded-full opacity-55 text-sm">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-4">
-                                        <path strokeLinecap="round" strokeLinejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" />
-                                    </svg>
-                                    <p>View on GitHub</p>
-                                </Link>
-                                <Link href={'/blog/dex-barber'} className="cursor-pointer hover:underline flex gap-2  flex-row items-center rounded-full opacity-55 text-sm">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-4">
-                                        <path strokeLinecap="round" strokeLinejoin="round" d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z" />
-                                    </svg>
-
-                                    <p>Read the Story</p>
-                                </Link>
-                            </div>
-                        </div>
-
-                        <div className="text-black dark:text-zinc-300 text-[15px] flex flex-col w-full rounded-[10px] hover:bg-zinc-100 dark:hover:bg-zinc-800 p-5 gap-[10px]">
-                            <Image
-                                src={magurame}
-                                alt="Ricardo portrait"
-                                width={150}
-                                height={150}
-                                quality={95}
-                                priority={true}
-                                className="h-[45px] w-[45px] rounded-full object-cover border-[0.40rem] shadow-md"
-                            />
-                            <h1 className="font-semibold">Magurameudon App Mobile Clone</h1>
-                            <p className="font-light">A mobile application to display Restaurant Magurameudon</p>
-                            <div>
-                                <Link href={`https://github.com/roihan37/Magurameudon-Mobile-App-Clone`} className="cursor-pointer hover:underline flex gap-2 flex-row items-center rounded-full opacity-55 text-sm">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-4">
-                                        <path strokeLinecap="round" strokeLinejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" />
-                                    </svg>
-                                    <p>View on GitHub</p>
-                                </Link>
-
-                            </div>
-                        </div>
-                       
-                               
+                        {featuredProjects.map((project) => (
+                            <article key={project.name} className="min-w-0 text-black dark:text-zinc-300 text-[15px] flex flex-col w-full rounded-[10px] hover:bg-zinc-100 dark:hover:bg-zinc-800 p-5 gap-3 transition-colors">
+                                <div className="flex items-center justify-between gap-3">
+                                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-zinc-100 text-zinc-700 dark:bg-zinc-800 dark:text-zinc-200">
+                                        <project.icon className="h-5 w-5" aria-hidden="true" />
+                                    </div>
+                                    {project.inProgress && (
+                                        <span className="rounded-full border border-zinc-300 px-2.5 py-1 text-xs dark:border-zinc-700">In Progress</span>
+                                    )}
+                                </div>
+                                <div>
+                                    <h3 className="font-semibold text-base">{project.name}</h3>
+                                    <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">{project.subtitle}</p>
+                                </div>
+                                <p className="font-light leading-relaxed">{featuredDescriptions[project.name]}</p>
+                                <div className="mt-auto flex flex-wrap items-center gap-x-4 gap-y-2 pt-2 text-sm text-zinc-600 dark:text-zinc-400">
+                                    {project.github && (
+                                        <a href={project.github} target="_blank" rel="noopener noreferrer" aria-label={`View ${project.name} on GitHub (opens in a new tab)`} className="inline-flex items-center gap-2 rounded-sm hover:underline focus-visible:outline-2 focus-visible:outline-offset-4">
+                                            <FiGithub aria-hidden="true" />
+                                            View on GitHub
+                                        </a>
+                                    )}
+                                    {project.demo && (
+                                        <a href={project.demo} target="_blank" rel="noopener noreferrer" aria-label={`View ${project.name} live demo (opens in a new tab)`} className="inline-flex items-center gap-2 rounded-sm hover:underline focus-visible:outline-2 focus-visible:outline-offset-4">
+                                            <FiArrowUpRight aria-hidden="true" />
+                                            Live Demo
+                                        </a>
+                                    )}
+                                </div>
+                            </article>
+                        ))}
 
                     </div>
                 </div>
                 {/* List Blog */}
                 <div className="py-10 sm:py-15 lg:pl-2">
-                    <h1 className="md:text-[44px] dark:text-zinc-200 sm:text-[36px] text-[31px] font-semibold">
+                    <h2 className="md:text-[44px] dark:text-zinc-200 sm:text-[36px] text-[31px] font-semibold">
                         Writing
-                    </h1>
+                    </h2>
                     <div className="ml-[3px] -mb-[25px] h-8 w-[3px] bg-zinc-950/10 dark:bg-white/10 rounded-t">
                     </div>
                     {
@@ -169,10 +152,7 @@ export default function HomeSection({ posts }: { posts: Post[] }) {
                     <div className=" opacity-60 mb-5">
                         <p>Send me a message, whether for collaboration, inquiries, or just a chat!</p>
                     </div>
-                    <div className="flex flex-col sm:flex-row sm:items-end lg:items-center gap-3 lg:gap-5">
-                        <textarea aria-label="Your message" placeholder="Your message..." className="p-2 border-zinc-200 dark:border-zinc-500 min-h-24 sm:min-h-20 lg:min-h-0 lg:h-[50px] min-w-0 dark:bg-zinc-800 w-full rounded-md  border-[1px]"></textarea>
-                        <button className="min-h-11 w-full sm:w-auto shrink-0 px-[15px] rounded-md py-[10px] bg-zinc-900 dark:bg-zinc-300 dark:text-zinc-950 text-white">Send</button>
-                    </div>
+                    <ContactForm compact />
                 </div>
 
             </div>
